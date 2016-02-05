@@ -1,0 +1,37 @@
+.n-content-topic {
+	@include nLinksTopic;
+	font-style: normal;
+}
+
+.n-content-topic--medium {
+	@include oTypographySansBoldSize(m);
+}
+
+.n-content-topic__link {
+	border-bottom: 1px dotted transparent;
+	transition-property: border-bottom-color, color;
+	transition-duration: 0.3s;
+	&:hover {
+		border-bottom-color: darken(getColorFor(topic, text), 20%);
+	}
+}
+
+.n-content-topic__with-follow {
+	line-height: 26px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.n-content-topic__list {
+	display: block;
+	padding: 2px 15px 2px 8px;
+	position: relative;
+	border-bottom-width: 0;
+}
+
+.n-content-topic__list--horizontal {
+	display: inline-block;
+	padding: 0;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}

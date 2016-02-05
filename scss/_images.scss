@@ -1,4 +1,4 @@
-.article-image {
+.n-content-image {
 	margin: 0 auto 1em;
 	max-width: 100%;
 	clear: left;
@@ -11,7 +11,7 @@
 	}
 }
 
-.article-image--inline {
+.n-content-image--inline {
 	@include oGridRespondTo(S) {
 		float: left;
 		clear: left;
@@ -20,13 +20,13 @@
 	}
 }
 
-.article-image--thin {
+.n-content-image--thin {
 		float: left;
 		max-width: 100%;
 		margin-right: 1em;
 }
 
-.article-image__placeholder {
+.n-content-image__placeholder {
 	// Padding hack ratio applied by XSLT
 	position: relative;
 
@@ -37,7 +37,7 @@
 	}
 }
 
-.article-image__caption {
+.n-content-image__caption {
 	@include oTypographySans(s);
 	font-style: italic;
 	color: getColor('cold-1');

@@ -1,6 +1,6 @@
 // ARTICLE VIDEO
 
-.article__video {
+.n-content-video {
 	position: relative;
 	clear: left;
 	margin: 0 auto 1em;
@@ -11,15 +11,15 @@
 	}
 }
 
-.article__video--brightcove {
+.n-content-video--brightcove {
 	width: 680px;
 }
 
-.article__video--youtube {
+.n-content-video--youtube {
 	width: 560px;
 }
 
-.article__video-wrapper {
+.n-content-video__wrapper {
 	padding-top: 56.25%;
 
 	img,
