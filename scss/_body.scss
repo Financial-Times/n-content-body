@@ -1,0 +1,52 @@
+//ARTICLE BODY ELEMENTS
+.article__body {
+	@include oTypographySans(m);
+	margin-bottom: 40px;
+
+	&--serif {
+		@include oTypographySerif(m);
+	}
+
+	> p {
+		margin: 0.3em 0 0.8em;
+	}
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	a {
+		@media print {
+			&:after {
+				text-decoration: none;
+				word-break: break-all;
+				word-wrap: break-word;
+			}
+			&[href^='/']:after {
+				content: ' (http://next.ft.com' attr(href) ')';
+			}
+			&:not([href^='/']):after {
+				content: ' (' attr(href) ')';
+			}
+		}
+	}
+
+	strong {
+		font-weight: 600;
+	}
+
+	.article__copyright-notice {
+		@include oTypographySansSize(s);
+		margin-top: 40px;
+		clear: both;
+	}
+
+	@media print {
+		&:after {
+			content: 'Print a single copy of this article for personal use. Contact us if you wish to print more to distribute to others. © The Financial Times Ltd.';
+			display: block;
+			border-top: 1px solid #000000;
+			padding-top: 5px;
+		}
+	}
+}

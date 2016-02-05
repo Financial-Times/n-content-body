@@ -1,0 +1,148 @@
+// Common design styling used across multiple elements within article
+// all prefixed with either c (componement - a collection of properties) or
+// u (utlity - a single property determined by the consttuction of the html)
+// suggested syntax,
+// eg. c-box, c-box--inline, u-border--all, u-border--all__thick
+//
+
+// Components
+
+.c-box {
+
+	box-sizing: border-box;
+	position: relative;
+	clear: left;
+	margin: 24px 0 16px;
+	padding: 16px 0;
+	width: 100%;
+
+	.o-expander__toggle {
+		@include oTypographySans(m);
+		margin-top: 12px;
+		i {
+			@include nextIcon(arrow-down, getColor('teal-1'), 12);
+			@include oFtIconsBaseIconStyles();
+			display: inline-block;
+			padding: 0 12px;
+			box-sizing: border-box;
+			&:hover {
+				@include nextIcon(arrow-down, getColor('cold-2'), 12);
+			}
+		}
+		&:hover {
+			color: getColor('cold-2');
+			text-decoration: none;
+		}
+		&[aria-pressed] i {
+			@include nextIcon(arrow-up, getColor('teal-1'), 12);
+		}
+	}
+
+}
+
+.c-box--inline {
+	float: left;
+	@include oGridRespondTo(S) {
+		max-width: 300px;
+		margin-right: 24px;
+	}
+}
+
+.c-box--title {
+	margin: -40px 0 8px 10px;
+}
+
+.c-box--title__text {
+	@include oTypographySerifDisplay(m);
+	color: getColor('cold-1');
+	display: inline-block;
+	padding: 10px;
+	padding-bottom: 0;
+	font-weight: 900;
+	background-color: inherit;
+	a {
+		color: getColor('cold-1');
+		border-bottom: 0;
+		text-decoration: none;
+	}
+}
+
+.c-topic {
+	@include nLinksTopic;
+	font-style: normal;
+}
+
+.c-topic__medium {
+	@include oTypographySansBoldSize(m);
+}
+
+.c-topic--link {
+	border-bottom: 1px dotted transparent;
+	transition-property: border-bottom-color, color;
+	transition-duration: 0.3s;
+	&:hover {
+		border-bottom-color: darken(getColorFor(topic, text), 20%);
+	}
+}
+
+.c-topic--with-follow {
+	line-height: 26px;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
+.c-topic--list {
+	display: block;
+	padding: 2px 15px 2px 8px;
+	position: relative;
+	border-bottom-width: 0;
+}
+
+.c-topic--list__horizontal {
+	display: inline-block;
+	padding: 0;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.c-time-date {
+	@include oTypographySans(xs);
+	text-transform: uppercase;
+	color: getColor('warm-6');
+
+	&--block {
+		display: block;
+	}
+}
+
+// Utilities
+
+.u-margin--left-right {
+	margin-left: 16px;
+	margin-right: 16px;
+}
+
+.u-padding--left-right {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.u-padding--bottom {
+	padding-bottom: 16px;
+}
+
+.u-padding--bottom__none {
+	padding-bottom: 0;
+}
+
+.u-background-color--pink {
+	background-color: getColor('pink');
+}
+
+.u-border--all {
+	border: 1px solid getColor('warm-3');
+}
+
+.u-border--left {
+	border-left: 1px solid getColor('warm-3');
+}
