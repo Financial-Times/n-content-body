@@ -5,6 +5,10 @@
 	margin-right: 16px;
 }
 
+.n-content-u-margin--bottom-none {
+	margin-bottom: 0;
+}
+
 .n-content-u-padding--left-right {
 	padding-left: 16px;
 	padding-right: 16px;
@@ -14,12 +18,16 @@
 	padding-bottom: 16px;
 }
 
-.n-content-u-padding--bottom__none {
+.n-content-u-padding--bottom-none {
 	padding-bottom: 0;
 }
 
 .n-content-u-background-color--pink {
 	background-color: getColor('pink');
+}
+
+.n-content-u-background-color--page {
+	background-color: getColorFor('page', 'background');
 }
 
 .n-content-u-border--all {
