@@ -2,12 +2,11 @@
 
 ## Styling for the body of content (eg. article)
 
-### Includes styling for basic article body;
+### Includes styling for simple article body;
 
 - body text
 - blockquotes
 - images
-- galleries
 - video
 - inline tags
 - subheads
