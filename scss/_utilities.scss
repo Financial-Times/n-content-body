@@ -1,31 +1,42 @@
 // Styling Utilities
 
-.u-margin--left-right {
+.n-content-u-margin--left-right {
 	margin-left: 16px;
 	margin-right: 16px;
 }
 
-.u-padding--left-right {
+.n-content-u-padding--left-right {
 	padding-left: 16px;
 	padding-right: 16px;
 }
 
-.u-padding--bottom {
+.n-content-u-padding--bottom {
 	padding-bottom: 16px;
 }
 
-.u-padding--bottom__none {
+.n-content-u-padding--bottom__none {
 	padding-bottom: 0;
 }
 
-.u-background-color--pink {
+.n-content-u-background-color--pink {
 	background-color: getColor('pink');
 }
 
-.u-border--all {
+.n-content-u-border--all {
 	border: 1px solid getColor('warm-3');
 }
 
-.u-border--left {
+.n-content-u-border--left {
 	border-left: 1px solid getColor('warm-3');
+}
+
+.n-content-u-align-center {
+	text-align: center;
+}
+
+//Want this to be capital L for consistency with o-grid definition
+.n-content-u-hide--L { 	// scss-lint:disable SelectorFormat
+	@include oGridRespondTo(L) {
+		display: none;
+	}
 }

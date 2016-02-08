@@ -57,22 +57,26 @@
 	// BLOCKQUOTES
 	blockquote {
 		color: getColor('cold-1');
-		padding-top: 32px;
-		padding-bottom: 0;
 		position: relative;
 
 		p {
 			@include oTypographySerifDisplay(m);
 		}
 
-		p:first-child {
-			&:before {
-				@include nextIcon(pullquote, getColor('cold-1'), 26);
-				position: absolute;
-				top: 0;
-				left: $quote-spacing-unit;
-				content: "";
+		.quote--full {
+			padding-top: 32px;
+			padding-bottom: 0;
+
+			p:first-child {
+				&:before {
+					@include nextIcon(pullquote, getColor('cold-1'), 26);
+					position: absolute;
+					top: 0;
+					left: $quote-spacing-unit;
+					content: "";
+				}
 			}
+
 		}
 	}
 
@@ -128,12 +132,12 @@
 
 	// TAGS
 
-	.article--tags__list-inline {
+	.tags__list--inline {
 		list-style-type: none;
 		padding-left: 0;
 	}
 
-	.article--tag__inline {
+	.tag--inline {
 		display: inline;
 	}
 
