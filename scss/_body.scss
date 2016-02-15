@@ -13,7 +13,7 @@
 		margin: 0.3em 0 0.8em;
 	}
 
-	> *:first-child {
+	> first-child {
 		margin-top: 0;
 	}
 
@@ -35,23 +35,6 @@
 
 	strong {
 		font-weight: 600;
-	}
-
-	// COPYRIGHT
-
-	.copyright-notice {
-		@include oTypographySansSize(s);
-		margin-top: 40px;
-		clear: both;
-	}
-
-	@media print {
-		&:after {
-			content: 'Print a single copy of this article for personal use. Contact us if you wish to print more to distribute to others. © The Financial Times Ltd.';
-			display: block;
-			border-top: 1px solid #000000;
-			padding-top: 5px;
-		}
 	}
 
 	// BLOCKQUOTES
@@ -128,17 +111,6 @@
 	}
 	.subhead--standard {
 		@include oTypographySansBold(m);
-	}
-
-	// TAGS
-
-	.tags__list--inline {
-		list-style-type: none;
-		padding-left: 0;
-	}
-
-	.tag--inline {
-		display: inline;
 	}
 
 }
