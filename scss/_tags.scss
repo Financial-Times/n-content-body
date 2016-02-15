@@ -38,6 +38,9 @@
 .n-content-tags__list--inline {
 	list-style-type: none;
 	padding-left: 0;
+	> li {
+		display: inline;
+	}
 }
 
 .n-content-tags__list--myft {
@@ -72,24 +75,12 @@
 }
 
 // TAG - ie. styling a singular tag
-.n-content-tag {
-	@include nLinksTopic;
-	font-style: normal;
-}
 
-.n-content-tag--medium {
-	@include oTypographySansBoldSize(m);
-}
-
-// can this be deprecated or included in n-content-tag?
-.n-content-tag__list-item {
+.n-content-tag__list-item--vertical {
 	@include nListsItem($use-case: n-lists);
 	&:first-child {
 		border-top: 1px solid rgba(0, 0, 0, 0.25);
 	}
-}
-.n-content-tag__list-item--inline {
-	display: inline;
 }
 
 .n-content-tag__list-item--with-follow {
@@ -107,30 +98,23 @@
 	}
 }
 
-.n-content-tag--link {
-	border-bottom: 1px dotted transparent;
-	transition-property: border-bottom-color, color;
-	transition-duration: 0.3s;
-	&:hover {
-		border-bottom-color: darken(getColorFor(topic, text), 20%);
-	}
+.n-content-tag {
+	@include nLinksTopic;
+	font-style: normal;
 }
 
+.n-content-tag--medium {
+	@include oTypographySansBoldSize(m);
+}
+
+
 .n-content-tag--with-follow {
-	line-height: 26px;
 	vertical-align: middle;
+	line-height: 26px;
 	margin-right: 10px;
 }
 
-
-.n-content-tag--list {
-	display: block;
-	padding: 2px 15px 2px 8px;
-	position: relative;
-	border-bottom-width: 0;
-}
-
-.n-content-tag--list__horizontal {
+.n-content-tag--horizontal-list {
 	display: inline-block;
 	padding: 0;
 	margin-right: 10px;
