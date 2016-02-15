@@ -41,10 +41,3 @@
 .n-content-u-align-center {
 	text-align: center;
 }
-
-//Want this to be capital L for consistency with o-grid definition
-.n-content-u-hide--L { 	// scss-lint:disable SelectorFormat
-	@include oGridRespondTo(L) {
-		display: none;
-	}
-}
