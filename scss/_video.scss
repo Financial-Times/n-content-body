@@ -1,0 +1,34 @@
+// ARTICLE VIDEO
+
+.n-content-video {
+	position: relative;
+	clear: left;
+	margin: 0 auto 1em;
+	max-width: 100%;
+
+	@media print {
+		display: none;
+	}
+}
+
+.n-content-video--brightcove {
+	width: 680px;
+}
+
+.n-content-video--youtube {
+	width: 560px;
+}
+
+.n-content-video__placeholder {
+	padding-top: 56.25%;
+
+	img,
+	video,
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}

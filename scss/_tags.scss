@@ -1,0 +1,122 @@
+// TAGS - ie. styling a list of tags and tags wrapper
+
+.n-content-tags__wrapper {
+	margin-top: 10px;
+	padding: 0 0 8px;
+	@include oGridRespondTo(L) {
+		align-self: flex-end;
+	}
+}
+
+.n-content-tags__wrapper--main-image {
+	padding: 0;
+}
+
+.n-content-tags__title {
+	@include oTypographySans(xs);
+	margin: 0;
+	text-transform: uppercase;
+}
+
+.n-content-tags__intro {
+	padding: 16px 0;
+	margin: 0 10px;
+	border-bottom: 1px solid getColor('warm-3');
+	p {
+		margin: 0;
+	}
+}
+
+.n-content-tags__list {
+	@include nLists();
+	margin: ($spacing-unit/2) 0 0;
+	@include oGridRespondTo($until: S) {
+		width: 100%;
+	}
+}
+
+.n-content-tags__list--inline {
+	list-style-type: none;
+	padding-left: 0;
+	> li {
+		display: inline;
+	}
+}
+
+.n-content-tags__list--myft {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+.n-content-tags__product-tour {
+	text-align: center;
+	padding: 15px 0;
+}
+
+.n-content-tags__product-tour-link {
+	@include oTypographySansData(m);
+	font-size: 16px;
+	position: relative;
+	&:after {
+		@include nextIcon('arrow-right', getColor('link-1'), 10);
+		content: '';
+		position: absolute;
+		top: 5px;
+	}
+	&:hover {
+		color: getColor('cold-2');
+
+		&:after {
+			@include nextIcon('arrow-right', getColor('cold-2'), 10);
+		}
+	}
+}
+
+// TAG - ie. styling a singular tag
+
+.n-content-tag__list-item--vertical {
+	@include nListsItem($use-case: n-lists);
+	&:first-child {
+		border-top: 1px solid rgba(0, 0, 0, 0.25);
+	}
+}
+
+.n-content-tag__list-item--with-follow {
+	position: relative;
+	padding: 10px 80px 10px 0;
+	margin: 0 10px;
+	border-bottom: 1px solid getColor('warm-3');
+	min-height: 26px;
+
+	.n-myft-ui {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		margin-top: -13px;
+	}
+}
+
+.n-content-tag {
+	@include nLinksTopic;
+	font-style: normal;
+}
+
+.n-content-tag--medium {
+	@include oTypographySansBoldSize(m);
+}
+
+
+.n-content-tag--with-follow {
+	vertical-align: middle;
+	line-height: 26px;
+	margin-right: 10px;
+}
+
+.n-content-tag--horizontal-list {
+	display: inline-block;
+	padding: 0;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}

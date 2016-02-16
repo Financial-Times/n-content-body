@@ -1,0 +1,60 @@
+.n-content-box {
+
+	box-sizing: border-box;
+	position: relative;
+	clear: left;
+	margin: 24px 0 16px;
+	padding: 16px 0;
+	width: 100%;
+
+	.o-expander__toggle {
+		@include oTypographySans(m);
+		margin-top: 12px;
+		i {
+			@include nextIcon(arrow-down, getColor('teal-1'), 12);
+			@include oFtIconsBaseIconStyles();
+			display: inline-block;
+			padding: 0 12px;
+			box-sizing: border-box;
+			&:hover {
+				@include nextIcon(arrow-down, getColor('cold-2'), 12);
+			}
+		}
+		&:hover {
+			color: getColor('cold-2');
+			text-decoration: none;
+		}
+		&[aria-pressed] i {
+			@include nextIcon(arrow-up, getColor('teal-1'), 12);
+		}
+	}
+
+}
+
+.n-content-box--inline {
+	float: left;
+	@include oGridRespondTo(S) {
+		max-width: 300px;
+		margin-right: 24px;
+	}
+}
+
+.n-content-box__title {
+	margin: -40px 0 8px 10px;
+}
+
+.n-content-box__title-text {
+	@include oTypographySerifDisplay(m);
+	color: getColor('cold-1');
+	display: inline-block;
+	padding: 10px;
+	padding-bottom: 0;
+	margin: 0;
+	font-weight: 900;
+	background-color: inherit;
+	a {
+		color: getColor('cold-1');
+		border-bottom: 0;
+		text-decoration: none;
+	}
+}
