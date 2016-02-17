@@ -1,17 +1,17 @@
 {
 	"name": "n-content-body",
 	"homepage": "https://github.com/Financial-Times/n-content-body",
-	"description": "Styling for body of content",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components"
-  ],
+	"description": "Styling for body of next content",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components"
+	],
 	"main": [
 		"main.scss"
 	],
 	"license": "MIT",
 	"dependencies": {
-				"next-sass-setup": "^7.0.0"
+		"next-sass-setup": "^7.0.0"
 	}
 }
