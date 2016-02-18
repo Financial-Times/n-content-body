@@ -37,6 +37,15 @@
 		font-weight: 600;
 	}
 
+	@media print {
+		&:after {
+			content: 'Print a single copy of this article for personal use. Contact us if you wish to print more to distribute to others. © The Financial Times Ltd.';
+			display: block;
+			border-top: 1px solid #000000;
+			padding-top: 5px;
+		}
+	}
+
 	// BLOCKQUOTES
 	blockquote {
 		color: getColor('cold-1');

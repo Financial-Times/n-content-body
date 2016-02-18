@@ -1,16 +1,7 @@
 // COPYRIGHT
 
 .n-content-copyright {
-  @include oTypographySansSize(s);
-  margin-top: 40px;
-  clear: both;
-}
-
-@media print {
-  &:after {
-    content: 'Print a single copy of this article for personal use. Contact us if you wish to print more to distribute to others. © The Financial Times Ltd.';
-    display: block;
-    border-top: 1px solid #000000;
-    padding-top: 5px;
-  }
+	@include oTypographySansSize(s);
+	margin-top: 40px;
+	clear: both;
 }
