@@ -46,17 +46,17 @@
 			@include oTypographySerifDisplay(m);
 		}
 
-		.quote--full {
+		&.quote--full {
 			padding-top: 32px;
 			padding-bottom: 0;
 
-				&:before {
-					@include nextIcon(pullquote, getColor('cold-1'), 26);
-					position: absolute;
-					top: 0;
-					left: 16px;
-					content: "";
-				}
+			&:before {
+				@include nextIcon(pullquote, getColor('cold-1'), 26);
+				position: absolute;
+				top: 0;
+				left: 16px;
+				content: "";
+			}
 		}
 	}
 
