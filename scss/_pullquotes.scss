@@ -1,0 +1,35 @@
+.n-content-pullquote {
+	@include nContentBox;
+	@include nContentBoxInline;
+	border: 1px solid getColor('warm-3');
+
+	p {
+		margin: 5px 0 0;
+	}
+
+	&:before {
+		@include nextIcon(pullquote, getColor('cold-1'), 26);
+		content: "";
+		position: absolute;
+		top: -16px;
+		left: 20px;
+		background-color: getColor('pink');
+	}
+}
+
+.n-content-pullquote--with-image {
+	padding-bottom: 0;
+	.n-content-pullquote__content {
+		padding-bottom: 16px;
+	}
+}
+
+.n-content-pullquote__content {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.n-content-pullquote__footer {
+	@include oTypographySansDataBold(m);
+	font-style: normal;
+}
