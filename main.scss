@@ -1,8 +1,11 @@
 @import "next-sass-setup/main";
+@import "scss/mixins";
+@import "scss/big-number";
+@import "scss/blockquotes";
 @import "scss/body";
-@import "scss/box";
 @import "scss/copyright";
 @import "scss/images";
+@import "scss/pullquotes";
+@import "scss/related-box";
 @import "scss/tags";
-@import "scss/utilities";
 @import "scss/video";

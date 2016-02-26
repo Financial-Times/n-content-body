@@ -2,21 +2,23 @@
 
 ## Styling for the body of content (eg. article)
 
-### Includes styling for simple article body;
+### Includes styling for article body elements;
 
 - body text
-- blockquotes
+- big numbers
+- block quotes
 - images
-- video
 - inline tags
+- pull quotes
+- related content & promo boxes
 - subheads
 - tables
+- video
 
 plus common / utility classes used across article elements
 
 
 ### Excludes styling for;
 
-- all asides (eg. promo / related content boxes, pull quotes, big numbers)
 - article heading styles (eg. headline, standfirst, date, byline)
 - onward journey (eg. recommended reads, more-ons, story packages)

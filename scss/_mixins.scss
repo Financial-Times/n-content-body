@@ -1,4 +1,4 @@
-.n-content-box {
+@mixin nContentBox() {
 
 	box-sizing: border-box;
 	position: relative;
@@ -28,10 +28,9 @@
 			@include nextIcon(arrow-up, getColor('teal-1'), 12);
 		}
 	}
-
 }
 
-.n-content-box--inline {
+@mixin nContentBoxInline() {
 	float: left;
 	@include oGridRespondTo(S) {
 		max-width: 300px;
@@ -39,11 +38,11 @@
 	}
 }
 
-.n-content-box__title {
+@mixin nContentBoxTitle() {
 	margin: -40px 0 8px 10px;
 }
 
-.n-content-box__title-text {
+@mixin nContentBoxTitleText() {
 	@include oTypographySerifDisplay(m);
 	color: getColor('cold-1');
 	display: inline-block;

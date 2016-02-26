@@ -1,0 +1,16 @@
+.n-content-blockquote {
+	@include nContentBox;
+	border-left: 1px solid getColor('warm-3');
+	padding: 32px 16px 0;
+	p {
+		margin: 5px 0 0;
+	}
+
+	&:before {
+		@include nextIcon(pullquote, getColor('cold-1'), 26);
+		position: absolute;
+		top: 0;
+		left: 16px;
+		content: "";
+	}
+}

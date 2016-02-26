@@ -1,0 +1,53 @@
+.n-content-related-box,
+.n-content-info-box {
+	@include nContentBox;
+	border: 1px solid getColor('warm-3');
+}
+
+.n-content-related-box {
+	@include nContentBoxInline;
+
+	.o-expander__toggle {
+		margin-left: 16px;
+	}
+}
+
+.n-content-info-box {
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+.n-content-related-box__title {
+	@include nContentBoxTitle;
+}
+
+.n-content-related-box__title-text {
+	@include nContentBoxTitleText;
+	background-color: getColor('pink');
+}
+
+.n-content-related-box__headline,
+.n-content-info-box__headline {
+	@include oTypographySansDataBold(l);
+	font-size: 26px;
+	line-height: 27px;
+	margin: 8px 16px;
+	color: getColor('cold-3');
+	p {
+		margin: 0;
+	}
+}
+
+.n-content-related-box__content,
+.n-content-info-box__content {
+	margin-left: 16px;
+	margin-right: 16px;
+	clear: left;
+	p {
+		margin: 5px 0 0;
+	}
+	ul,
+	ol {
+		padding-left: 20px;
+	}
+}
