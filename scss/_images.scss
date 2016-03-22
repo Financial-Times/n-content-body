@@ -1,5 +1,4 @@
 .n-content-image {
-	display: table;
 	margin: 0 auto 1em;
 	max-width: 100%;
 	clear: left;
@@ -41,8 +40,6 @@
 
 .n-content-image__caption {
 	@include oTypographySans(s);
-	display: table-caption;
-	caption-side: bottom;
 	font-style: italic;
 	color: getColor('cold-1');
 	margin-top: 0.5em;
