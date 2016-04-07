@@ -2,7 +2,7 @@
 .n-content-body {
 
 	// STANDARD TYPOGRAPHY AND ELEMENTS
-	@include oTypographySans(m);
+	font: 18px/1.4 Georgia, serif;
 	margin-bottom: 40px;
 
 	&--serif {
