@@ -1,22 +1,31 @@
 //ARTICLE BODY ELEMENTS
 .n-content-body {
 
-	// STANDARD TYPOGRAPHY AND ELEMENTS
+	@include oTypographyBodyWrapper;
+
+	STANDARD TYPOGRAPHY AND ELEMENTS
+	// TO DO move standard font declaration to o-typography
 	font: 18px/1.4 Georgia, serif;
+
+	// TO DO include in top level o-typography
 	margin-bottom: 40px;
 
+	// TO DO remove - deprecated
 	&--serif {
 		@include oTypographySerif(m);
 	}
 
+	// TO DO remove, already in o-typography
 	> p {
 		margin: 0.3em 0 0.8em;
 	}
 
+	// TO DO include in top level o-typography
 	> first-child {
 		margin-top: 0;
 	}
 
+	// QUESTION v. specific print style - retain in n-content-body or migrate to o-typography?
 	a {
 		@media print {
 			&:after {
@@ -33,10 +42,12 @@
 		}
 	}
 
+	// TO DO remove, already in o-typography
 	strong {
 		font-weight: 600;
 	}
 
+	// QUESTION v. specific print style - retain in n-content-body or migrate to o-typography?
 	@media print {
 		&:after {
 			content: 'Print a single copy of this article for personal use. Contact us if you wish to print more to distribute to others. © The Financial Times Ltd.';
@@ -47,6 +58,8 @@
 	}
 
 	// BLOCKQUOTES
+	// TO DO create mixins for blockquote / blockquote para in o-typography
+	// QUESTION How much styling to put into o-typography
 	blockquote {
 		color: getColor('cold-1');
 		position: relative;
@@ -57,6 +70,7 @@
 	}
 
 	// DATA TABLES
+	// TO DO create a mixin for data-table, don't split out mixins for each element
 	.data-table {
 		margin-top: 20px;
 		border-spacing: 0;
@@ -93,6 +107,8 @@
 	}
 
 	// SUBHEADS
+
+	// TO DO create mixins for subhead / aubhead-crosshead / subhead--standard in o-typography
 
 	.subhead {
 		@include oTypographySansBold(l);

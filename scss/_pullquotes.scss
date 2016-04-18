@@ -30,6 +30,7 @@
 }
 
 .n-content-pullquote__footer {
+	// TO DO use new otypography footer mixin with font weight 600
 	@include oTypographySansDataBold(m);
 	font-style: normal;
 }

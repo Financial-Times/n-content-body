@@ -39,6 +39,8 @@
 }
 
 .n-content-image__caption {
+	// TO DO will pick up existing o-typography figcaption mixin
+	// QUESTION o-typography is normal font style vs italic
 	@include oTypographySans(s);
 	font-style: italic;
 	color: getColor('cold-1');
