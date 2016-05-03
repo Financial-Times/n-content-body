@@ -12,6 +12,6 @@
 	],
 	"license": "MIT",
 	"dependencies": {
-		"next-sass-setup": "^7.0.0"
+		"next-sass-setup": "^8.0.2"
 	}
 }
