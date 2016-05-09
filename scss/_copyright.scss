@@ -1,4 +1,6 @@
 .n-content-copyright {
+	// TO DO change from <p> to <footer> in next-article
+	// Use new oTypographyFooter mixin
 	@include oTypographySansSize(s);
 	margin-top: 40px;
 	clear: both;
