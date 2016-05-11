@@ -2,6 +2,7 @@
   "name": "n-content-body",
   "version": "0.0.0",
   "devDependencies": {
+    "bower": "^1.7.9",
     "lintspaces-cli": "^0.1.1"
   }
 }
