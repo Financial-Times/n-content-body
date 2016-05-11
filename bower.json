@@ -4,9 +4,9 @@
 	"description": "Styling for body of next content",
 	"ignore": [
 		"ft.yml",
-        "Makefile",
-        "n.Makefile",
-        "package.json"
+		"Makefile",
+		"n.Makefile",
+		"package.json"
 	],
 	"main": [
 		"main.scss"
