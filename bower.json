@@ -3,7 +3,9 @@
 	"homepage": "https://github.com/Financial-Times/n-content-body",
 	"description": "Styling for body of next content",
 	"ignore": [
+		".gitignore",
 		"ft.yml",
+		"circle.yml",
 		"Makefile",
 		"n.Makefile",
 		"package.json"
