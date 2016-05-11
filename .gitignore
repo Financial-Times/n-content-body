@@ -1,7 +1,6 @@
 .editorconfig
 .scss-lint.yml
 
-/circle.yml
 /npm-debug.log
 
 /node_modules/

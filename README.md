@@ -1,4 +1,4 @@
-# n-content-body
+# n-content-body [![Circle CI](https://circleci.com/gh/Financial-Times/n-content-body.svg?style=svg)](https://circleci.com/gh/Financial-Times/n-content-body)
 
 ## Styling for the body of content (eg. article)
 
