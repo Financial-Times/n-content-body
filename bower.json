@@ -3,9 +3,10 @@
 	"homepage": "https://github.com/Financial-Times/n-content-body",
 	"description": "Styling for body of next content",
 	"ignore": [
-		"**/.*",
-		"node_modules",
-		"bower_components"
+		"ft.yml",
+        "Makefile",
+        "n.Makefile",
+        "package.json"
 	],
 	"main": [
 		"main.scss"

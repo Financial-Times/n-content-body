@@ -1,8 +1,7 @@
 {
-	"name": "n-content-body",
-	"version": "0.0.0",
-	"devDependencies": {
-		"next-build-tools": "^5.16.0",
-		"origami-build-tools": "^4.0.0"
-	}
+  "name": "n-content-body",
+  "version": "0.0.0",
+  "devDependencies": {
+    "lintspaces-cli": "^0.1.1"
+  }
 }

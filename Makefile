@@ -1,5 +1,1 @@
-install:
-	obt install --verbose
-
-verify:
-	obt verify
+include n.Makefile
