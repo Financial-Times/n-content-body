@@ -11,13 +11,13 @@
 		@include oTypographySans(m);
 		margin-top: 12px;
 		i {
-			@include nextIcon(arrow-down, getColor('teal-1'), 12);
+			@include oIconsGetIcon('arrow-down', getColor('teal-1'), 12);
 			@include oFtIconsBaseIconStyles();
 			display: inline-block;
 			padding: 0 12px;
 			box-sizing: border-box;
 			&:hover {
-				@include nextIcon(arrow-down, getColor('cold-2'), 12);
+				@include oIconsGetIcon('arrow-down', getColor('cold-2'), 12);
 			}
 		}
 		&:hover {
@@ -25,9 +25,9 @@
 			text-decoration: none;
 		}
 		&[aria-expanded="true"] i {
-			@include nextIcon(arrow-up, getColor('teal-1'), 12);
+			@include oIconsGetIcon('arrow-up', getColor('teal-1'), 12);
 			&:hover {
-				@include nextIcon(arrow-up, getColor('cold-2'), 12);
+				@include oIconsGetIcon('arrow-up', getColor('cold-2'), 12);
 			}
 		}
 	}
