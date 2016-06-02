@@ -8,7 +8,7 @@
 	}
 
 	&:before {
-		@include nextIcon(pullquote, getColor('cold-1'), 26);
+		@include oIconsGetIcon('pullquote', getColor('cold-1'), 26);
 		content: "";
 		position: absolute;
 		top: -16px;

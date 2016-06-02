@@ -1,20 +1,21 @@
 {
-	"name": "n-content-body",
-	"homepage": "https://github.com/Financial-Times/n-content-body",
-	"description": "Styling for body of next content",
-	"ignore": [
-		".gitignore",
-		"ft.yml",
-		"circle.yml",
-		"Makefile",
-		"n.Makefile",
-		"package.json"
-	],
-	"main": [
-		"main.scss"
-	],
-	"license": "MIT",
-	"dependencies": {
-		"next-sass-setup": "^8.0.2"
-	}
+  "name": "n-content-body",
+  "homepage": "https://github.com/Financial-Times/n-content-body",
+  "description": "Styling for body of next content",
+  "ignore": [
+    ".gitignore",
+    "ft.yml",
+    "circle.yml",
+    "Makefile",
+    "n.Makefile",
+    "package.json"
+  ],
+  "main": [
+    "main.scss"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "next-sass-setup": "^8.0.2",
+    "o-icons": "^4.1.2"
+  }
 }

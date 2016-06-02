@@ -60,7 +60,7 @@
 	font-size: 16px;
 	position: relative;
 	&:after {
-		@include nextIcon('arrow-right', getColor('link-1'), 10);
+		@include oIconsGetIcon('arrow-right', getColor('link-1'), 10);
 		content: '';
 		position: absolute;
 		top: 5px;
@@ -69,7 +69,7 @@
 		color: getColor('cold-2');
 
 		&:after {
-			@include nextIcon('arrow-right', getColor('cold-2'), 10);
+			@include oIconsGetIcon('arrow-right', getColor('cold-2'), 10);
 		}
 	}
 }
