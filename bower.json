@@ -15,7 +15,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "next-sass-setup": "^8.0.2",
-    "o-icons": "^4.1.2"
+    "n-ui": "^1.4.0"
   }
 }
