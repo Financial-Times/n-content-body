@@ -1,8 +1,11 @@
 .n-content-image {
-	margin: 0 auto 1em;
 	max-width: 100%;
 	clear: left;
 	page-break-inside: avoid;
+
+	@media screen {
+		margin: 0 auto 1em;
+	}
 
 	img {
 		display: block;
