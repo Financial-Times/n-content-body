@@ -42,7 +42,7 @@
 }
 
 .n-content-image__caption {
-	@include oTypographySans(s);
+	@include oTypographySans('s', $load-progressively: true);
 	font-style: italic;
 	color: getColor('cold-1');
 	margin-top: 0.5em;
