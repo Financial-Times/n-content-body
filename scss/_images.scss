@@ -24,21 +24,9 @@
 }
 
 .n-content-image--thin {
-		float: left;
-		max-width: 100%;
-		margin-right: 1em;
-}
-
-.n-content-image__placeholder {
-	// Padding hack ratio applied by XSLT
-	position: relative;
-
-	img {
-		position: absolute;
-		top: 0;
-		left: 0;
-		max-width: 100%;
-	}
+	float: left;
+	max-width: 100%;
+	margin-right: 1em;
 }
 
 .n-content-image__caption {
