@@ -8,7 +8,7 @@
 	width: 100%;
 
 	.o-expander__toggle {
-		@include oTypographySans(m);
+		@include oTypographySans('m', $load-progressively: true);
 		margin-top: 12px;
 		i {
 			@include oIconsGetIcon('arrow-down', getColor('teal-1'), 12);

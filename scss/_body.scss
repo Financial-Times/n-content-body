@@ -96,7 +96,7 @@
 	// SUBHEADS
 
 	.subhead {
-		@include oTypographySansBold(l);
+		@include oTypographySansBold('l', $load-progressively: true);
 		margin-top: 50px;
 		margin-bottom: 20px;
 	}
@@ -104,7 +104,7 @@
 		border-bottom: 1px solid black;
 	}
 	.subhead--standard {
-		@include oTypographySansBold(m);
+		@include oTypographySansBold('m', $load-progressively: true);
 	}
 
 }

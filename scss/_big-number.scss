@@ -11,12 +11,12 @@
 }
 
 .n-content-big-number__title {
-	@include oTypographySerifDisplayBold(xl);
+	@include oTypographySerifDisplayBold('xl', $load-progressively: true);
 	font-size: 3em;
 	line-height: 1em;
 }
 
 .n-content-big-number__content {
-	@include oTypographySansData(m);
+	@include oTypographySansData('m', $load-progressively: true);
 	font-size: 16px;
 }

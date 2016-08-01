@@ -30,6 +30,6 @@
 }
 
 .n-content-pullquote__footer {
-	@include oTypographySansDataBold(m);
+	@include oTypographySansDataBold('m', $load-progressively: true);
 	font-style: normal;
 }
