@@ -13,7 +13,7 @@
 }
 
 .n-content-tags__title {
-	@include oTypographySans(xs);
+	@include oTypographySans('xs', $load-progressively: true);
 	margin: 0;
 	text-transform: uppercase;
 }
