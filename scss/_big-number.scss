@@ -11,7 +11,7 @@
 }
 
 .n-content-big-number__title {
-	@include oTypographySerifDisplayBold('xl', $load-progressively: true);
+	@include oTypographySerifDisplay('xl', $load-progressively: true);
 	font-size: 3em;
 	line-height: 1em;
 }
