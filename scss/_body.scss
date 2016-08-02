@@ -53,7 +53,7 @@
 		position: relative;
 
 		p {
-			@include oTypographySerifDisplay(m);
+			@include oTypographySerifDisplay('m', $load-progressively: true);
 		}
 	}
 
