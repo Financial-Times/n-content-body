@@ -12,6 +12,10 @@
 	padding: 0;
 }
 
+.n-content-tags__wrapper--inline {
+	clear: both;
+}
+
 .n-content-tags__title {
 	@include oTypographySans('xs', $load-progressively: true);
 	margin: 0;
