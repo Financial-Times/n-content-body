@@ -16,8 +16,5 @@
   "license": "MIT",
   "dependencies": {
     "n-ui": "^2.0.0"
-  },
-  "resolutions": {
-    "n-ui": "^2.0.0"
   }
 }
