@@ -2,18 +2,15 @@
 .n-content-body {
 
 	// STANDARD TYPOGRAPHY AND ELEMENTS
-	font: 18px/1.4 Georgia, serif;
+	font: 18px/1.7 Georgia, serif;
 	margin-bottom: 40px;
-
-	&--serif {
-		@include oTypographySerif(m);
-	}
+	-webkit-font-smoothing: antialiased;
 
 	> p {
 		margin: 0.3em 0 0.8em;
 	}
 
-	> first-child {
+	> :first-child {
 		margin-top: 0;
 	}
 
