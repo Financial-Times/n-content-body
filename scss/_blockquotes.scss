@@ -7,10 +7,10 @@
 	}
 
 	&:before {
-		@include oIconsGetIcon('pullquote', getColor('cold-1'), 26);
+		@include oIconsGetIcon('speech-left', getColor('cold-1'), 44);
+		content: '';
 		position: absolute;
-		top: 0;
-		left: 16px;
-		content: "";
+		top: -11px;
+		left: 6px;
 	}
 }

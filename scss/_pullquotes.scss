@@ -8,12 +8,11 @@
 	}
 
 	&:before {
-		@include oIconsGetIcon('pullquote', getColor('cold-1'), 26);
+		@include oIconsGetIcon('speech-left', getColor('cold-1'), 44);
 		content: "";
 		position: absolute;
-		top: -16px;
-		left: 20px;
-		background-color: getColor('pink');
+		top: -24px;
+		left: 12px;
 	}
 }
 
