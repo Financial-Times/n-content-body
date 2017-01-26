@@ -15,9 +15,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "n-ui": "^2.0.0"
-  },
-  "resolutions": {
-    "o-icons": "^5.2.0"
+    "n-ui": "^3.0.0"
   }
 }
