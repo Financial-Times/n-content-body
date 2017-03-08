@@ -81,19 +81,7 @@
 }
 
 @mixin nListsItemLink($use-case: n-lists) {
-	@if($use-case == n-lists-inversed) {
-		@include nLinksTopic($inversed: true);
-	} @else if ($use-case == n-lists-links-inversed) {
-		@include nLinksBody($inversed: true);
-		@include oTypographySansBold(s);
-		text-transform: uppercase;
-	} @else if ($use-case == n-lists-links) {
-		@include nLinksBody();
-		@include oTypographySansBold(s);
-		text-transform: uppercase;
-	} @else {
-		@include nLinksTopic();
-	}
+	@include nLinksTopic();
 	display: block;
 	padding: 2px 15px 2px $spacing-unit/2;
 	position: relative;
