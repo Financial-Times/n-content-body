@@ -22,7 +22,7 @@
 				word-wrap: break-word;
 			}
 			&[href^='/']:after {
-				content: ' (http://next.ft.com' attr(href) ')';
+				content: ' (https://www.ft.com' attr(href) ')';
 			}
 			&:not([href^='/']):after {
 				content: ' (' attr(href) ')';
