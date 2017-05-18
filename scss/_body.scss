@@ -14,34 +14,8 @@
 		margin-top: 0;
 	}
 
-	a {
-		@media print {
-			&:after {
-				text-decoration: none;
-				word-break: break-all;
-				word-wrap: break-word;
-			}
-			&[href^='/']:after {
-				content: ' (https://www.ft.com' attr(href) ')';
-			}
-			&:not([href^='/']):after {
-				content: ' (' attr(href) ')';
-			}
-		}
-	}
-
 	strong {
 		font-weight: 600;
-	}
-
-	@media print {
-		&:after {
-			content: 'Print a single copy of this article for personal use. Contact us if you wish to print more to distribute to others. © The Financial Times Ltd.';
-			display: block;
-			border-top: 1px solid #000000;
-			padding-top: 5px;
-			clear: both;
-		}
 	}
 
 	// BLOCKQUOTES
@@ -106,5 +80,4 @@
 	.subhead--standard {
 		@include oTypographySansBold('m', $load-progressively: true);
 	}
-
 }
