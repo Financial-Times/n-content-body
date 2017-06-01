@@ -1,10 +1,10 @@
 .n-content-big-number {
 	@include nContentBox;
 	@include nContentBoxInline;
-	border: 1px solid getColor('warm-3');
+	border: 1px solid getColor('black-20');
 	padding-left: 16px;
 	padding-right: 16px;
-	color: getColor('cold-1');
+	color: getColor('black-70');
 	p {
 		margin: 5px 0 0;
 	}

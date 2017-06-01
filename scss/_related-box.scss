@@ -1,7 +1,7 @@
 .n-content-related-box,
 .n-content-info-box {
 	@include nContentBox;
-	border: 1px solid getColor('warm-3');
+	border: 1px solid getColor('black-20');
 }
 
 .n-content-related-box {
@@ -23,7 +23,7 @@
 
 .n-content-related-box__title-text {
 	@include nContentBoxTitleText;
-	background-color: getColor('pink');
+	background-color: getColor('paper');
 }
 
 .n-content-related-box__image-link {
@@ -38,7 +38,7 @@
 	font-size: 26px;
 	line-height: 27px;
 	margin: 8px 16px;
-	color: getColor('cold-3');
+	color: getColor('black-90');
 	word-wrap: break-word;
 	p {
 		margin: 0;

@@ -31,7 +31,7 @@
 .n-content-image__caption {
 	@include oTypographySans('s', $load-progressively: true);
 	font-style: italic;
-	color: getColor('cold-1');
+	color: getColor('black-70');
 	margin-top: 0.5em;
 
 	@media print {

@@ -20,7 +20,7 @@
 
 	// BLOCKQUOTES
 	blockquote {
-		color: getColor('cold-1');
+		color: getColor('black-70');
 		position: relative;
 
 		p {
@@ -51,7 +51,7 @@
 			}
 		}
 		tbody tr:nth-child(odd) {
-			background-color: getColor('pink-tint2');
+			background-color: getColor('black-10');
 		}
 		th,
 		td {
