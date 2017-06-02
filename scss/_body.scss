@@ -24,7 +24,7 @@
 		position: relative;
 
 		p {
-			@include oTypographySerifDisplay('m', $load-progressively: true);
+			@include oTypographyDisplay($scale: 2, $progressive: true);
 		}
 	}
 
@@ -68,7 +68,7 @@
 	// SUBHEADS
 
 	.subhead {
-		@include oTypographySansBold('l', $load-progressively: true);
+		@include oTypographySansBold($scale: 4, $progressive: true);
 		margin-top: 50px;
 		margin-bottom: 20px;
 	}
@@ -78,6 +78,6 @@
 		border-bottom: 1px solid black;
 	}
 	.subhead--standard {
-		@include oTypographySansBold('m', $load-progressively: true);
+		@include oTypographySansBold($scale: 2, $progressive: true);
 	}
 }

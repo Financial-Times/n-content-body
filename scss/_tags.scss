@@ -17,7 +17,7 @@
 }
 
 .n-content-tags__title {
-	@include oTypographySans('xs', $load-progressively: true);
+	@include oTypographySans($scale: -2, $progressive: true);
 	margin: 0;
 	text-transform: uppercase;
 }
@@ -60,9 +60,9 @@
 }
 
 .n-content-tags__product-tour-link {
-	@include oTypographySansData('m', $load-progressively: true);
-	font-size: 16px;
+	@include oTypographySans($scale: 0, $progressive: true);
 	position: relative;
+
 	&:after {
 		@include oIconsGetIcon('arrow-right', getColor('teal-40'), 20);
 		content: '';
@@ -109,9 +109,9 @@
 }
 
 .n-content-tag--medium {
-	@include oTypographySansBoldSize('m', $with-progressive-size: true);
+	@include oTypographySize($scale: 2);
+	@include oTypographyProgressiveFontFallback($font: 'sans', $scale: 2);
 }
-
 
 .n-content-tag--with-follow {
 	vertical-align: middle;

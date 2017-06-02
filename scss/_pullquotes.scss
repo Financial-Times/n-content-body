@@ -29,6 +29,6 @@
 }
 
 .n-content-pullquote__footer {
-	@include oTypographySansDataBold('m', $load-progressively: true);
+	@include oTypographySansBold($scale: 2, $progressive: true);
 	font-style: normal;
 }

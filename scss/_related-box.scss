@@ -34,12 +34,13 @@
 
 .n-content-related-box__headline,
 .n-content-info-box__headline {
-	@include oTypographySansDataBold('l', $load-progressively: true);
+	@include oTypographySansBold($scale: 4, $progressive: true);
 	font-size: 26px;
 	line-height: 27px;
 	margin: 8px 16px;
 	color: getColor('black-90');
 	word-wrap: break-word;
+
 	p {
 		margin: 0;
 	}
@@ -50,6 +51,7 @@
 	margin-left: 16px;
 	margin-right: 16px;
 	clear: left;
+
 	p {
 		margin: 5px 0 0;
 	}
