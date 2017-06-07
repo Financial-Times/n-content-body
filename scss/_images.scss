@@ -28,7 +28,8 @@
 	margin-right: 1em;
 }
 
-.n-content-image__caption {
+.n-content-image__caption,
+.n-content-picture {
 	@include oTypographySans('s', $load-progressively: true);
 	font-style: italic;
 	color: getColor('cold-1');
@@ -41,7 +42,9 @@
 }
 
 .n-content-picture {
-	margin: 0;
+	@media screen {
+		margin: 0 auto 1em;
+	}
 
 	img {
 		display: block;
