@@ -42,7 +42,9 @@
 }
 
 .n-content-picture {
-	margin: 1em 0;
+	@media screen {
+		margin: 0 auto 1em;
+	}
 
 	img {
 		display: block;
