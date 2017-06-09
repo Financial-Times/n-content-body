@@ -1,5 +1,5 @@
 .n-content-copyright {
-	@include oTypographySans($scale: 3, $progressive: true);
+	@include oTypographySans(1, $progressive: true);
 	margin-top: 40px;
 	clear: both;
 }
