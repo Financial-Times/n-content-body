@@ -29,11 +29,9 @@
 }
 
 .n-content-image__caption,
-.n-content-picture {
+.n-content-picture__caption {
 	@include oTypographySans('s', $load-progressively: true);
-	font-style: italic;
-	color: getColor('cold-1');
-	margin-top: 0.5em;
+	margin-top: 8px;
 
 	@media print {
 		font-size: 9pt;
