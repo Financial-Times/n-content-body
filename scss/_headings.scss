@@ -1,0 +1,33 @@
+@mixin nContentHeading2 {
+	@include oTypographySansBold($scale: 4, $progressive: true);
+	@include oTypographyMargin($top: 8, $bottom: 5);
+	// trigger a new formatting context so it won't run into floats
+	overflow: hidden;
+	&:before {
+		@include oTypographyMargin($bottom: 2);
+		content: '';
+		display: block;
+		width: 60px;
+		border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
+	}
+}
+
+@mixin nContentHeading3 {
+	@include oTypographySans($scale: 4, $progressive: true);
+	@include oTypographyMargin($top: 6, $bottom: 4);
+	font-weight: 400;
+}
+
+@mixin nContentHeading4 {
+	@include oTypographySans($scale: 3, $progressive: true);
+	@include oTypographyMargin($top: 4, $bottom: 3);
+	font-weight: 400;
+}
+
+@mixin nContentHeading5 {
+	@include oTypographySans($scale: 0, $progressive: true);
+	@include oTypographyMargin($top: 3, $bottom: 3);
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}

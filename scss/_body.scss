@@ -66,18 +66,38 @@
 	}
 
 	// SUBHEADS
-
 	.subhead {
-		@include oTypographySansBold($scale: 4, $progressive: true);
-		margin-top: 50px;
-		margin-bottom: 20px;
+		 @include oTypographySansBold($scale: 4, $progressive: true);
+		 margin-top: 50px;
+		 margin-bottom: 20px;
 	}
+
 	.subhead--crosshead {
 		// trigger a new formatting context so it won't run into floats
 		overflow: hidden;
 		border-bottom: 1px solid black;
 	}
+
 	.subhead--standard {
 		@include oTypographySansBold($scale: 2, $progressive: true);
 	}
+
+	//raw heading tags - TODO: map these to classes in ES
+	h1 {
+		@include nContentHeading2;
+	}
+	h2 {
+		@include nContentHeading3;
+	}
+
+	h3 {
+		@include nContentHeading4;
+	}
+
+	h4,
+	h5,
+	h6 {
+		@include nContentHeading5;
+	}
+
 }
