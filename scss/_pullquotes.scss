@@ -1,34 +1,47 @@
 .n-content-pullquote {
 	@include nContentBox;
 	@include nContentBoxInline;
-	border: 1px solid getColor('black-20');
+	padding: 16px 0 0;
 
 	p {
-		margin: 5px 0 0;
+		margin: 5px 0 15px 0;
 	}
 
 	&:before {
-		@include oIconsGetIcon('speech-left', getColor('black-70'), 44);
+		@include oIconsGetIcon('speech-left', getColor('black-80'), 44);
 		content: "";
 		position: absolute;
-		top: -24px;
-		left: 12px;
+		top: -25px;
+		left: -10px;
 	}
 }
 
 .n-content-pullquote--with-image {
 	padding-bottom: 0;
+
 	.n-content-pullquote__content {
-		padding-bottom: 16px;
+		padding-bottom: 15px;
 	}
 }
 
 .n-content-pullquote__content {
-	padding-left: 16px;
-	padding-right: 16px;
+	@include 	oTypographySansBold(4, $line-height: 1);
+	padding-right: 15px;
 }
 
 .n-content-pullquote__footer {
-	@include oTypographySansBold($scale: 2, $progressive: true);
-	font-style: normal;
+	@include oTypographySans(-1, $progressive: true);
+	color: getColor('black-80');
+	text-transform: uppercase;
+}
+
+.n-content-pullquote--wide {
+	float: none;
+	max-width: 100%;
+	margin-top: 35px;
+	text-align: center;
+
+	&:before {
+		left: 44%;
+	}
 }
