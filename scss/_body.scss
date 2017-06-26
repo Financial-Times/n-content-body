@@ -7,7 +7,7 @@
 	-webkit-font-smoothing: antialiased;
 
 	> p {
-		margin: 0.3em 0 0.8em;
+		@include oTypographyBody();
 	}
 
 	> :first-child {
@@ -66,18 +66,34 @@
 	}
 
 	// SUBHEADS
-
 	.subhead {
 		@include oTypographySansBold($scale: 4, $progressive: true);
 		margin-top: 50px;
 		margin-bottom: 20px;
 	}
+
 	.subhead--crosshead {
 		// trigger a new formatting context so it won't run into floats
 		overflow: hidden;
 		border-bottom: 1px solid black;
 	}
+
 	.subhead--standard {
 		@include oTypographySansBold($scale: 2, $progressive: true);
+	}
+
+	.n-content-heading-2 {
+		@include nContentHeading2;
+	}
+	.n-content-heading-3 {
+		@include nContentHeading3;
+	}
+
+	.n-content-heading-4 {
+		@include nContentHeading4;
+	}
+
+	.n-content-heading-5 {
+		@include nContentHeading5;
 	}
 }
