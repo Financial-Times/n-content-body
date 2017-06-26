@@ -15,7 +15,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "n-ui-foundations": "^2.0.0-alpha"
+    "n-ui-foundations": "^2.0.0-beta.2"
   },
   "resolutions": {
     "o-colors": "^4.0.1"
