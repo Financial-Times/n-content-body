@@ -6,6 +6,61 @@
 	p {
 		margin: 5px 0 15px;
 	}
+}
+
+.n-content-pullquote--with-image {
+	max-width: 100%;
+	margin-top: 0;
+
+	@include oGridRespondTo($until: M) {
+		display: flex;
+		flex-direction: column-reverse;
+		margin: 0;
+
+		.n-image-wrapper .n-image {
+			max-width: none;
+			width: 100vw;
+			left: -50vw;
+			margin-left: 50%
+		}
+
+		p {
+			margin: 20px 0 15px;
+		}
+	};
+
+	@include oGridRespondTo(M) {
+		display: block;
+
+		.n-image-wrapper {
+			@include oGridColspan(7);
+			padding: 0 !important;
+
+			.n-image {
+				@supports(object-fit: cover) {
+					object-fit: cover;
+					height: 100%;
+					position: relative;
+				}
+			}
+		}
+
+		.n-content-pullquote__content {
+			@include oGridColspan(5);
+			float: right;
+			margin-top: 40px;
+
+			&:before {
+				top: -40px;
+				left: 10px;
+			}
+		}
+	}
+}
+
+.n-content-pullquote__content {
+	@include 	oTypographySansBold(4, $line-height: 1);
+	padding-right: 15px;
 
 	&:before {
 		@include oIconsGetIcon('speech-left', getColor('black-80'), 44);
@@ -14,19 +69,6 @@
 		top: -25px;
 		left: -10px;
 	}
-}
-
-.n-content-pullquote--with-image {
-	padding-bottom: 0;
-
-	.n-content-pullquote__content {
-		padding-bottom: 15px;
-	}
-}
-
-.n-content-pullquote__content {
-	@include 	oTypographySansBold(4, $line-height: 1);
-	padding-right: 15px;
 }
 
 .n-content-pullquote__footer {
@@ -41,7 +83,7 @@
 	margin-top: 35px;
 	text-align: center;
 
-	&:before {
+	.n-content-pullquote__content:before {
 		left: 44%;
 	}
 }
