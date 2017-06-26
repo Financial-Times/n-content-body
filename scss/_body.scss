@@ -7,7 +7,7 @@
 	-webkit-font-smoothing: antialiased;
 
 	> p {
-		margin: 0.3em 0 0.8em;
+		@include oTypographyBody();
 	}
 
 	> :first-child {
@@ -64,9 +64,9 @@
 
 	// SUBHEADS
 	.subhead {
-		 @include oTypographySansBold($scale: 4, $progressive: true);
-		 margin-top: 50px;
-		 margin-bottom: 20px;
+		@include oTypographySansBold($scale: 4, $progressive: true);
+		margin-top: 50px;
+		margin-bottom: 20px;
 	}
 
 	.subhead--crosshead {
@@ -79,22 +79,18 @@
 		@include oTypographySansBold($scale: 2, $progressive: true);
 	}
 
-	//raw heading tags - TODO: map these to classes in ES
-	h1 {
+	.n-content-heading-2 {
 		@include nContentHeading2;
 	}
-	h2 {
+	.n-content-heading-3 {
 		@include nContentHeading3;
 	}
 
-	h3 {
+	.n-content-heading-4 {
 		@include nContentHeading4;
 	}
 
-	h4,
-	h5,
-	h6 {
+	.n-content-heading-5 {
 		@include nContentHeading5;
 	}
-
 }
