@@ -1,34 +1,92 @@
 .n-content-pullquote {
 	@include nContentBox;
 	@include nContentBoxInline;
-	border: 1px solid getColor('black-20');
+	@include oTypographyPadding($top: 4, $bottom: 0);
+	@include oTypographyMargin($top: 4);
 
 	p {
-		margin: 5px 0 0;
-	}
-
-	&:before {
-		@include oIconsGetIcon('speech-left', getColor('black-70'), 44);
-		content: "";
-		position: absolute;
-		top: -24px;
-		left: 12px;
+		@include oTypographyMargin($top: 1, $bottom: 4);
 	}
 }
 
 .n-content-pullquote--with-image {
-	padding-bottom: 0;
-	.n-content-pullquote__content {
-		padding-bottom: 16px;
+	@include oTypographyMargin($top: 0);
+	max-width: 100%;
+
+	@include oGridRespondTo($until: M) {
+		display: flex;
+		flex-direction: column-reverse;
+		margin: 0;
+
+		.n-image-wrapper .n-image {
+			max-width: none;
+			width: 100vw;
+			left: -50vw;
+			margin-left: 50%
+		}
+
+		p {
+			@include oTypographyMargin($top: 5, $bottom: 4);
+		}
+	};
+
+	@include oGridRespondTo(M) {
+		display: block;
+
+		.n-image-wrapper {
+			@include oGridColspan(7);
+			padding: 0 !important;
+
+			.n-image {
+				@supports(object-fit: cover) {
+					object-fit: cover;
+					height: 100%;
+					position: relative;
+				}
+			}
+		}
+
+		.n-content-pullquote__content {
+			@include oGridColspan(5);
+			@include oTypographyMargin($top: 10);
+			float: right;
+
+			&:before {
+				top: -40px;
+				left: 10px;
+			}
+		}
 	}
 }
 
 .n-content-pullquote__content {
-	padding-left: 16px;
+	@include oTypographySansBold(4, $line-height: 1);
+	@include oTypographyMargin($bottom: 4);
+
 	padding-right: 16px;
+
+	&:before {
+		@include oIconsGetIcon('speech-left', getColor('black-80'), 44);
+		content: "";
+		position: absolute;
+		top: -25px;
+		left: -10px;
+	}
 }
 
 .n-content-pullquote__footer {
-	@include oTypographySansBold($scale: 2, $progressive: true);
-	font-style: normal;
+	@include oTypographySans(-1, $progressive: true);
+	color: getColor('black-80');
+	text-transform: uppercase;
+}
+
+.n-content-pullquote--wide {
+	float: none;
+	max-width: 100%;
+	margin-top: 35px;
+	text-align: center;
+
+	.n-content-pullquote__content:before {
+		left: 44%;
+	}
 }
