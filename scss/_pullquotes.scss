@@ -2,6 +2,7 @@
 	@include nContentBox;
 	@include nContentBoxInline;
 	@include oTypographyPadding($top: 4, $bottom: 0);
+	@include oTypographyMargin($top: 4);
 
 	p {
 		@include oTypographyMargin($top: 1, $bottom: 4);
@@ -59,7 +60,9 @@
 }
 
 .n-content-pullquote__content {
-	@include 	oTypographySansBold(4, $line-height: 1);
+	@include oTypographySansBold(4, $line-height: 1);
+	@include oTypographyMargin($bottom: 4);
+
 	padding-right: 16px;
 
 	&:before {
