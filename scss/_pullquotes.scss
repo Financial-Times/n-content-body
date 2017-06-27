@@ -1,16 +1,16 @@
 .n-content-pullquote {
 	@include nContentBox;
 	@include nContentBoxInline;
-	padding: 16px 0 0;
+	@include oTypographyPadding($top: 4, $bottom: 0);
 
 	p {
-		margin: 5px 0 15px;
+		@include oTypographyMargin($top: 1, $bottom: 4);
 	}
 }
 
 .n-content-pullquote--with-image {
+	@include oTypographyMargin($top: 0);
 	max-width: 100%;
-	margin-top: 0;
 
 	@include oGridRespondTo($until: M) {
 		display: flex;
@@ -25,7 +25,7 @@
 		}
 
 		p {
-			margin: 20px 0 15px;
+			@include oTypographyMargin($top: 5, $bottom: 4);
 		}
 	};
 
@@ -47,8 +47,8 @@
 
 		.n-content-pullquote__content {
 			@include oGridColspan(5);
+			@include oTypographyMargin($top: 10);
 			float: right;
-			margin-top: 40px;
 
 			&:before {
 				top: -40px;
@@ -60,7 +60,7 @@
 
 .n-content-pullquote__content {
 	@include 	oTypographySansBold(4, $line-height: 1);
-	padding-right: 15px;
+	padding-right: 16px;
 
 	&:before {
 		@include oIconsGetIcon('speech-left', getColor('black-80'), 44);
