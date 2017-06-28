@@ -2,12 +2,16 @@
 .n-content-body {
 
 	// STANDARD TYPOGRAPHY AND ELEMENTS
-	font: 18px/1.7 Georgia, serif;
+	@include oTypographySerif($scale: 1, $line-height: 28px, $progressive: false);
 	margin-bottom: 40px;
 	-webkit-font-smoothing: antialiased;
 
 	> p {
 		@include oTypographyBody();
+
+		a {
+			@include oTypographyLink;
+		}
 	}
 
 	> :first-child {

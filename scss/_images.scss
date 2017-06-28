@@ -29,8 +29,7 @@
 }
 
 .n-content-image__caption {
-	@include oTypographySans($scale: 0, $progressive: true);
-	font-style: italic;
+	@include oTypographySans(0);
 	color: getColor('black-70');
 	margin-top: 0.5em;
 
