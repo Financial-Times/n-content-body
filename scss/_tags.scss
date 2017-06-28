@@ -64,7 +64,7 @@
 	position: relative;
 
 	&:after {
-		@include oIconsGetIcon('arrow-right', getColor('teal-40'), 20);
+		@include oIconsGetIcon('arrow-right', getColor('teal-40'), 20, $iconset-version: 1);
 		content: '';
 		position: absolute;
 		top: -1px;
@@ -74,7 +74,7 @@
 		color: getColor('black-80');
 
 		&:after {
-			@include oIconsGetIcon('arrow-right', getColor('black-80'), 20);
+			@include oIconsGetIcon('arrow-right', getColor('black-80'), 20, $iconset-version: 1);
 		}
 	}
 }
