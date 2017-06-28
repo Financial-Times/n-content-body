@@ -29,7 +29,7 @@
 }
 
 .n-content-image__caption {
-	@include oTypographySans(0);
+	@include oTypographySans(-1);
 	color: getColor('black-70');
 	margin-top: 0.5em;
 
