@@ -18,15 +18,20 @@
 		margin-left: 0;
 		margin-right: 0;
 		max-width: 100%;
+		width: 100%;
 	}
 
 	@include oGridRespondTo($until: M) {
 		display: flex;
-		flex-direction: column-reverse;
+		flex-direction: column;
 		margin: 0;
 
 		.n-content-pullquote__content:before {
-			top: 20px;
+			position: relative;
+		}
+
+		.n-image-wrapper {
+			@include oTypographyMargin($bottom: 7);
 		}
 
 		.n-image-wrapper .n-image {
@@ -37,7 +42,7 @@
 		}
 
 		p {
-			@include oTypographyMargin($top: 5, $bottom: 4);
+			@include oTypographyMargin($top: 0, $bottom: 4);
 		}
 	};
 
@@ -45,20 +50,12 @@
 		display: block;
 
 		.n-image-wrapper {
-			@include oGridColspan(7);
+			@include oGridColspan(5);
 			padding: 0 !important;
-
-			.n-image {
-				@supports(object-fit: cover) {
-					object-fit: cover;
-					height: 100%;
-					position: relative;
-				}
-			}
 		}
 
 		.n-content-pullquote__content {
-			@include oGridColspan(5);
+			@include oGridColspan(7);
 			float: right;
 		}
 	}
