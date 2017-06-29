@@ -1,0 +1,33 @@
+.n-content-recommended {
+	.n-content-body > & {
+		@include nLayoutInset;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		list-style: none;
+		border-bottom: 1px solid oColorsGetPaletteColor(black-10);
+
+	}
+
+	a {
+		@include oTypographySans($scale: 2, $progressive: true);
+		@include oColorsFor(link-title, text);
+		@include oTypographyPadding($top: 2, $bottom: 2);
+		display: inline-block;
+		border-bottom-width: 0;
+
+		&:hover {
+			color: oColorsGetPaletteColor(black-60);
+		}
+	}
+}
+.n-content-recommended__title {
+	@include oTypographySansBold($scale: 1, $progressive: true);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}

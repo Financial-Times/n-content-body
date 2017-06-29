@@ -40,7 +40,7 @@
 	@include oTypographyMargin($top: 0, $bottom: 1);
 	font-weight: 400;
 	text-transform: uppercase;
-	letter-spacing: 0.5px;
+	letter-spacing: 1px;
 	& + p {
 		@include oTypographyMargin($top: 5);
 	}

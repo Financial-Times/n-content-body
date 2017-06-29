@@ -103,7 +103,10 @@
 }
 
 @mixin nLayoutInset() {
-	max-width: 300px;
-	margin: 0 oTypographySpacingSize(7) oTypographySpacingSize(7) 0;
-	float: left;
+	margin-bottom: oTypographySpacingSize(7);
+	@include oGridRespondTo(S) {
+		margin-right: oTypographySpacingSize(7);
+		max-width: 300px;
+		float: left;
+	}
 }
