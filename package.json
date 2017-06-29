@@ -5,5 +5,9 @@
     "@financial-times/n-gage": "^1.8.0",
     "bower": "^1.7.9",
     "lintspaces-cli": "^0.1.1"
+  },
+  "scripts": {
+    "precommit": "node_modules/.bin/secret-squirrel",
+    "prepush": "make verify -j3"
   }
 }
