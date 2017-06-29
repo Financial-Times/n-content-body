@@ -1,0 +1,43 @@
+.n-content-layout {
+
+	@include oTypographyMargin($bottom: 7);
+
+	&[data-layout-width="full-grid"] {
+		@include oGridRespondTo($until: L) {
+			width: 100%;
+		}
+
+		@include oGridRespondTo(L) {
+			position: relative;
+			left: calc(75% + 10px);
+			width: 100vw;
+			margin-left: -50vw;
+		}
+
+		@include oGridRespondTo(XL) {
+			left: calc(75% - 15px);
+		}
+	}
+}
+
+.n-content-layout__container {
+	display: flex;
+	margin: 0 (-1 * oTypographySpacingSize($units: 2));
+
+	[data-layout-width="full-grid"] & {
+		@include oGridContainer;
+	}
+}
+
+.n-content-layout__slot {
+	flex: 1;
+
+	& + .n-content-layout__slot {
+		margin-left: 16px;
+	}
+}
+
+.n-content-layout__slot--wide {
+	flex: 2;
+	text-align: center;
+}

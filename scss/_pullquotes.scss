@@ -1,22 +1,33 @@
 .n-content-pullquote {
-	@include nContentBox;
-	@include nContentBoxInline;
-	@include oTypographyPadding($top: 4, $bottom: 0);
-	@include oTypographyMargin($top: 4);
+	.n-content-body > & {
+		@include nLayoutInset;
+		@include oTypographyPadding($top: 0, $bottom: 0);
+		margin-top: 0;
+		margin-left: 0;
+	}
 
 	p {
-		@include oTypographyMargin($top: 1, $bottom: 4);
+		margin-top: -12px;
+		@include oTypographyMargin($bottom: 4);
 	}
 }
 
 .n-content-pullquote--with-image {
-	@include oTypographyMargin($top: 0);
-	max-width: 100%;
+	.n-content-body > & {
+		@include oTypographyMargin($top: 0);
+		margin-left: 0;
+		margin-right: 0;
+		max-width: 100%;
+	}
 
 	@include oGridRespondTo($until: M) {
 		display: flex;
 		flex-direction: column-reverse;
 		margin: 0;
+
+		.n-content-pullquote__content:before {
+			top: 20px;
+		}
 
 		.n-image-wrapper .n-image {
 			max-width: none;
@@ -48,13 +59,7 @@
 
 		.n-content-pullquote__content {
 			@include oGridColspan(5);
-			@include oTypographyMargin($top: 10);
 			float: right;
-
-			&:before {
-				top: -40px;
-				left: 10px;
-			}
 		}
 	}
 }
@@ -68,14 +73,14 @@
 	&:before {
 		@include oIconsGetIcon('speech-left', getColor('black-80'), 44, $iconset-version: 1);
 		content: "";
-		position: absolute;
-		top: -25px;
-		left: -10px;
+		position: relative;
+		top: -8px;
+		left: -8px;
 	}
 }
 
 .n-content-pullquote__footer {
-	@include oTypographySans(-1, $progressive: true);
+	@include oTypographySans(0, $progressive: true);
 	color: getColor('black-80');
 	text-transform: uppercase;
 }

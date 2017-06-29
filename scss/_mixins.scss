@@ -101,3 +101,12 @@
 		}
 	}
 }
+
+@mixin nLayoutInset() {
+	margin-bottom: oTypographySpacingSize(7);
+	@include oGridRespondTo(S) {
+		margin-right: oTypographySpacingSize(7);
+		max-width: 300px;
+		float: left;
+	}
+}
