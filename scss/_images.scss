@@ -28,7 +28,8 @@
 	margin-right: 1em;
 }
 
-.n-content-image__caption {
+.n-content-image__caption,
+.n-content-picture__caption {
 	@include oTypographySans(0);
 	color: getColor('black-70');
 	margin-top: 0.5em;
