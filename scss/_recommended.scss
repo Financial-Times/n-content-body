@@ -29,5 +29,5 @@
 .n-content-recommended__title {
 	@include oTypographySansBold($scale: 1, $progressive: true);
 	text-transform: uppercase;
-	letter-spacing: 1px;
+	letter-spacing: 0.5px;
 }

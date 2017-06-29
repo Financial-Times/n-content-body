@@ -25,6 +25,10 @@
 		flex-direction: column-reverse;
 		margin: 0;
 
+		.n-content-pullquote__content:before {
+			top: 20px;
+		}
+
 		.n-image-wrapper .n-image {
 			max-width: none;
 			width: 100vw;
@@ -73,16 +77,10 @@
 		top: -8px;
 		left: -8px;
 	}
-
-	@include oGridRespondTo($until: M) {
-		&:before {
-			top: 20px;
-		}
-	}
 }
 
 .n-content-pullquote__footer {
-	@include oTypographySans(-1, $progressive: true);
+	@include oTypographySans(0, $progressive: true);
 	color: getColor('black-80');
 	text-transform: uppercase;
 }
