@@ -55,7 +55,6 @@
 
 		.n-content-pullquote__content {
 			@include oGridColspan(5);
-			@include oTypographyMargin($top: 10);
 			float: right;
 		}
 	}
@@ -73,6 +72,12 @@
 		position: relative;
 		top: -8px;
 		left: -8px;
+	}
+
+	@include oGridRespondTo($until: M) {
+		&:before {
+			top: 20px;
+		}
 	}
 }
 
