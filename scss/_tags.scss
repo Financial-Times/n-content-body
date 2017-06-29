@@ -17,7 +17,7 @@
 }
 
 .n-content-tags__title {
-	@include oTypographySans('xs', $load-progressively: true);
+	@include oTypographySans($scale: -2, $progressive: true);
 	margin: 0;
 	text-transform: uppercase;
 }
@@ -25,7 +25,7 @@
 .n-content-tags__intro {
 	padding: 16px 0;
 	margin: 0 10px;
-	border-bottom: 1px solid getColor('warm-3');
+	border-bottom: 1px solid getColor('black-20');
 	p {
 		margin: 0;
 	}
@@ -60,21 +60,21 @@
 }
 
 .n-content-tags__product-tour-link {
-	@include oTypographySansData('m', $load-progressively: true);
-	font-size: 16px;
+	@include oTypographySans($scale: 0, $progressive: true);
 	position: relative;
+
 	&:after {
-		@include oIconsGetIcon('arrow-right', getColor('link-1'), 20);
+		@include oIconsGetIcon('arrow-right', getColor('teal-40'), 20, $iconset-version: 1);
 		content: '';
 		position: absolute;
 		top: -1px;
 		right: -15px;
 	}
 	&:hover {
-		color: getColor('cold-2');
+		color: getColor('black-80');
 
 		&:after {
-			@include oIconsGetIcon('arrow-right', getColor('cold-2'), 20);
+			@include oIconsGetIcon('arrow-right', getColor('black-80'), 20, $iconset-version: 1);
 		}
 	}
 }
@@ -92,7 +92,7 @@
 	position: relative;
 	padding: 10px 110px 10px 0;
 	margin: 0 10px;
-	border-bottom: 1px solid getColor('warm-3');
+	border-bottom: 1px solid getColor('black-20');
 	min-height: 26px;
 
 	.n-myft-ui {
@@ -109,9 +109,9 @@
 }
 
 .n-content-tag--medium {
-	@include oTypographySansBoldSize('m', $with-progressive-size: true);
+	@include oTypographySize($scale: 0);
+	@include oTypographyProgressiveFontFallback($font: 'sans', $scale: 0);
 }
-
 
 .n-content-tag--with-follow {
 	vertical-align: middle;

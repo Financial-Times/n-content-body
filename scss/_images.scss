@@ -30,8 +30,9 @@
 
 .n-content-image__caption,
 .n-content-picture__caption {
-	@include oTypographySans('s', $load-progressively: true);
-	margin-top: 8px;
+	@include oTypographySans(0);
+	color: getColor('black-70');
+	margin-top: 0.5em;
 
 	@media print {
 		font-size: 9pt;

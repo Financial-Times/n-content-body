@@ -2,12 +2,16 @@
 .n-content-body {
 
 	// STANDARD TYPOGRAPHY AND ELEMENTS
-	font: 18px/1.7 Georgia, serif;
+	@include oTypographySerif($scale: 1, $line-height: 28px, $progressive: false);
 	margin-bottom: 40px;
 	-webkit-font-smoothing: antialiased;
 
 	> p {
-		margin: 0.3em 0 0.8em;
+		@include oTypographyBody();
+
+		a {
+			@include oTypographyLink;
+		}
 	}
 
 	> :first-child {
@@ -20,12 +24,9 @@
 
 	// BLOCKQUOTES
 	blockquote {
-		color: getColor('cold-1');
+		-webkit-font-smoothing: antialiased;
+		color: getColor('black-80');
 		position: relative;
-
-		p {
-			@include oTypographySerifDisplay('m', $load-progressively: true);
-		}
 	}
 
 	// DATA TABLES
@@ -51,7 +52,7 @@
 			}
 		}
 		tbody tr:nth-child(odd) {
-			background-color: getColor('pink-tint2');
+			background-color: getColor('black-10');
 		}
 		th,
 		td {
@@ -65,19 +66,20 @@
 		}
 	}
 
-	// SUBHEADS
+	.subhead--crosshead,
+	.n-content-heading-2 {
+		@include nContentHeading2;
+	}
+	.subhead--standard,
+	.n-content-heading-3 {
+		@include nContentHeading3;
+	}
 
-	.subhead {
-		@include oTypographySansBold('l', $load-progressively: true);
-		margin-top: 50px;
-		margin-bottom: 20px;
+	.n-content-heading-4 {
+		@include nContentHeading4;
 	}
-	.subhead--crosshead {
-		// trigger a new formatting context so it won't run into floats
-		overflow: hidden;
-		border-bottom: 1px solid black;
-	}
-	.subhead--standard {
-		@include oTypographySansBold('m', $load-progressively: true);
+
+	.n-content-heading-5 {
+		@include nContentHeading5;
 	}
 }

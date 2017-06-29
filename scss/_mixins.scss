@@ -1,5 +1,4 @@
 @mixin nContentBox() {
-
 	box-sizing: border-box;
 	position: relative;
 	clear: left;
@@ -8,26 +7,26 @@
 	width: 100%;
 
 	.o-expander__toggle {
-		@include oTypographySans('m', $load-progressively: true);
+		@include oTypographySans($scale: 2, $progressive: true);
 		margin-top: 12px;
 		i {
-			@include oIconsGetIcon('arrow-down', getColor('teal-1'), 12);
+			@include oIconsGetIcon('arrow-down', getColor('teal-40'), 12);
 			@include oIconsBaseStyles();
 			display: inline-block;
 			padding: 0 12px;
 			box-sizing: border-box;
 			&:hover {
-				@include oIconsGetIcon('arrow-down', getColor('cold-2'), 12);
+				@include oIconsGetIcon('arrow-down', getColor('black-80'), 12);
 			}
 		}
 		&:hover {
-			color: getColor('cold-2');
+			color: getColor('black-80');
 			text-decoration: none;
 		}
 		&[aria-expanded="true"] i {
-			@include oIconsGetIcon('arrow-up', getColor('teal-1'), 12);
+			@include oIconsGetIcon('arrow-up', getColor('teal-40'), 12);
 			&:hover {
-				@include oIconsGetIcon('arrow-up', getColor('cold-2'), 12);
+				@include oIconsGetIcon('arrow-up', getColor('black-80'), 12);
 			}
 		}
 	}
@@ -46,14 +45,14 @@
 }
 
 @mixin nContentBoxTitleText() {
-	@include oTypographySansBold('m', $load-progressively: true);
+	@include oTypographySansBold($scale: 2, $progressive: true);
 	display: inline-block;
 	padding: 10px;
 	padding-bottom: 0;
 	margin: 0;
 	background-color: inherit;
 	a {
-		color: getColor('cold-1');
+		color: getColor('black-70');
 		border-bottom: 0;
 		text-decoration: none;
 	}
