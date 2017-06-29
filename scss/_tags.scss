@@ -109,8 +109,8 @@
 }
 
 .n-content-tag--medium {
-	@include oTypographySize($scale: 2);
-	@include oTypographyProgressiveFontFallback($font: 'sans', $scale: 2);
+	@include oTypographySize($scale: 0);
+	@include oTypographyProgressiveFontFallback($font: 'sans', $scale: 0);
 }
 
 .n-content-tag--with-follow {
