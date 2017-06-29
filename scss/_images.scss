@@ -28,10 +28,11 @@
 	margin-right: 1em;
 }
 
-.n-content-image__caption,
-.n-content-picture__caption {
-	@include oTypographySans('s', $load-progressively: true);
-	margin-top: 8px;
+.n-content-image__caption {
+	@include oTypographySans($scale: 0, $progressive: true);
+	font-style: italic;
+	color: getColor('black-70');
+	margin-top: 0.5em;
 
 	@media print {
 		font-size: 9pt;

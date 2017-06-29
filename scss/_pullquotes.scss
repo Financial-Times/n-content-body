@@ -1,14 +1,14 @@
 .n-content-pullquote {
 	@include nContentBox;
 	@include nContentBoxInline;
-	border: 1px solid getColor('warm-3');
+	border: 1px solid getColor('black-20');
 
 	p {
 		margin: 5px 0 0;
 	}
 
 	&:before {
-		@include oIconsGetIcon('speech-left', getColor('cold-1'), 44);
+		@include oIconsGetIcon('speech-left', getColor('black-70'), 44);
 		content: "";
 		position: absolute;
 		top: -24px;
@@ -29,6 +29,6 @@
 }
 
 .n-content-pullquote__footer {
-	@include oTypographySansDataBold('m', $load-progressively: true);
+	@include oTypographySansBold($scale: 2, $progressive: true);
 	font-style: normal;
 }

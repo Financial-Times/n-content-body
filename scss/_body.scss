@@ -20,11 +20,11 @@
 
 	// BLOCKQUOTES
 	blockquote {
-		color: getColor('cold-1');
+		color: getColor('black-70');
 		position: relative;
 
 		p {
-			@include oTypographySerifDisplay('m', $load-progressively: true);
+			@include oTypographyDisplay($scale: 2, $progressive: true);
 		}
 	}
 
@@ -51,7 +51,7 @@
 			}
 		}
 		tbody tr:nth-child(odd) {
-			background-color: getColor('pink-tint2');
+			background-color: getColor('black-10');
 		}
 		th,
 		td {
@@ -68,7 +68,7 @@
 	// SUBHEADS
 
 	.subhead {
-		@include oTypographySansBold('l', $load-progressively: true);
+		@include oTypographySansBold($scale: 4, $progressive: true);
 		margin-top: 50px;
 		margin-bottom: 20px;
 	}
@@ -78,6 +78,6 @@
 		border-bottom: 1px solid black;
 	}
 	.subhead--standard {
-		@include oTypographySansBold('m', $load-progressively: true);
+		@include oTypographySansBold($scale: 2, $progressive: true);
 	}
 }
