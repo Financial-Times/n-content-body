@@ -17,9 +17,58 @@
 }
 
 .n-content-pullquote--with-image {
+<<<<<<< HEAD
 	padding-bottom: 0;
 	.n-content-pullquote__content {
 		padding-bottom: 16px;
+=======
+	@include oTypographyMargin($top: 0);
+	max-width: 100%;
+
+	@include oGridRespondTo($until: M) {
+		display: flex;
+		flex-direction: column-reverse;
+		margin: 0;
+
+		.n-image-wrapper .n-image {
+			max-width: none;
+			width: 100vw;
+			left: -50vw;
+			margin-left: 50%;
+		}
+
+		p {
+			@include oTypographyMargin($top: 5, $bottom: 4);
+		}
+	};
+
+	@include oGridRespondTo(M) {
+		display: block;
+
+		.n-image-wrapper {
+			@include oGridColspan(7);
+			padding: 0 !important;
+
+			.n-image {
+				@supports(object-fit: cover) {
+					object-fit: cover;
+					height: 100%;
+					position: relative;
+				}
+			}
+		}
+
+		.n-content-pullquote__content {
+			@include oGridColspan(5);
+			@include oTypographyMargin($top: 10);
+			float: right;
+
+			&:before {
+				top: -40px;
+				left: 10px;
+			}
+		}
+>>>>>>> 8d63887... update hooks and bower.json
 	}
 }
 
