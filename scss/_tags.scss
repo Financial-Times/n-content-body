@@ -60,6 +60,7 @@
 }
 
 .n-content-tags__product-tour-link {
+	@include oTypographyLink;
 	@include oTypographySans($scale: 0, $progressive: true);
 	position: relative;
 
@@ -68,7 +69,7 @@
 		content: '';
 		position: absolute;
 		top: -1px;
-		right: -15px;
+		right: -20px;
 	}
 	&:hover {
 		color: getColor('black-80');

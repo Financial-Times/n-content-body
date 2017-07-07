@@ -1,5 +1,4 @@
 @mixin nContentBox() {
-
 	box-sizing: border-box;
 	position: relative;
 	clear: left;
@@ -100,5 +99,15 @@
 		&:after {
 			@include oIconsGetIcon('arrow-right', oColorsGetColorFor(#{$use-case}-hover, border), 10);
 		}
+	}
+}
+
+@mixin nLayoutInset() {
+	margin-bottom: oTypographySpacingSize(7);
+	@include oGridRespondTo(S) {
+		@include oGridColspan(5, $width-only: true);
+		margin-right: oTypographySpacingSize(7);
+		float: left;
+		clear: both;
 	}
 }

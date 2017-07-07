@@ -24,12 +24,9 @@
 
 	// BLOCKQUOTES
 	blockquote {
-		color: getColor('black-70');
+		-webkit-font-smoothing: antialiased;
+		color: getColor('black-80');
 		position: relative;
-
-		p {
-			@include oTypographyDisplay($scale: 2, $progressive: true);
-		}
 	}
 
 	// DATA TABLES
@@ -81,6 +78,7 @@
 	.n-content-heading-4 {
 		@include nContentHeading4;
 	}
+
 
 	.n-content-heading-5 {
 		@include nContentHeading5;

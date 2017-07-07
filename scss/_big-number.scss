@@ -1,18 +1,17 @@
 .n-content-big-number {
-	@include nContentBox;
-	@include nContentBoxInline;
-	border: 1px solid getColor('black-20');
-	padding-left: 16px;
-	padding-right: 16px;
-	color: getColor('black-70');
+	color: getColor('black');
 
 	p {
 		margin: 5px 0 0;
 	}
+	// big numbers not inside a layout should float
+	.n-content-body > & {
+		@include nLayoutInset;
+	}
 }
 
 .n-content-big-number__title {
-	@include oTypographyDisplay($scale: 6, $progressive: true);
+	@include oTypographySansBold($scale: 8, $progressive: true);
 }
 
 .n-content-big-number__content {
