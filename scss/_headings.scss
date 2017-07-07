@@ -46,6 +46,6 @@
 	}
 
 	& + figure {
-		@include oTypographyMargin($top: $figureSize)
+		@include oTypographyMargin($top: $figureSize);
 	}
 }
