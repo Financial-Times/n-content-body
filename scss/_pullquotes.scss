@@ -12,54 +12,6 @@
 	}
 }
 
-.n-content-pullquote--with-image {
-	.n-content-body > & {
-		@include oTypographyMargin($top: 0);
-		margin-left: 0;
-		margin-right: 0;
-		max-width: 100%;
-		width: 100%;
-	}
-
-	@include oGridRespondTo($until: M) {
-		display: flex;
-		flex-direction: column;
-		margin: 0;
-
-		.n-content-pullquote__content:before {
-			position: relative;
-		}
-
-		.n-image-wrapper {
-			@include oTypographyMargin($bottom: 7);
-		}
-
-		.n-image-wrapper .n-image {
-			max-width: none;
-			width: 100vw;
-			left: -50vw;
-			margin-left: 50%;
-		}
-
-		p {
-			@include oTypographyMargin($top: 0, $bottom: 4);
-		}
-	};
-
-	@include oGridRespondTo(M) {
-		display: block;
-
-		.n-image-wrapper {
-			@include oGridColspan(5);
-			padding: 0 !important;
-		}
-
-		.n-content-pullquote__content {
-			@include oGridColspan(7);
-			float: right;
-		}
-	}
-}
 
 .n-content-pullquote__content {
 	@include oTypographySansBold(4, $line-height: 1);

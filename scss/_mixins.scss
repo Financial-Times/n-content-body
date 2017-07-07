@@ -108,5 +108,6 @@
 		@include oGridColspan(5, $width-only: true);
 		margin-right: oTypographySpacingSize(7);
 		float: left;
+		clear: both;
 	}
 }
