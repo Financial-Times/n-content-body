@@ -7,7 +7,7 @@
 	}
 
 	&:before {
-		@include oIconsGetIcon('speech-left', getColor('black-70'), 44);
+		@include oIconsGetIcon('speech-left', getColor('black-70'), 44, $iconset-version: 1);
 		content: '';
 		position: absolute;
 		top: -11px;
