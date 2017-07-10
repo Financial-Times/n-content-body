@@ -1,6 +1,5 @@
 .n-content-layout {
 
-	@include oTypographyMargin($bottom: 7);
 	clear: both;
 
 	&[data-layout-width="full-grid"] {
@@ -13,6 +12,10 @@
 			left: calc(75% + 10px);
 			width: 100vw;
 			margin-left: -50vw;
+
+			.n-content-layout__container {
+				@include oGridContainer;
+			}
 		}
 
 		@include oGridRespondTo(XL) {
@@ -23,22 +26,21 @@
 
 .n-content-layout__container {
 	display: flex;
-	margin: 0 (-1 * oTypographySpacingSize($units: 2));
-
-	[data-layout-width="full-grid"] & {
-		@include oGridContainer;
-	}
+	flex-wrap: wrap;
+	width: 100%;
 }
 
 .n-content-layout__slot {
-	flex: 1;
+	@include oTypographyMargin($bottom: 7);
 
-	& + .n-content-layout__slot {
-		margin-left: 16px;
+	@include oGridRespondTo(M) {
+		flex: 1;
+		& + .n-content-layout__slot {
+			margin-left: 16px;
+		}
+
+		&--wide {
+			flex: 2;
+		}
 	}
-}
-
-.n-content-layout__slot--wide {
-	flex: 2;
-	text-align: center;
 }
