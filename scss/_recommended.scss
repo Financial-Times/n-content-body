@@ -6,12 +6,15 @@
 	ul {
 		margin: 0;
 		padding: 0;
-	}
 
-	li {
-		list-style: none;
-		border-bottom: 1px solid oColorsGetPaletteColor(black-10);
-
+		li {
+			list-style: none;
+			border-bottom: 1px solid oColorsGetPaletteColor(black-10);
+			padding: 0;
+			&:before {
+				display: none;
+			}
+		}
 	}
 
 	a {
@@ -20,6 +23,7 @@
 		@include oTypographyPadding($top: 2, $bottom: 2);
 		display: inline-block;
 		border-bottom-width: 0;
+		width: 100%;
 
 		&:hover {
 			color: oColorsGetPaletteColor(black-60);

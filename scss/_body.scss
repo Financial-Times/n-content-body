@@ -18,12 +18,12 @@
 		margin-top: 0;
 	}
 
-	ul {
+	> ul {
 		@include oTypographyList();
 		@include oTypographyListUnordered();
 	}
 
-	ol {
+	> ol {
 		@include oTypographyList();
 		@include oTypographyListOrdered();
 	}
