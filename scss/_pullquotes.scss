@@ -29,7 +29,7 @@
 }
 
 .n-content-pullquote__footer {
-	@include oTypographySans(0, $progressive: true);
+	@include oTypographySans(-1, $progressive: true);
 	color: getColor('black-80');
 	text-transform: uppercase;
 }
