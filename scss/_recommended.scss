@@ -23,6 +23,7 @@
 		@include oTypographyPadding($top: 2, $bottom: 2);
 		display: inline-block;
 		border-bottom-width: 0;
+		width: 100%;
 
 		&:hover {
 			color: oColorsGetPaletteColor(black-60);
