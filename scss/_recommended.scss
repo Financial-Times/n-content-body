@@ -6,12 +6,15 @@
 	ul {
 		margin: 0;
 		padding: 0;
-	}
 
-	li {
-		list-style: none;
-		border-bottom: 1px solid oColorsGetPaletteColor(black-10);
-
+		li {
+			list-style: none;
+			border-bottom: 1px solid oColorsGetPaletteColor(black-10);
+			padding: 0;
+			&:before {
+				display: none;
+			}
+		}
 	}
 
 	a {
