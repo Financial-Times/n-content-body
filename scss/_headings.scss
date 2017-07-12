@@ -24,7 +24,7 @@
 
 @mixin nContentHeading4 {
 	@include oTypographySans($scale: 3, $progressive: true);
-	@include nContentMargins();
+	@include nContentMargins($headingBottom: 3);
 
 	font-weight: 400;
 }
@@ -45,7 +45,9 @@
 		@include oTypographyMargin($top: $pSize);
 	}
 
-	& + figure {
+	& + figure,
+	& + div,
+	& + aside {
 		@include oTypographyMargin($top: $figureSize);
 	}
 }

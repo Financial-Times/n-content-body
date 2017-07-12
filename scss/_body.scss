@@ -18,6 +18,16 @@
 		margin-top: 0;
 	}
 
+	ul {
+		@include oTypographyList();
+		@include oTypographyListUnordered();
+	}
+
+	ol {
+		@include oTypographyList();
+		@include oTypographyListOrdered();
+	}
+
 	strong {
 		font-weight: 600;
 	}
