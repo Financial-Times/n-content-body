@@ -6,7 +6,8 @@
 	margin-bottom: 40px;
 	-webkit-font-smoothing: antialiased;
 
-	> p {
+	> p,
+	.n-content-layout__slot p {
 		@include oTypographyBody();
 
 		a {
