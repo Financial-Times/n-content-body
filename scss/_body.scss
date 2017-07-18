@@ -18,12 +18,14 @@
 		margin-top: 0;
 	}
 
-	> ul {
+	> ul,
+	.n-content-layout__slot ul {
 		@include oTypographyList();
 		@include oTypographyListUnordered();
 	}
 
-	> ol {
+	> ol,
+	.n-content-layout__slot ol {
 		@include oTypographyList();
 		@include oTypographyListOrdered();
 	}
