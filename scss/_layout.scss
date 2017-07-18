@@ -1,5 +1,6 @@
 .n-content-layout {
-
+	// margin considers p margin bottom of 28px to equal 36px on both sides
+	@include oTypographyMargin($top: 2, $bottom: 9);
 	clear: both;
 
 	&[data-layout-width="full-grid"] {
@@ -28,11 +29,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
+	border: solid oColorsMix('black', 'paper', 20);
+	border-width: 1px 0; //top and bottom
 }
 
 .n-content-layout__slot {
-	@include oTypographyMargin($bottom: 7);
-
+	@include oTypographyMargin($top: 3, $bottom: 3);
 	@include oGridRespondTo(M) {
 		flex: 1;
 		& + .n-content-layout__slot {
@@ -42,5 +44,9 @@
 		&--wide {
 			flex: 2;
 		}
+	}
+
+	:last-child {
+		margin-bottom: 0;
 	}
 }

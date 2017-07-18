@@ -6,7 +6,8 @@
 	margin-bottom: 40px;
 	-webkit-font-smoothing: antialiased;
 
-	> p {
+	> p,
+	.n-content-layout__slot p {
 		@include oTypographyBody();
 
 		a {
@@ -18,12 +19,24 @@
 		margin-top: 0;
 	}
 
-	> ul {
+	// DIVIDER
+	> hr {
+		// margin considers p margin bottom of 28px and hr border size of 4px to equal 36px on both sides
+		@include oTypographyMargin($top: 2, $bottom: 8);
+		border: 4px solid oColorsGetPaletteColor('black');
+		width: 60px;
+		display: inline-block;
+	}
+
+	// LISTS
+	> ul,
+	.n-content-layout__slot ul {
 		@include oTypographyList();
 		@include oTypographyListUnordered();
 	}
 
-	> ol {
+	> ol,
+	.n-content-layout__slot ol {
 		@include oTypographyList();
 		@include oTypographyListOrdered();
 	}

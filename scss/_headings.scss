@@ -1,5 +1,5 @@
 @mixin nContentHeading2 {
-	@include oTypographySansBold($scale: 4, $progressive: true);
+	@include oTypographySansBold($scale: 4);
 	@include nContentMargins($headingTop: 8);
 	// trigger a new formatting context so it won't run into floats
 	overflow: hidden;
@@ -15,7 +15,7 @@
 }
 
 @mixin nContentHeading3 {
-	@include oTypographySans($scale: 4, $progressive: true);
+	@include oTypographySans($scale: 4);
 	@include nContentMargins();
 
 	color: oColorsGetPaletteColor('black');
@@ -23,14 +23,14 @@
 }
 
 @mixin nContentHeading4 {
-	@include oTypographySans($scale: 3, $progressive: true);
+	@include oTypographySans($scale: 3);
 	@include nContentMargins($headingBottom: 3);
 
 	font-weight: 400;
 }
 
 @mixin nContentHeading5 {
-	@include oTypographySans($scale: 0, $progressive: true);
+	@include oTypographySans($scale: 0);
 	@include nContentMargins();
 
 	font-weight: 400;
@@ -38,7 +38,7 @@
 	letter-spacing: 0.5px;
 }
 
-@mixin nContentMargins($headingTop: 0, $headingBottom: 1, $pSize: 1, $figureSize: 5) {
+@mixin nContentMargins($headingTop: 0, $headingBottom: 1, $pSize: 1, $elementSize: 5) {
 	@include oTypographyMargin($top: $headingTop, $bottom: $headingBottom);
 
 	& + p {
@@ -50,6 +50,6 @@
 	& + ul,
 	& + li,
 	& + aside {
-		@include oTypographyMargin($top: $figureSize);
+		@include oTypographyMargin($top: $elementSize);
 	}
 }
