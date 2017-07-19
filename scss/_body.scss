@@ -7,7 +7,7 @@
 	-webkit-font-smoothing: antialiased;
 
 	> p,
-	.n-content-layout__slot p {
+	.n-content-layout__slot > p {
 		@include oTypographyBody();
 
 		a {
@@ -30,13 +30,13 @@
 
 	// LISTS
 	> ul,
-	.n-content-layout__slot ul {
+	.n-content-layout__slot > ul {
 		@include oTypographyList();
 		@include oTypographyListUnordered();
 	}
 
 	> ol,
-	.n-content-layout__slot ol {
+	.n-content-layout__slot > ol {
 		@include oTypographyList();
 		@include oTypographyListOrdered();
 	}
