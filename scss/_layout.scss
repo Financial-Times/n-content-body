@@ -25,12 +25,16 @@
 	}
 }
 
+
+
 .n-content-layout__container {
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
 	border: solid oColorsMix('black', 'paper', 20);
 	border-width: 1px 0; //top and bottom
+	@include oTypographyPadding($bottom: 2);
+
 }
 
 .n-content-layout__slot {
@@ -49,5 +53,27 @@
 
 	:last-child {
 		margin-bottom: 0;
+	}
+
+
+}
+
+//Font overrides for slot content
+.n-content-body .n-content-layout__slot {
+		> p,
+	> ul > li {
+		@include oTypographySans($scale: 1, $line-height: 24px);
+	}
+}
+
+//fix spacing and borders for layoutsets
+.n-content-layout-set {
+	@include oTypographyMargin($top: 2, $bottom: 9);
+	.n-content-layout {
+		@include oTypographyMargin($top: 0, $bottom: 0);
+	}
+
+	.n-content-layout + .n-content-layout .n-content-layout__container {
+		border-top-width: 0;
 	}
 }
