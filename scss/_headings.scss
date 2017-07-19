@@ -4,14 +4,6 @@
 	// trigger a new formatting context so it won't run into floats
 	overflow: hidden;
 	color: oColorsGetPaletteColor('black');
-
-	&:before {
-		@include oTypographyMargin($bottom: 2);
-		content: '';
-		display: block;
-		width: 60px;
-		border-bottom: oTypographySpacingSize(1) solid oColorsGetPaletteColor('black');
-	}
 }
 
 @mixin nContentHeading3 {
