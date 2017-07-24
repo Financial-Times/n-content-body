@@ -38,7 +38,8 @@
 }
 
 .n-content-layout__slot {
-	min-width: 0;
+	min-width: 0; //fix for images going outside the container
+	max-width: 100%; //fix overflow on IE
 	@include oTypographyMargin($top: 3, $bottom: 3);
 	@include oGridRespondTo(M) {
 		flex: 1;
