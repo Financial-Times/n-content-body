@@ -1,16 +1,22 @@
-.n-content-blockquote {
-	@include nContentBox;
-	border-left: 1px solid getColor('black-20');
-	padding: 32px 16px 0;
-	p {
-		margin: 5px 0 0;
-	}
+@import 'o-quote/main';
+
+.n-content-blockquote,
+.n-content-body > blockquote,
+.n-content-layout__slot > blockquote {
+	@include oQuote();
+	@include oQuoteStandard();
+	@include oTypographyMargin($bottom: 7);
 
 	&:before {
-		@include oIconsGetIcon('speech-left', getColor('black-70'), 44, $iconset-version: 1);
 		content: '';
-		position: absolute;
-		top: -11px;
-		left: 6px;
+		display: block;
+		@include oQuoteStandardIcon();
 	}
+
+	cite {
+		@include oQuoteCite();
+		@include oQuoteStandardCite();
+		@include oQuoteStandardCiteAuthor();
+	}
+
 }
