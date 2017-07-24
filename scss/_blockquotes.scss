@@ -1,8 +1,6 @@
 @import 'o-quote/main';
 
-.n-content-blockquote,
-.n-content-body > blockquote,
-.n-content-layout__slot > blockquote {
+.n-content-blockquote {
 	@include oQuote();
 	@include oQuoteStandard();
 	@include oTypographyMargin($bottom: 7);
