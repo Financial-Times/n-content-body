@@ -2,10 +2,14 @@
 	// margin considers p margin bottom of 28px to equal 36px on both sides
 	@include oTypographyMargin($top: 2, $bottom: 9);
 	clear: both;
+	padding: 0 oTypographySpacingSize(3);
+
+	background-color: oColorsGetPaletteColor('black-5');
 
 	&[data-layout-width="full-grid"] {
 		@include oGridRespondTo($until: L) {
 			width: 100%;
+			margin-left: -1 * oGridGutter();
 		}
 
 		@include oGridRespondTo(L) {
@@ -31,8 +35,6 @@
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
-	border: solid oColorsMix('black', 'paper', 20);
-	border-width: 1px 0; //top and bottom
 	@include oTypographyPadding($bottom: 2);
 
 }
@@ -56,8 +58,6 @@
 	:last-child {
 		margin-bottom: 0;
 	}
-
-
 }
 
 //Font overrides for slot content
