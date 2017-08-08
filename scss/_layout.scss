@@ -37,6 +37,11 @@
 	width: 100%;
 	@include oTypographyPadding($bottom: 2);
 
+	> :not(.n-content-layout__slot) {
+		@include oTypographyMargin($top: 4, $bottom: 0);
+		flex: 0 0 100%;
+	}
+
 }
 
 .n-content-layout__slot {
@@ -45,7 +50,7 @@
 	flex-basis: 100%;
 	@include oTypographyMargin($top: 3, $bottom: 3);
 	@include oGridRespondTo(M) {
-		flex: 1;
+		flex: 1 1 1px;
 		& + .n-content-layout__slot {
 			margin-left: 16px;
 		}
