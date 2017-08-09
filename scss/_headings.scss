@@ -38,7 +38,7 @@
 	}
 
 	& + figure,
-	& + div,
+	& + div:not(.n-content-layout__slot),
 	& + ul,
 	& + li,
 	& + aside {
