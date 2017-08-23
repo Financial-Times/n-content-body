@@ -4,7 +4,7 @@
 	clear: both;
 	padding: 0 oTypographySpacingSize(3);
 
-	background-color: oColorsGetPaletteColor('black-5');
+	background-color: oColorsGetPaletteColor('wheat');
 
 	&[data-layout-width="full-grid"] {
 		@include oGridRespondTo($until: L) {
@@ -36,7 +36,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
-	@include oTypographyPadding($top: 1, $bottom: 2);
+	@include oTypographyPadding($top: 1);
 
 	> :not(.n-content-layout__slot) {
 		@include oTypographyMargin($top: 2, $bottom: 0);
@@ -44,7 +44,7 @@
 	}
 
 	> [class^=n-content-heading-] {
-		@include oTypographyMargin($top: 0, $bottom: 0);
+		@include oTypographyMargin($top: 0, $bottom: 1);
 		@include oTypographyPadding($bottom: 1);
 		border-bottom: 1px solid getColor(black-20);
 	}
@@ -76,7 +76,10 @@
 .n-content-body .n-content-layout__slot {
 	> p,
 	> ul > li {
-		@include oTypographySans($scale: 1);
+		@include oTypographySans($scale: 1, $line-height: 22px);
+	}
+	> p {
+		@include oTypographyMargin($bottom: 3);
 	}
 }
 
