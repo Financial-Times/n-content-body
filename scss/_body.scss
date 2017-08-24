@@ -24,6 +24,7 @@
 		// margin considers p margin bottom of 28px and hr border size of 4px to equal 36px on both sides
 		@include oTypographyMargin($top: 2, $bottom: 8);
 		border: 2px solid oColorsGetPaletteColor('black');
+		border-width: 2px 0;
 		width: 60px;
 		display: inline-block;
 	}

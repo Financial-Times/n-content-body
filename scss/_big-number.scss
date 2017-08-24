@@ -15,5 +15,5 @@
 }
 
 .n-content-big-number__content {
-	@include oTypographySans($scale: 2, $progressive: true);
+	@include oTypographySans($scale: 1, $line-height: 22px, $progressive: true);
 }
