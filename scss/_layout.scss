@@ -2,7 +2,6 @@
 	// margin considers p margin bottom of 28px to equal 36px on both sides
 	@include oTypographyMargin($top: 2, $bottom: 9);
 	clear: both;
-	padding: 0 oTypographySpacingSize(3);
 
 	background-color: oColorsGetPaletteColor('wheat');
 
@@ -45,8 +44,11 @@
 
 	> [class^=n-content-heading-] {
 		@include oTypographyMargin($top: 0, $bottom: 1);
-		@include oTypographyPadding($bottom: 1);
-		border-bottom: 1px solid getColor(black-20);
+		@include oTypographyPadding($bottom: 2);
+		border-bottom: 2px solid getColor(paper);
+		padding-left: oTypographySpacingSize(3);
+		padding-right: oTypographySpacingSize(3);
+		box-sizing: border-box;
 	}
 
 }
@@ -54,6 +56,8 @@
 .n-content-layout__slot {
 	min-width: 0; //fix for images going outside the container
 	max-width: 100%; //fix overflow on IE
+	padding-left: oTypographySpacingSize(3);
+	padding-right: oTypographySpacingSize(3);
 	flex-basis: 100%;
 	@include oTypographyMargin($top: 1, $bottom: 3);
 	@include oGridRespondTo(M) {
