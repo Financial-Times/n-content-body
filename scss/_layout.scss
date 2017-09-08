@@ -3,7 +3,7 @@
 	@include oTypographyMargin($top: 2, $bottom: 9);
 	clear: both;
 
-	background-color: oColorsGetPaletteColor('wheat');
+	background-color: rgba(oColorsGetPaletteColor('wheat'), 0.5);
 
 	&[data-layout-width="full-grid"] {
 		@include oGridRespondTo($until: L) {
