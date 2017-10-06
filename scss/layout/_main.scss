@@ -1,35 +1,11 @@
+@import './widths';
+@import './aside';
+@import './card';
+
 .n-content-layout {
 	// margin considers p margin bottom of 28px to equal 36px on both sides
 	@include oTypographyMargin($top: 2, $bottom: 9);
-	clear: both;
-
-	background-color: rgba(oColorsGetPaletteColor('wheat'), 0.5);
-
-	&[data-layout-width="full-grid"] {
-		@include oGridRespondTo($until: L) {
-			width: 100%;
-			margin-left: -1 * oGridGutter();
-		}
-
-		@include oGridRespondTo(L) {
-			position: relative;
-			left: calc(75% + 10px);
-			width: 100vw;
-			margin-left: -50vw;
-
-			.n-content-layout__container {
-				@include oGridContainer;
-			}
-		}
-
-		@include oGridRespondTo(XL) {
-			left: calc(75% - 15px);
-		}
-	}
-
 }
-
-
 
 .n-content-layout__container {
 	display: flex;
@@ -46,18 +22,13 @@
 		@include oTypographyMargin($top: 0, $bottom: 1);
 		@include oTypographyPadding($bottom: 2);
 		border-bottom: 2px solid getColor(paper);
-		padding-left: oTypographySpacingSize(3);
-		padding-right: oTypographySpacingSize(3);
 		box-sizing: border-box;
 	}
-
 }
 
 .n-content-layout__slot {
 	min-width: 0; //fix for images going outside the container
 	max-width: 100%; //fix overflow on IE
-	padding-left: oTypographySpacingSize(3);
-	padding-right: oTypographySpacingSize(3);
 	flex-basis: 100%;
 	@include oTypographyMargin($top: 1, $bottom: 3);
 	@include oGridRespondTo(M) {
@@ -66,7 +37,7 @@
 			margin-left: 16px;
 		}
 
-		&--wide {
+		&[data-slot-width="wide"] {
 			flex: 2;
 		}
 	}

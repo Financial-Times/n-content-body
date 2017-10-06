@@ -1,0 +1,17 @@
+.n-content-layout-set,
+.n-content-layout {
+
+	&[data-layout-name="card"] {
+		background-color: rgba(oColorsGetPaletteColor('wheat'), 0.5);
+
+		.n-content-layout__slot {
+			padding-left: oTypographySpacingSize(3);
+			padding-right: oTypographySpacingSize(3);
+		}
+
+		[class^=n-content-heading-] {
+			padding-left: oTypographySpacingSize(3);
+			padding-right: oTypographySpacingSize(3);
+		}
+	}
+}
