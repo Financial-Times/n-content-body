@@ -1,0 +1,32 @@
+.n-content-layout-set,
+.n-content-layout {
+	clear: both;
+
+
+	&[data-layout-width="full-grid"] {
+		@include oGridRespondTo($until: L) {
+			width: 100%;
+			margin-left: -1 * oGridGutter();
+		}
+
+		@include oGridRespondTo(L) {
+			position: relative;
+			left: calc(75% + 10px);
+			width: 100vw;
+			margin-left: -50vw;
+
+			.n-content-layout__container {
+				@include oGridContainer;
+			}
+		}
+
+		@include oGridRespondTo(XL) {
+			left: calc(75% - 15px);
+		}
+	}
+
+	&[data-layout-width="inset-left"] {
+		@include nLayoutInset();
+	}
+
+}
