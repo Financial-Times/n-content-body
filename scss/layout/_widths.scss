@@ -6,7 +6,6 @@
 	&[data-layout-width="full-grid"] {
 		@include oGridRespondTo($until: L) {
 			width: 100%;
-			margin-left: -1 * oGridGutter();
 		}
 
 		@include oGridRespondTo(L) {
