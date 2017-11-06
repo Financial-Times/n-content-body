@@ -78,7 +78,7 @@
 }
 
 @mixin nListsItemLink($use-case: n-lists) {
-	@include nLinksTopic();
+	@include oTypographyTopic;
 	display: block;
 	padding: 2px 15px 2px $spacing-unit/2;
 	position: relative;
