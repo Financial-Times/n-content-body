@@ -1,0 +1,48 @@
+.n-content-layout-set {
+	&[data-layout-name="timeline"] {
+
+		.n-content-heading-4 {
+			@include oTypographySansBold($scale: 10);
+			@include oTypographyMargin($top: 1, $bottom: 1);
+		}
+
+		.n-content-layout__slot {
+			flex-basis: 100%;
+			padding-left: 30px;
+			margin-left: 0px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			position: relative;
+			&:before {
+				content: '';
+				width: 2px;
+				background: #000;
+				height: 100%;
+				display: block;
+				position: absolute;
+				left: 5px;
+				top: 0px;
+			}
+			.n-content-heading-5 {
+				position: relative;
+				margin-top: 12px;
+				strong {
+					&:after {
+						content: '';
+						position: absolute;
+						top: 6px;
+						left: -28px;
+						height: 8px;
+						width: 8px;
+						border-radius: 50%;
+						background-color: #000;
+					}
+				}
+			}
+			p {
+				margin-bottom: 0px;
+			}
+		}
+	}
+
+}
