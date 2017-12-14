@@ -1,9 +1,9 @@
-.n-content-layout-set {
-	&[data-layout-name="timeline"] {
+.n-content-layout-set,
+.n-content-layout {
 
-		.n-content-heading-4 {
-			@include oTypographySansBold($scale: 10);
-			@include oTypographyMargin($top: 1, $bottom: 1);
+	&[data-layout-name="timeline"] {
+		.n-content-layout__container {
+			margin-bottom: 10px;
 		}
 
 		.n-content-layout__slot {
@@ -27,7 +27,7 @@
 				position: relative;
 				margin-top: 12px;
 				strong {
-					&:after {
+					&:before {
 						content: '';
 						position: absolute;
 						top: 6px;

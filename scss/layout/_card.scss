@@ -3,15 +3,6 @@
 
 	&[data-layout-name="card"] {
 		background-color: rgba(oColorsGetPaletteColor('wheat'), 0.5);
-
-		.n-content-layout__slot {
-			padding-left: oTypographySpacingSize(3);
-			padding-right: oTypographySpacingSize(3);
-		}
-
-		.n-content-layout__container > [class^=n-content-heading-] {
-			padding-left: oTypographySpacingSize(3);
-			padding-right: oTypographySpacingSize(3);
-		}
+		padding: 5px 20px;
 	}
 }
