@@ -2,6 +2,9 @@
 .n-content-layout {
 
 	&[data-layout-name="timeline"] {
+		> :last-child {
+			padding-bottom: 20px;
+		}
 		.n-content-big-number__title {
 			margin-bottom: 12px;
 		}
@@ -37,6 +40,9 @@
 						background-color: #000;
 					}
 				}
+			}
+			p {
+				margin-bottom: 0px;
 			}
 		}
 	}
