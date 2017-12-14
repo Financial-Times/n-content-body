@@ -2,12 +2,9 @@
 .n-content-layout {
 
 	&[data-layout-name="timeline"] {
-		.n-content-layout__container {
-			:last-child {
-				margin-bottom: oTypographySpacingSize(3);
-			}
+		.n-content-big-number__title {
+			margin-bottom: 12px;
 		}
-
 		.n-content-layout__slot {
 			flex-basis: 100%;
 			padding-left: 30px;
@@ -40,9 +37,6 @@
 						background-color: #000;
 					}
 				}
-			}
-			p {
-				margin-bottom: 0px;
 			}
 		}
 	}
