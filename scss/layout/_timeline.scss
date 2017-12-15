@@ -1,0 +1,89 @@
+.n-content-layout-set,
+.n-content-layout {
+
+	&[data-layout-name="timeline"] {
+		.n-content-heading-3 {
+			border-bottom: 0px;
+			padding-bottom: 0px;
+		}
+		.n-content-heading-4 {
+			padding-top: 10px;
+			border-bottom: 0px;
+			@include oTypographySansBold($scale: 8, $progressive: true);
+		}
+		.n-content-layout__slot {
+			flex-basis: 100%;
+			padding-left: 30px;
+			margin-left: 0px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+			position: relative;
+			&:before {
+				content: '';
+				width: 2px;
+				background: #000;
+				height: 100%;
+				display: block;
+				position: absolute;
+				left: 5px;
+				top: 0px;
+			}
+			.n-content-heading-5 {
+				position: relative;
+				margin-top: 12px;
+				strong {
+					&:before {
+						content: '';
+						position: absolute;
+						top: 6px;
+						left: -28px;
+						height: 8px;
+						width: 8px;
+						border-radius: 50%;
+						background-color: #000;
+					}
+				}
+			}
+			p {
+				margin-bottom: 0px;
+			}
+		}
+	}
+
+}
+
+.n-content-layout-set {
+	&[data-layout-name="card"] {
+		> :last-child {
+			padding-bottom: 20px;
+		}
+		.n-content-layout {
+			&[data-layout-name="timeline"] {
+				padding-left: oTypographySpacingSize(3);
+				padding-right: oTypographySpacingSize(3);
+				.n-content-heading-3 {
+					padding-top: 4px;
+				}
+			}
+		}
+
+	}
+}
+
+.n-content-layout-set {
+	&[data-layout-name="aside"] {
+		> :last-child {
+			padding-bottom: 20px;
+		}
+		.n-content-layout {
+			&[data-layout-name="timeline"] {
+				padding-left: oTypographySpacingSize(3);
+				padding-right: oTypographySpacingSize(3);
+				.n-content-heading-3 {
+					padding-top: 4px;
+				}
+			}
+		}
+
+	}
+}
