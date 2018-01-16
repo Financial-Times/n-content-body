@@ -2,7 +2,7 @@
 .n-content-layout {
 
 	&[data-layout-name="aside"] {
-		background-color: rgba(oColorsGetPaletteColor('wheat'), 0.5);
+		background-color: oColorsGetTint('wheat', 100);
 
 		.n-content-layout__slot {
 			padding-left: oTypographySpacingSize(3);
