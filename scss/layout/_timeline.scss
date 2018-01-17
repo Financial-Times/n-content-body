@@ -21,7 +21,7 @@
 			&:before {
 				content: '';
 				width: 2px;
-				background: oGolorsGetPaletteColor('black');
+				background: getColor('black');
 				height: 100%;
 				display: block;
 				position: absolute;
@@ -40,7 +40,7 @@
 						height: 8px;
 						width: 8px;
 						border-radius: 50%;
-						background-color: oGolorsGetPaletteColor('black');
+						background-color: getColor('black');
 					}
 				}
 			}
