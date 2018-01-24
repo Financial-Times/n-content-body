@@ -70,3 +70,9 @@
 		border-top-width: 0;
 	}
 }
+
+//Hide horizontal rules in layoutsets
+//These horizontal rules are the by-product of a layout hack used by Methode
+.n-content-layout-set > .n-content-layout hr {
+	display: none;
+}
