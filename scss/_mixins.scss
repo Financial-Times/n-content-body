@@ -111,3 +111,13 @@
 		clear: both;
 	}
 }
+
+@mixin nLayoutInsetRight() {
+	margin-bottom: oTypographySpacingSize(7);
+	@include oGridRespondTo(S) {
+		@include oGridColspan(5, $width-only: true);
+		margin-left: oTypographySpacingSize(7);
+		float: right;
+		clear: both;
+	}
+}

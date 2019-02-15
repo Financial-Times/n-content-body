@@ -28,4 +28,7 @@
 		@include nLayoutInset();
 	}
 
+	&[data-layout-width="inset-right"] {
+		@include nLayoutInsetRight();
+	}
 }
