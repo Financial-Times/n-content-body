@@ -2,6 +2,19 @@
 .n-content-layout {
 	clear: both;
 
+	&[data-layout-width="full-bleed"] {
+		width: 100vw;
+		margin-left: -50vw;
+
+		left: calc(50% + 120px);
+		z-index: 1;
+
+		.n-content-layout__container {
+			padding-left: 40px;
+			padding-right: 40px;
+			width: auto;
+		}
+	}
 
 	&[data-layout-width="full-grid"] {
 		@include oGridRespondTo($until: L) {
