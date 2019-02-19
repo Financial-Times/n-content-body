@@ -53,47 +53,11 @@
 		position: relative;
 	}
 
-	// DATA TABLES
-	.data-table {
-		margin-top: 20px;
-		border-spacing: 0;
-		width: 100%;
-
-		caption,
-		thead {
-			text-align: left;
-		}
-		caption {
-			font-weight: 500;
-			text-transform: uppercase;
-		}
-		thead,
-		tbody {
-			&:before {
-				content: "";
-				display: block;
-				height: 10px;
-			}
-		}
-		tbody tr:nth-child(odd) {
-			background-color: getColor('black-10');
-		}
-		th,
-		td {
-			vertical-align: top;
-		}
-		th {
-			font-weight: 500;
-		}
-		td {
-			padding: 5px 10px;
-		}
-	}
-
 	.subhead--crosshead,
 	.n-content-heading-2 {
 		@include nContentHeading2;
 	}
+
 	.subhead--standard,
 	.n-content-heading-3 {
 		@include nContentHeading3;
@@ -102,7 +66,6 @@
 	.n-content-heading-4 {
 		@include nContentHeading4;
 	}
-
 
 	.n-content-heading-5 {
 		@include nContentHeading5;
