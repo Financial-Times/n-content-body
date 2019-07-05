@@ -71,3 +71,40 @@
 		@include nContentHeading5;
 	}
 }
+
+// TABLES
+.n-content-layout {
+	.n-content-body__caption {
+		text-align: left;
+		padding: 0;
+	}
+
+	&[data-layout-width="full-bleed"] .n-content-body__caption,
+	&[data-layout-width="full-grid"] .n-content-body__caption {
+		padding: 0 10px;
+	}
+}
+
+// Shift caption headings down one, as h1 is the highest caption level,
+// but we want h2 to be the highest heading style possible
+.n-content-body__caption--h1 {
+	@include nContentHeading2;
+}
+.n-content-body__caption--auto, // Default style
+.n-content-body__caption--h2 {
+	@include nContentHeading3;
+}
+.n-content-body__caption--h3 {
+	@include nContentHeading4;
+}
+.n-content-body__caption--h4 {
+	@include nContentHeading5;
+}
+.n-content-body__caption--h5 {
+	@include nContentHeading6;
+}
+
+// Hide caption
+.n-content-body__caption--hidden {
+	@include oNormaliseVisuallyHidden;
+}
