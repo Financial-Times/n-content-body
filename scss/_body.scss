@@ -97,11 +97,9 @@
 .n-content-body__caption--h3 {
 	@include nContentHeading4;
 }
-.n-content-body__caption--h4 {
-	@include nContentHeading5;
-}
+.n-content-body__caption--h4,
 .n-content-body__caption--h5 {
-	@include nContentHeading6;
+	@include nContentHeading5;
 }
 
 // Hide caption
