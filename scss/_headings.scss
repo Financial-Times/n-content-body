@@ -20,6 +20,11 @@
 	@include nContentMargins();
 }
 
+@mixin nContentHeading6 {
+	@include oTypographyHeadingLevel6();
+	@include nContentMargins();
+}
+
 @mixin nContentMargins($headingTop: 0, $headingBottom: 1, $pSize: 1, $elementSize: 5) {
 	@include oTypographyMargin($top: $headingTop, $bottom: $headingBottom);
 
