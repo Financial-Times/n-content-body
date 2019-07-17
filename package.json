@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "devDependencies": {
     "@financial-times/n-gage": "^3.6.0",
-    "bower": "^1.7.9",
+    "bower": "^1.8.8",
     "lintspaces-cli": "^0.1.1",
     "snyk": "^1.167.2"
   },
