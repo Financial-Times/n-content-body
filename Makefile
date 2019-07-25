@@ -4,4 +4,7 @@ node_modules/@financial-times/n-gage/index.mk:
 
 -include node_modules/@financial-times/n-gage/index.mk
 
-test: verify
+test: integration-test verify
+
+integration-test:
+	npx jest test/integration
