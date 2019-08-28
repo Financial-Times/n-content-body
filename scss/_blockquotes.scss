@@ -5,12 +5,6 @@
 	@include oQuoteStandard();
 	@include oTypographyMargin($bottom: 7);
 
-	&:before {
-		content: '';
-		display: block;
-		@include oQuoteStandardIcon();
-	}
-
 	cite {
 		@include oQuoteCite();
 		@include oQuoteStandardCite();
