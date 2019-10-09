@@ -16,6 +16,6 @@
     "prepare": "npx snyk protect || npx snyk protect -d || true"
   },
   "engines": {
-    "node": "8.16.0"
+    "node": "8.16.2"
   }
 }
