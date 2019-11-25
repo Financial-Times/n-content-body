@@ -1,7 +1,8 @@
 .n-content-pullquote {
 	.n-content-body > & {
 		@include nLayoutInset;
-		@include oTypographyPadding($top: 0, $bottom: 0);
+		padding-top: 0;
+		padding-bottom: 0;
 		margin-top: 0;
 		margin-left: 0;
 	}
@@ -14,8 +15,8 @@
 
 
 .n-content-pullquote__content {
-	@include oTypographySansBold(3);
-	@include oTypographyMargin($bottom: 4);
+	@include oTypographySans($weight: 'bold');
+	margin-bottom: oSpacingByName('s4');
 
 	padding-right: 16px;
 

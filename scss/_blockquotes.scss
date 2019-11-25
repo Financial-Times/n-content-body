@@ -3,7 +3,7 @@
 .n-content-blockquote {
 	@include oQuote();
 	@include oQuoteStandard();
-	@include oTypographyMargin($bottom: 7);
+	margin-bottom: oSpacingByName('s8');
 
 	cite {
 		@include oQuoteCite();

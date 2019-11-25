@@ -45,7 +45,7 @@
 }
 
 @mixin nContentBoxTitleText() {
-	@include oTypographySansBold($scale: 2, $progressive: true);
+	@include oTypographySans($weight: 'bold', $scale: 2, $progressive: true);
 	display: inline-block;
 	padding: 10px;
 	padding-bottom: 0;
@@ -78,7 +78,7 @@
 }
 
 @mixin nListsItemLink($use-case: n-lists) {
-	@include oTypographyTopic;
+	@include oEditorialTypographyTag($type: 'topic');
 	display: block;
 	padding: 2px 15px 2px $spacing-unit/2;
 	position: relative;
@@ -103,20 +103,20 @@
 }
 
 @mixin nLayoutInset() {
-	margin-bottom: oTypographySpacingSize(7);
+	margin-bottom: oSpacingByName('s8');
 	@include oGridRespondTo(S) {
 		@include oGridColspan(5, $width-only: true);
-		margin-right: oTypographySpacingSize(7);
+		margin-right: oSpacingByName('s8');
 		float: left;
 		clear: both;
 	}
 }
 
 @mixin nLayoutInsetRight() {
-	margin-bottom: oTypographySpacingSize(7);
+	margin-bottom: oSpacingByName('s8');
 	@include oGridRespondTo(S) {
 		@include oGridColspan(5, $width-only: true);
-		margin-left: oTypographySpacingSize(7);
+		margin-left: oSpacingByName('s8');
 		float: right;
 		clear: both;
 	}

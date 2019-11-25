@@ -9,7 +9,7 @@
 		.n-content-heading-4 {
 			padding-top: 10px;
 			border-bottom: 0;
-			@include oTypographySansBold($scale: 8, $progressive: true);
+			@include oTypographySans($weight: 'bold', $scale: 8, $progressive: true);
 		}
 		.n-content-layout__slot {
 			flex-basis: 100%;
@@ -59,8 +59,8 @@
 		}
 		.n-content-layout {
 			&[data-layout-name="timeline"] {
-				padding-left: oTypographySpacingSize(3);
-				padding-right: oTypographySpacingSize(3);
+				padding-left: oSpacingByName('s3');
+				padding-right: oSpacingByName('s3');
 				.n-content-heading-3 {
 					padding-top: 4px;
 				}
@@ -77,8 +77,8 @@
 		}
 		.n-content-layout {
 			&[data-layout-name="timeline"] {
-				padding-left: oTypographySpacingSize(3);
-				padding-right: oTypographySpacingSize(3);
+				padding-left: oSpacingByName('s3');
+				padding-right: oSpacingByName('s3');
 				.n-content-heading-3 {
 					padding-top: 4px;
 				}

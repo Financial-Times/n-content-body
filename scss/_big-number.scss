@@ -11,7 +11,7 @@
 }
 
 .n-content-big-number__title {
-	@include oTypographySansBold($scale: 8, $progressive: true);
+	@include oTypographySans($weight: 'bold', $scale: 8, $progressive: true);
 	display: block;
 	margin: 5px 0;
 }

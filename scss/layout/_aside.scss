@@ -5,13 +5,13 @@
 		background-color: oColorsGetTint('wheat', 100);
 
 		.n-content-layout__slot {
-			padding-left: oTypographySpacingSize(3);
-			padding-right: oTypographySpacingSize(3);
+			padding-left: oSpacingByName('s3');
+			padding-right: oSpacingByName('s3');
 		}
 
 		.n-content-layout__container > [class^=n-content-heading-] {
-			padding-left: oTypographySpacingSize(3);
-			padding-right: oTypographySpacingSize(3);
+			padding-left: oSpacingByName('s3');
+			padding-right: oSpacingByName('s3');
 		}
 	}
 }

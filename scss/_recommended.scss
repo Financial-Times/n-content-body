@@ -20,7 +20,8 @@
 	a {
 		@include oTypographySans($scale: 1, $progressive: true);
 		@include oColorsFor(link-title, text);
-		@include oTypographyPadding($top: 1, $bottom: 2);
+		padding-top: oSpacingByName('s1');
+		padding-bottom: oSpacingByName('s2');
 		display: inline-block;
 		border-bottom-width: 0;
 		width: 100%;
@@ -31,6 +32,6 @@
 	}
 }
 .n-content-recommended__title {
-	@include oTypographySansBold($scale: 1, $progressive: true);
+	@include oTypographySans($weight: 'bold', $scale: 1, $progressive: true);
 	margin-top: 4px;
 }

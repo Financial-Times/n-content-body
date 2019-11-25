@@ -12,7 +12,7 @@
 	display: flex;
 	flex-wrap: wrap;
 	width: 100%;
-	@include oTypographyPadding($top: 1);
+	padding-top: oSpacingByName('s1');
 
 	> :not(.n-content-layout__slot) {
 		@include oTypographyMargin($top: 2, $bottom: 0);
@@ -21,7 +21,7 @@
 
 	> [class^=n-content-heading-] {
 		@include oTypographyMargin($top: 0, $bottom: 1);
-		@include oTypographyPadding($bottom: 2);
+		padding-bottom: oSpacingByName('s2');
 		border-bottom: 2px solid getColor(paper);
 		box-sizing: border-box;
 	}
