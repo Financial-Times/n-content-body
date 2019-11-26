@@ -10,13 +10,13 @@
 		@include oTypographySans($scale: 2);
 		margin-top: 12px;
 		i {
-			@include oIconsGetIcon('arrow-down', oColorsByName('teal-40'), 12);
-			@include oIconsBaseStyles();
+			@include oIconsContent('arrow-down', oColorsByName('teal-40'), 12);
+			@include oIconsContentBaseStyles();
 			display: inline-block;
 			padding: 0 12px;
 			box-sizing: border-box;
 			&:hover {
-				@include oIconsGetIcon('arrow-down', oColorsByName('black-80'), 12);
+				@include oIconsContent('arrow-down', oColorsByName('black-80'), 12);
 			}
 		}
 		&:hover {
@@ -24,9 +24,9 @@
 			text-decoration: none;
 		}
 		&[aria-expanded="true"] i {
-			@include oIconsGetIcon('arrow-up', oColorsByName('teal-40'), 12);
+			@include oIconsContent('arrow-up', oColorsByName('teal-40'), 12);
 			&:hover {
-				@include oIconsGetIcon('arrow-up', oColorsByName('black-80'), 12);
+				@include oIconsContent('arrow-up', oColorsByName('black-80'), 12);
 			}
 		}
 	}
@@ -85,7 +85,7 @@
 	text-decoration: none;
 	border-bottom-width: 0;
 	&:after {
-		@include oIconsGetIcon('arrow-right', oColorsByUsecase($use-case, 'border'), 10);
+		@include oIconsContent('arrow-right', oColorsByUsecase($use-case, 'border'), 10);
 		content: '';
 		opacity: 0.25;
 		position: absolute;
@@ -97,7 +97,7 @@
 		background: rgba(oColorsByUsecase(#{$use-case}-hover, 'background'), 0.1);
 		border-bottom-width: 0;
 		&:after {
-			@include oIconsGetIcon('arrow-right', oColorsByUsecase(#{$use-case}-hover, 'border'), 10);
+			@include oIconsContent('arrow-right', oColorsByUsecase(#{$use-case}-hover, 'border'), 10);
 		}
 	}
 }

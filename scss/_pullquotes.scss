@@ -21,7 +21,7 @@
 	padding-right: 16px;
 
 	&:before {
-		@include oIconsGetIcon('speech-left', oColorsByName('black-80'), 44, $iconset-version: 1);
+		@include oIconsContent('speech-left', oColorsByName('black-80'), 44, $iconset-version: 1);
 		content: "";
 		position: relative;
 		top: -8px;
