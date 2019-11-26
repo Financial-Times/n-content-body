@@ -10,6 +10,7 @@ async function compile({ file, includePaths }) {
 			includePaths
 		}, function(err, result) {
 			if (err) {
+				console.error(err.formatted)
 				return reject(err);
 			}
 			resolve(result);
