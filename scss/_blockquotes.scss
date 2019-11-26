@@ -1,14 +1,13 @@
 @import 'o-quote/main';
 
 .n-content-blockquote {
-	@include oQuote();
+	@include oQuoteBase();
 	@include oQuoteStandard();
-	@include oTypographyMargin($bottom: 7);
+	margin-bottom: oSpacingByName('s8');
 
 	cite {
-		@include oQuoteCite();
+		@include oQuoteBaseCite();
 		@include oQuoteStandardCite();
 		@include oQuoteStandardCiteAuthor();
 	}
-
 }

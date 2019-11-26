@@ -1,7 +1,7 @@
 .n-content-related-box,
 .n-content-info-box {
 	@include nContentBox;
-	border: 1px solid getColor('black-20');
+	border: 1px solid oColorsByName('black-20');
 }
 
 .n-content-related-box {
@@ -23,7 +23,7 @@
 
 .n-content-related-box__title-text {
 	@include nContentBoxTitleText;
-	background-color: getColor('paper');
+	background-color: oColorsByName('paper');
 }
 
 .n-content-related-box__image-link {
@@ -34,11 +34,11 @@
 
 .n-content-related-box__headline,
 .n-content-info-box__headline {
-	@include oTypographySansBold($scale: 4, $progressive: true);
+	@include oTypographySans($weight: 'bold', $scale: 4);
 	font-size: 26px;
 	line-height: 27px;
 	margin: 8px 16px;
-	color: getColor('black-90');
+	color: oColorsByName('black-90');
 	word-wrap: break-word;
 
 	p {
