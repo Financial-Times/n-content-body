@@ -31,7 +31,7 @@
 .n-content-image__caption,
 .n-content-picture__caption {
 	@include oTypographySans(-1);
-	@include oTypographyMargin($top: 1);
+	margin-top: oSpacingByName('s1');
 	color: getColor('black-70');
 
 	@media print {

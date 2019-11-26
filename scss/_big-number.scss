@@ -11,12 +11,12 @@
 }
 
 .n-content-big-number__title {
-	@include oTypographySans($weight: 'bold', $scale: 8, $progressive: true);
+	@include oTypographySans($weight: 'bold', $scale: 8);
 	display: block;
 	margin: 5px 0;
 }
 
 .n-content-big-number__content {
-	@include oTypographySans($scale: 1, $line-height: 22px, $progressive: true);
+	@include oTypographySans($scale: 1, $line-height: 22px);
 	display: block;
 }

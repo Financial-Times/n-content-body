@@ -9,7 +9,7 @@
 
 	p {
 		margin-top: -12px;
-		@include oTypographyMargin($bottom: 4);
+		margin-bottom: oSpacingByName('s4');
 	}
 }
 
@@ -30,7 +30,7 @@
 }
 
 .n-content-pullquote__footer {
-	@include oTypographySans(-1, $progressive: true);
+	@include oTypographySans(-1);
 	color: getColor('black-80');
 }
 

@@ -9,7 +9,7 @@
 		.n-content-heading-4 {
 			padding-top: 10px;
 			border-bottom: 0;
-			@include oTypographySans($weight: 'bold', $scale: 8, $progressive: true);
+			@include oTypographySans($weight: 'bold', $scale: 8);
 		}
 		.n-content-layout__slot {
 			flex-basis: 100%;

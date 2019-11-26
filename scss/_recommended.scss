@@ -18,7 +18,7 @@
 	}
 
 	a {
-		@include oTypographySans($scale: 1, $progressive: true);
+		@include oTypographySans($scale: 1);
 		@include oColorsFor(link-title, text);
 		padding-top: oSpacingByName('s1');
 		padding-bottom: oSpacingByName('s2');
@@ -32,6 +32,6 @@
 	}
 }
 .n-content-recommended__title {
-	@include oTypographySans($weight: 'bold', $scale: 1, $progressive: true);
+	@include oTypographySans($weight: 'bold', $scale: 1);
 	margin-top: 4px;
 }

@@ -2,7 +2,7 @@
 .n-content-body {
 
 	// STANDARD TYPOGRAPHY AND ELEMENTS
-	@include oTypographySerif($scale: 1, $line-height: 28px, $progressive: false);
+	@include oTypographySerif($scale: 1, $line-height: 28px, $include-progressive: false);
 	margin-bottom: 40px;
 	-webkit-font-smoothing: antialiased;
 
@@ -21,8 +21,8 @@
 
 	// DIVIDER
 	> hr {
-		// margin considers p margin bottom of 28px and hr border size of 4px to equal 36px on both sides
-		@include oTypographyMargin($top: 2, $bottom: 8);
+		margin-bottom: oSpacingByName('s8');
+		margin-top: oSpacingByName('s2');
 		border: 2px solid oColorsGetPaletteColor('black');
 		border-width: 2px 0;
 		width: 60px;
@@ -32,7 +32,7 @@
 	// LISTS
 	> ul,
 	.n-content-layout__slot > ul {
-		@include oTypographyList($type: 'unordered');;
+		@include oTypographyList($type: 'unordered');
 	}
 
 	> ol,

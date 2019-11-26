@@ -15,7 +15,8 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "n-ui-foundations": "v4.0.0-beta.1",
-    "o-quote": "^4.0.0"
+    "n-ui-foundations": "4.0.0-beta.1",
+    "o-quote": "^4.0.0",
+    "o-editorial-typography": "^1.0.0"
   }
 }
