@@ -32,7 +32,7 @@
 .n-content-picture__caption {
 	@include oTypographySans(-1);
 	margin-top: oSpacingByName('s1');
-	color: getColor('black-70');
+	color: oColorsByName('black-70');
 
 	@media print {
 		font-size: 9pt;

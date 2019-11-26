@@ -2,7 +2,7 @@
 .n-content-layout {
 
 	&[data-layout-name="aside"] {
-		background-color: oColorsGetTint('wheat', 100);
+		background-color: oColorsGetTone('wheat', 100);
 
 		.n-content-layout__slot {
 			padding-left: oSpacingByName('s3');

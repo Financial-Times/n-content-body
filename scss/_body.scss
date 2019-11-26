@@ -47,7 +47,7 @@
 	// BLOCKQUOTES
 	blockquote {
 		-webkit-font-smoothing: antialiased;
-		color: getColor('black-80');
+		color: oColorsByName('black-80');
 		position: relative;
 	}
 

@@ -21,7 +21,7 @@
 	padding-right: 16px;
 
 	&:before {
-		@include oIconsGetIcon('speech-left', getColor('black-80'), 44, $iconset-version: 1);
+		@include oIconsGetIcon('speech-left', oColorsByName('black-80'), 44, $iconset-version: 1);
 		content: "";
 		position: relative;
 		top: -8px;
@@ -31,7 +31,7 @@
 
 .n-content-pullquote__footer {
 	@include oTypographySans(-1);
-	color: getColor('black-80');
+	color: oColorsByName('black-80');
 }
 
 .n-content-pullquote--wide {

@@ -19,7 +19,7 @@
 
 	a {
 		@include oTypographySans($scale: 1);
-		@include oColorsFor(link-title, text);
+		color: oColorsByUsecase('link-title', 'text');
 		padding-top: oSpacingByName('s1');
 		padding-bottom: oSpacingByName('s2');
 		display: inline-block;

@@ -25,7 +25,7 @@
 		margin-bottom: oSpacingByName('s1');
 		margin-top: 0;
 		padding-bottom: oSpacingByName('s2');
-		border-bottom: 2px solid getColor(paper);
+		border-bottom: 2px solid oColorsByName(paper);
 		box-sizing: border-box;
 	}
 }

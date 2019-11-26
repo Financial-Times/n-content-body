@@ -10,23 +10,23 @@
 		@include oTypographySans($scale: 2);
 		margin-top: 12px;
 		i {
-			@include oIconsGetIcon('arrow-down', getColor('teal-40'), 12);
+			@include oIconsGetIcon('arrow-down', oColorsByName('teal-40'), 12);
 			@include oIconsBaseStyles();
 			display: inline-block;
 			padding: 0 12px;
 			box-sizing: border-box;
 			&:hover {
-				@include oIconsGetIcon('arrow-down', getColor('black-80'), 12);
+				@include oIconsGetIcon('arrow-down', oColorsByName('black-80'), 12);
 			}
 		}
 		&:hover {
-			color: getColor('black-80');
+			color: oColorsByName('black-80');
 			text-decoration: none;
 		}
 		&[aria-expanded="true"] i {
-			@include oIconsGetIcon('arrow-up', getColor('teal-40'), 12);
+			@include oIconsGetIcon('arrow-up', oColorsByName('teal-40'), 12);
 			&:hover {
-				@include oIconsGetIcon('arrow-up', getColor('black-80'), 12);
+				@include oIconsGetIcon('arrow-up', oColorsByName('black-80'), 12);
 			}
 		}
 	}
@@ -52,7 +52,7 @@
 	margin: 0;
 	background-color: inherit;
 	a {
-		color: getColor('black-70');
+		color: oColorsByName('black-70');
 		border-bottom: 0;
 		text-decoration: none;
 	}
@@ -66,8 +66,8 @@
 }
 
 @mixin nListsItem($use-case: n-lists) {
-	@include oColorsFor($use-case, background);
-	border: 1px solid rgba(oColorsGetColorFor($use-case, border), 0.25);
+	background-color: oColorsByUsecase($use-case, 'background');
+	border: 1px solid rgba(oColorsByUsecase($use-case, 'border'), 0.25);
 	border-width: 0 0 1px;
 	min-width: 200px;
 	vertical-align: top;
@@ -85,7 +85,7 @@
 	text-decoration: none;
 	border-bottom-width: 0;
 	&:after {
-		@include oIconsGetIcon('arrow-right', oColorsGetColorFor($use-case, border), 10);
+		@include oIconsGetIcon('arrow-right', oColorsByUsecase($use-case, 'border'), 10);
 		content: '';
 		opacity: 0.25;
 		position: absolute;
@@ -94,10 +94,10 @@
 	}
 	&:hover,
 	&:focus {
-		background: rgba(oColorsGetColorFor(#{$use-case}-hover, background), 0.1);
+		background: rgba(oColorsByUsecase(#{$use-case}-hover, 'background'), 0.1);
 		border-bottom-width: 0;
 		&:after {
-			@include oIconsGetIcon('arrow-right', oColorsGetColorFor(#{$use-case}-hover, border), 10);
+			@include oIconsGetIcon('arrow-right', oColorsByUsecase(#{$use-case}-hover, 'border'), 10);
 		}
 	}
 }
