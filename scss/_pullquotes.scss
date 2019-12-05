@@ -15,7 +15,7 @@
 
 
 .n-content-pullquote__content {
-	@include oTypographySans($weight: 'bold');
+	@include oTypographySans($scale: 3, $weight: 'bold');
 	margin-bottom: oSpacingByName('s4');
 
 	padding-right: 16px;

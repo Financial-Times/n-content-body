@@ -6,8 +6,8 @@
 	margin-bottom: oSpacingByName('s8');
 
 	cite {
-		@include oQuoteBaseCite();
 		@include oQuoteStandardCite();
 		@include oQuoteStandardCiteAuthor();
+		@include oQuoteBaseCite();
 	}
 }
