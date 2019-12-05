@@ -8,7 +8,8 @@
 
 	> p,
 	.n-content-layout__slot > p {
-		@include oTypographyBody();
+		@include oTypographySerif(1);
+		margin: 0 0 oSpacingByName('s6');
 
 		a {
 			@include oTypographyLink;
@@ -23,7 +24,7 @@
 	> hr {
 		margin-bottom: oSpacingByName('s8');
 		margin-top: oSpacingByName('s2');
-		border: 2px solid oColorsGetPaletteColor('black');
+		border: 2px solid oColorsByName('black');
 		border-width: 2px 0;
 		width: 60px;
 		display: inline-block;

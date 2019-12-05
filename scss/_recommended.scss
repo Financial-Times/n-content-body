@@ -9,7 +9,7 @@
 
 		li {
 			list-style: none;
-			border-bottom: 1px solid oColorsGetPaletteColor(black-10);
+			border-bottom: 1px solid oColorsByName('black-10');
 			padding: 0;
 			&:before {
 				display: none;
@@ -27,11 +27,11 @@
 		width: 100%;
 
 		&:hover {
-			color: oColorsGetPaletteColor(black-60);
+			color: oColorsByName('black-60');
 		}
 	}
 }
 .n-content-recommended__title {
-	@include oTypographySans($weight: 'bold', $scale: 1);
+	@include oTypographySans($weight: 'semibold', $scale: 1);
 	margin-top: 4px;
 }
