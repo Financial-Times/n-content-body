@@ -1,13 +1,10 @@
 @import 'o-quote/main';
 
 .n-content-blockquote {
-	@include oQuoteBase();
-	@include oQuoteStandard();
+	@include oQuoteEditorial();
 	margin-bottom: oSpacingByName('s8');
 
 	cite {
-		@include oQuoteStandardCite();
-		@include oQuoteStandardCiteAuthor();
-		@include oQuoteBaseCite();
+		@include oQuoteEditorialCiteAuthor();
 	}
 }
