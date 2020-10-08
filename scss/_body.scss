@@ -1,16 +1,24 @@
+@import 'o-spacing/main';
+@import "o-typography/main";
+@import "o-editorial-typography/main";
+@import "o-editorial-layout/main";
+
 //ARTICLE BODY ELEMENTS
 .n-content-body {
 
 	// STANDARD TYPOGRAPHY AND ELEMENTS
-	@include oTypographySerif($scale: 1, $line-height: 28px, $include-progressive: false);
-	margin-bottom: 40px;
-	-webkit-font-smoothing: antialiased;
+	@include oEditorialTypographyBody();
+	margin-bottom: oSpacingByIncrement(10);
+
+	p {
+		// style paragraphs in relation to sibling elements,
+		// headings etc, without including typographic styles
+		// again which are inherited from .n-content-body
+		@include oEditorialLayoutBodyWithoutTypography();
+	}
 
 	> p,
 	.n-content-layout__slot > p {
-		@include oTypographySerif($scale: (default: 1, XL: 2), $line-height: 1.6);
-		margin: 0 0 oSpacingByName('s6');
-
 		a {
 			@include oTypographyLink;
 		}
@@ -42,7 +50,7 @@
 	}
 
 	strong {
-		font-weight: 600;
+		@include oTypographySerif($weight: 'bold', $include-font-family: false);
 	}
 
 	// BLOCKQUOTES
@@ -87,19 +95,19 @@
 // Shift caption headings down one, as h1 is the highest caption level,
 // but we want h2 to be the highest heading style possible
 .n-content-body__caption--h1 {
-	@include nContentHeading2;
+	@include oEditorialTypographyHeading($level: 2);
 }
 .n-content-body__caption--auto, // Default style
 .n-content-body__caption--h2 {
-	@include nContentHeading3;
+	@include oEditorialTypographyHeading($level: 3);
 }
 .n-content-body__caption--h3 {
-	@include nContentHeading4;
+	@include oEditorialTypographyHeading($level: 4);
 }
 .n-content-body__caption--h4,
 .n-content-body__caption--h5,
 .n-content-body__caption--h6 {
-	@include nContentHeading5;
+	@include oEditorialTypographyHeading($level: 5);
 }
 
 // Hide caption

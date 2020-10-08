@@ -1,28 +1,29 @@
-@import "o-editorial-typography/main";
+@import "o-editorial-layout/main";
 
 @mixin nContentHeading2 {
-	@include oEditorialTypographyHeading($level: 2);
-	@include nContentMargins($headingTop: 8);
+	@include oEditorialLayoutHeading($level: 2);
 	// trigger a new formatting context so it won't run into floats
 	overflow: hidden;
 }
 
 @mixin nContentHeading3 {
-	@include oEditorialTypographyHeading($level: 3);
-	@include nContentMargins();
+	@include oEditorialLayoutHeading($level: 3);
 }
 
 @mixin nContentHeading4 {
-	@include oEditorialTypographyHeading($level: 4);
-	@include nContentMargins($headingBottom: 3);
+	@include oEditorialLayoutHeading($level: 4);
 }
 
 @mixin nContentHeading5 {
-	@include oEditorialTypographyHeading($level: 5);
-	@include nContentMargins();
+	@include oEditorialLayoutHeading($level: 5);
 }
 
+/// @deprecated - Use o-editorial-layout instead.
 @mixin nContentMargins($headingTop: 0, $headingBottom: 1) {
+	@warn 'The mixin `nContentMargins` is deprecated. ' +
+	'To match the margin of article headings use the ' +
+	'`o-editorial-layout` component.';
+
 	margin-top: oSpacingByIncrement($headingTop);
 	margin-bottom: oSpacingByIncrement($headingBottom);
 

@@ -34,8 +34,6 @@
 	min-width: 0; //fix for images going outside the container
 	max-width: 100%; //fix overflow on IE
 	flex-basis: 100%;
-	margin-top: oSpacingByName('s1');
-	margin-bottom: oSpacingByName('s3');
 	@include oGridRespondTo(M) {
 		flex: 1 1 1px;
 		& + .n-content-layout__slot {
@@ -52,14 +50,29 @@
 	}
 }
 
-//Font overrides for slot content
-.n-content-body .n-content-layout__slot {
-	> p,
-	> ul > li {
-		@include oTypographySans($scale: 1, $line-height: 22px);
-	}
-	> p {
+// Overrides for slot content
+// It is difficult to update article markup at time of writing,
+// so complex selectors are needed to undo styles.
+.n-content-body {
+	.n-content-layout__slot,
+	.subhead--crosshead + .n-content-layout__slot,
+	.n-content-heading-2 + .n-content-layout__slot,
+	.subhead--standard + .n-content-layout__slot,
+	.n-content-heading-3 + .n-content-layout__slot,
+	.n-content-heading-4 + .n-content-layout__slot,
+	.n-content-heading-5 + .n-content-layout__slot {
+		margin-top: oSpacingByName('s1');
 		margin-bottom: oSpacingByName('s3');
+	}
+
+	.n-content-layout__slot {
+		> p,
+		> ul > li {
+			@include oTypographySans($scale: 1, $line-height: 22px);
+		}
+		> p {
+			margin-bottom: oSpacingByName('s3');
+		}
 	}
 }
 
