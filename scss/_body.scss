@@ -1,7 +1,7 @@
 @import 'o-spacing/main';
 @import "o-typography/main";
-@import "o-editorial-typography/main";
-@import "o-editorial-layout/main";
+@import "node_modules/@financial-times/o-editorial-typography/main";
+@import "node_modules/@financial-times/o-editorial-layout/main";
 
 //ARTICLE BODY ELEMENTS
 .n-content-body {
