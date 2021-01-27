@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@financial-times/o-editorial-layout": "^1.1.0",
-    "@financial-times/o-editorial-typography": "^1.1.0",
+    "@financial-times/o-editorial-typography": "1.1.0",
     "@financial-times/o-quote": "^4.1.2",
     "@financial-times/o-visual-effects": "^3.0.6",
     "n-ui-foundations": "^6.0.0"
