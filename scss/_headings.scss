@@ -1,4 +1,4 @@
-@import "node_modules/@financial-times/o-editorial-layout/main";
+@import "o-editorial-layout/main";
 
 @mixin nContentHeading2 {
 	@include oEditorialLayoutHeading($level: 2);
