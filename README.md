@@ -26,6 +26,17 @@ plus common / utility classes used across article elements
 
 ## Migration guides
 
+### v9 to v10
+
+v10 moves the responsibility of setting the width of embedded YouTube videos to the consumer, in relation to the 'n-content-video--youtube' class.
+
+Below is an example of how to set the width in the consumer repo:
+```
+.n-content-video--youtube {
+	width: 560px;
+}
+```
+
 ### v8 to v9
 
 v9 upgrades its version of `n-ui-foundations` from ^4.0.0 to ^6.0.0.
