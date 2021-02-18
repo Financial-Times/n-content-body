@@ -26,6 +26,17 @@ plus common / utility classes used across article elements
 
 ## Migration guides
 
+### v9 to v10
+
+v10 removes the width of embedded YouTube videos, in relation to the 'n-content-video--youtube' class. This is a design decision to make embedded YouTube videos consistently full-width. If you would like to replicate the old behaviour, you will have to set the width in the consumer repo.
+
+Below is an example of how to replicate the old behaviour:
+```
+.n-content-video--youtube {
+	width: 560px;
+}
+```
+
 ### v8 to v9
 
 v9 upgrades its version of `n-ui-foundations` from ^4.0.0 to ^6.0.0.
