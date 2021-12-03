@@ -1,19 +1,27 @@
 @import "o-editorial-layout/main";
 
+// Make sure when linking to a specific heading in an article that its not covered by the sticky nav
+@import 'o-header/main';
+$heading-height-with-spacing: $o-header-sticky-height + oSpacingByName('s4');
+
 @mixin nContentHeading2 {
 	@include oEditorialLayoutHeading($level: 2);
+	scroll-margin-top: $heading-height-with-spacing;
 }
 
 @mixin nContentHeading3 {
 	@include oEditorialLayoutHeading($level: 3);
+	scroll-margin-top: $heading-height-with-spacing;
 }
 
 @mixin nContentHeading4 {
 	@include oEditorialLayoutHeading($level: 4);
+	scroll-margin-top: $heading-height-with-spacing;
 }
 
 @mixin nContentHeading5 {
 	@include oEditorialLayoutHeading($level: 5);
+	scroll-margin-top: $heading-height-with-spacing;
 }
 
 /// @deprecated - Use o-editorial-layout instead.
