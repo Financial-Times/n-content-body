@@ -2,8 +2,6 @@
 
 @mixin nContentHeading2 {
 	@include oEditorialLayoutHeading($level: 2);
-	// trigger a new formatting context so it won't run into floats
-	overflow: hidden;
 }
 
 @mixin nContentHeading3 {
