@@ -1,18 +1,28 @@
 {
-  "name": "n-content-body",
+  "name": "@financial-times/n-content-body",
+  "description": "Styling for body of next content",
   "version": "0.0.0",
+  "main": "main.scss",
   "devDependencies": {
-    "@financial-times/n-gage": "^3.6.0",
-    "bower": "^1.8.8",
-    "jest": "^24.8.0",
-    "lintspaces-cli": "^0.1.1",
+    "@financial-times/n-gage": "^8.3.2",
+    "jest": "^27.5.1",
+    "lintspaces-cli": "^0.7.1",
     "node-sass": "^4.12.0",
-    "snyk": "^1.167.2"
+    "snyk": "^1.866.2"
+  },
+  "dependencies": {
+    "n-ui-foundations": "^9.0.0",
+    "@financial-times/o-quote": "^9.0.0",
+    "@financial-times/o-editorial-typography": "^2.3.2",
+    "@financial-times/o-editorial-layout": "^2.3.1",
+    "@financial-times/o-header": "^9.2.4"
   },
   "scripts": {
     "precommit": "node_modules/.bin/secret-squirrel",
     "prepush": "make verify -j3",
     "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
     "prepare": "npx snyk protect || npx snyk protect -d || true"
-  }
+  },
+  "homepage": "https://github.com/Financial-Times/n-content-body",
+  "license": "MIT"
 }
