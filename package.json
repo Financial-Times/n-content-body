@@ -14,5 +14,9 @@
     "prepush": "make verify -j3",
     "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
     "prepare": "npx snyk protect || npx snyk protect -d || true"
+  },
+  "volta": {
+    "node": "12.22.10",
+    "npm": "7.24.2"
   }
 }
