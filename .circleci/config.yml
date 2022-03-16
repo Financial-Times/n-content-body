@@ -72,7 +72,7 @@ jobs:
       - *restore_npm_cache
       - run:
           name: Update NPM
-          command: sudo npm install -g npm@latest
+          command: npm install -g npm@latest-7
       - run:
           name: Install project dependencies
           command: make install
