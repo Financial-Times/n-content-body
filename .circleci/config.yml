@@ -70,6 +70,9 @@ jobs:
           name: Checkout next-ci-shared-helpers
           command: git clone --depth 1 git@github.com:Financial-Times/next-ci-shared-helpers.git .circleci/shared-helpers
       - *restore_npm_cache
+      - run: 
+          name: Update NPM
+          command: sudo npm install -g npm@latest
       - run:
           name: Install project dependencies
           command: make install
