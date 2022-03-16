@@ -24,8 +24,8 @@
   "license": "MIT",
   "husky": {
     "hooks": {
-      "commit-msg": "node_modules/.bin/secret-squirrel-commitmsg",
-      "pre-commit": "node_modules/.bin/secret-squirrel",
+      "commit-msg": "secret-squirrel-commitmsg",
+      "pre-commit": "secret-squirrel",
       "pre-push": "make verify -j3"
     }
   }
