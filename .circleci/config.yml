@@ -55,7 +55,7 @@ references:
     branches:
       ignore: /.*/
 
-version: 2
+version: 2.1
 
 orbs:
   node: circleci/node@4.6.0
