@@ -4,15 +4,25 @@
   "devDependencies": {
     "@financial-times/n-gage": "^3.6.0",
     "bower": "^1.8.8",
+    "check-engine": "^1.10.1",
     "jest": "^24.8.0",
     "lintspaces-cli": "^0.1.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^5.0.0",
     "snyk": "^1.167.2"
   },
   "scripts": {
     "precommit": "node_modules/.bin/secret-squirrel",
     "prepush": "make verify -j3",
     "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
-    "prepare": "npx snyk protect || npx snyk protect -d || true"
+    "prepare": "npx snyk protect || npx snyk protect -d || true",
+    "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
+  },
+  "volta": {
+    "node": "12.22.10",
+    "npm": "7.24.2"
+  },
+  "engines": {
+    "node": "12.x",
+    "npm": "7.x || 8.x"
   }
 }
