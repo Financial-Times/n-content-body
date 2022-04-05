@@ -8,13 +8,10 @@
     "check-engine": "^1.10.1",
     "jest": "^24.8.0",
     "lintspaces-cli": "^0.1.1",
-    "snyk": "^1.167.2"
+    "snyk": "^1.167.2",
     "sass": "^1.49.11",
   },
   "scripts": {
-    "precommit": "node_modules/.bin/secret-squirrel",
-    "prepush": "make verify -j3",
-    "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
     "prepare": "npx snyk protect || npx snyk protect -d || true",
     "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine"
   },
@@ -47,5 +44,11 @@
   },
   "homepage": "https://github.com/Financial-Times/n-content-body",
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "commit-msg": "secret-squirrel-commitmsg",
+      "pre-commit": "secret-squirrel",
+      "pre-push": "make verify -j3"
+    }
   }
 }
