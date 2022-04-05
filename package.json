@@ -8,8 +8,8 @@
     "check-engine": "^1.10.1",
     "jest": "^24.8.0",
     "lintspaces-cli": "^0.1.1",
-    "node-sass": "^5.0.0",
     "snyk": "^1.167.2"
+    "sass": "^1.49.11",
   },
   "scripts": {
     "precommit": "node_modules/.bin/secret-squirrel",
