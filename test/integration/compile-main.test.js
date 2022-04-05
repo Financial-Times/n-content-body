@@ -25,6 +25,7 @@ describe('Compile scss file', () => {
 			includePaths: [
 				path.join(BASE_PATH, 'bower_components'),
 				path.join(BASE_PATH, 'node_modules/@financial-times'),
+				path.join(BASE_PATH, 'node_modules'),
 			]
 		});
 		expect(result).toBeTruthy();
