@@ -23,7 +23,7 @@
     "node": "12.x",
     "npm": "7.x || 8.x"
   },
-  "dependencies": {
+  "peerDependencies": {
     "n-ui-foundations": "^9.0.0",
     "@financial-times/o-quote": "^5.3.0",
     "@financial-times/o-editorial-typography": "^2.3.2",
