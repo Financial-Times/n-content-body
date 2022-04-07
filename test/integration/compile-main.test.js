@@ -1,5 +1,5 @@
 const path = require('path');
-const sass = require('node-sass');
+const sass = require('sass');
 
 const BASE_PATH = path.join(__dirname, '../../');
 
@@ -23,8 +23,8 @@ describe('Compile scss file', () => {
 		const result = await compile({
 			file: path.join(__dirname, 'entry-file.scss'),
 			includePaths: [
-				path.join(BASE_PATH, 'bower_components'),
 				path.join(BASE_PATH, 'node_modules/@financial-times'),
+				path.join(BASE_PATH, 'node_modules'),
 			]
 		});
 		expect(result).toBeTruthy();
