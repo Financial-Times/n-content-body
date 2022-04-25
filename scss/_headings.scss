@@ -1,7 +1,7 @@
-@import "o-editorial-layout/main";
+@import "@financial-times/o-editorial-layout/main";
 
 // Make sure when linking to a specific heading in an article that its not covered by the sticky nav
-@import 'o-header/main';
+@import '@financial-times/o-header/main';
 $heading-height-with-spacing: $o-header-sticky-height + oSpacingByName('s4');
 
 @mixin nContentHeading2 {
