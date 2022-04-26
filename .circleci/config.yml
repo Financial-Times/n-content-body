@@ -17,7 +17,7 @@ references:
     &container_config_lambda_node8
     working_directory: ~/project/build
     docker:
-      - image: cimg/node:<< parameters.node-version >>-browsers
+      - image: circleci/node:<< parameters.node-version >>-browsers
     parameters:
       node-version:
         default: "16.14"
