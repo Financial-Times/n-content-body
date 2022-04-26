@@ -38,8 +38,5 @@
       "pre-commit": "secret-squirrel",
       "pre-push": "make verify -j3"
     }
-  },
-  "dependencies": {
-    "yaml": "^2.0.1"
   }
 }
