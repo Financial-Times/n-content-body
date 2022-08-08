@@ -6,10 +6,17 @@
   "devDependencies": {
     "@dotcom-tool-kit/circleci": "^2.1.4",
     "@dotcom-tool-kit/circleci-npm": "^2.0.7",
+    "@dotcom-tool-kit/eslint": "^2.1.5",
     "@dotcom-tool-kit/jest": "^2.0.6",
     "@dotcom-tool-kit/npm": "^2.0.7",
+    "@dotcom-tool-kit/prettier": "^2.0.7",
+    "@financial-times/eslint-config-next": "^4.0.0",
     "check-engine": "^1.10.1",
     "dotcom-tool-kit": "^2.3.2",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-yml": "^1.1.0",
     "jest": "^27.5.1",
     "lintspaces-cli": "^0.7.1",
     "sass": "^1.49.11",
@@ -21,7 +28,8 @@
     "build": "dotcom-tool-kit build:local",
     "test": "dotcom-tool-kit test:local",
     "start": "dotcom-tool-kit run:local",
-    "integration-test": "jest test/integration"
+    "integration-test": "jest test/integration",
+    "format": "dotcom-tool-kit format:local"
   },
   "volta": {
     "node": "16.14.2",

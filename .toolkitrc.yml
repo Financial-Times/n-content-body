@@ -3,5 +3,17 @@ plugins:
   - '@dotcom-tool-kit/circleci'
   - '@dotcom-tool-kit/npm'
   - '@dotcom-tool-kit/circleci-npm'
-hooks: {}
-options: {}
+  - '@dotcom-tool-kit/eslint'
+  - '@dotcom-tool-kit/prettier'
+hooks: 
+  test:local:
+    - Eslint
+    - JestLocal
+  test:ci:
+    - Eslint
+    - JestCI
+options:
+  '@dotcom-tool-kit/eslint':
+    files: '**/*.{js,yml,json}'
+  '@dotcom-tool-kit/prettier':
+    files: '**/*.{js,yml,json}'
