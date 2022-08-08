@@ -1,0 +1,7 @@
+plugins:
+  - '@dotcom-tool-kit/jest'
+  - '@dotcom-tool-kit/circleci'
+  - '@dotcom-tool-kit/npm'
+  - '@dotcom-tool-kit/circleci-npm'
+hooks: {}
+options: {}
