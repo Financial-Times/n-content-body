@@ -20,7 +20,8 @@
     "preinstall": "[ \"$INIT_CWD\" != \"$PWD\" ] || npm_config_yes=true npx check-engine",
     "build": "dotcom-tool-kit build:local",
     "test": "dotcom-tool-kit test:local",
-    "start": "dotcom-tool-kit run:local"
+    "start": "dotcom-tool-kit run:local",
+    "integration-test": "jest test/integration"
   },
   "volta": {
     "node": "16.14.2",
