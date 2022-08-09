@@ -1,86 +1,100 @@
 @mixin nContentBox() {
-	box-sizing: border-box;
-	position: relative;
-	clear: left;
-	margin: 24px 0 16px;
-	padding: 16px 0;
-	width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  clear: left;
+  margin: 24px 0 16px;
+  padding: 16px 0;
+  width: 100%;
 
-	.o-expander__toggle {
-		@include oTypographySans($scale: 2);
-		margin-top: 12px;
-		i {
-			@include oIconsContent('arrow-down', oColorsByName('teal-40'), 12);
-			@include oIconsContentBaseStyles();
-			display: inline-block;
-			padding: 0 12px;
-			box-sizing: border-box;
-			&:hover {
-				@include oIconsContent('arrow-down', oColorsByName('black-80'), 12);
-			}
-		}
-		&:hover {
-			color: oColorsByName('black-80');
-			text-decoration: none;
-		}
-		&[aria-expanded="true"] i {
-			@include oIconsContent('arrow-up', oColorsByName('teal-40'), 12);
-			&:hover {
-				@include oIconsContent('arrow-up', oColorsByName('black-80'), 12);
-			}
-		}
-	}
+  .o-expander__toggle {
+    @include oTypographySans($scale: 2);
+
+    margin-top: 12px;
+
+    i {
+      @include oIconsContent("arrow-down", oColorsByName("teal-40"), 12);
+      @include oIconsContentBaseStyles;
+
+      display: inline-block;
+      padding: 0 12px;
+      box-sizing: border-box;
+
+      &:hover {
+        @include oIconsContent("arrow-down", oColorsByName("black-80"), 12);
+      }
+    }
+
+    &:hover {
+      color: ocolorsbyname("black-80");
+      text-decoration: none;
+    }
+
+    &[aria-expanded="true"] i {
+      @include oIconsContent("arrow-up", oColorsByName("teal-40"), 12);
+
+      &:hover {
+        @include oIconsContent("arrow-up", oColorsByName("black-80"), 12);
+      }
+    }
+  }
 }
 
 @mixin nContentBoxInline() {
-	float: left;
-	@include oGridRespondTo(S) {
-		max-width: 300px;
-		margin-right: 24px;
-	}
+  float: left;
+
+  @include oGridRespondTo(S) {
+    max-width: 300px;
+    margin-right: 24px;
+  }
 }
 
 @mixin nContentBoxTitle() {
-	margin: -40px 0 8px 10px;
+  margin: -40px 0 8px 10px;
 }
 
 @mixin nContentBoxTitleText() {
-	@include oTypographySans($weight: 'bold', $scale: 2);
-	display: inline-block;
-	padding: 10px;
-	padding-bottom: 0;
-	margin: 0;
-	background-color: inherit;
-	a {
-		color: oColorsByName('black-70');
-		border-bottom: 0;
-		text-decoration: none;
-	}
+  @include oTypographySans($weight: "bold", $scale: 2);
+
+  display: inline-block;
+  padding: 10px;
+  padding-bottom: 0;
+  margin: 0;
+  background-color: inherit;
+
+  a {
+    color: ocolorsbyname("black-70");
+    border-bottom: 0;
+    text-decoration: none;
+  }
 }
 
 @mixin nLists() {
-	display: inline-block;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 @mixin nLayoutInset() {
-	margin-bottom: oSpacingByName('s8');
-	@include oGridRespondTo(S) {
-		@include oGridColspan(5, $width-only: true);
-		margin-right: oSpacingByName('s8');
-		float: left;
-		clear: both;
-	}
+  margin-bottom: ospacingbyname("s8");
+
+  @include oGridRespondTo(S) {
+    @include oGridColspan(5, $width-only: true);
+
+    margin-right: ospacingbyname("s8");
+    float: left;
+    clear: both;
+  }
 }
 
 @mixin nLayoutInsetRight() {
-	margin-bottom: oSpacingByName('s8');
-	@include oGridRespondTo(S) {
-		@include oGridColspan(5, $width-only: true);
-		margin-left: oSpacingByName('s8');
-		float: right;
-		clear: both;
-	}
+  margin-bottom: ospacingbyname("s8");
+
+  @include oGridRespondTo(S) {
+    @include oGridColspan(5, $width-only: true);
+
+    margin-left: ospacingbyname("s8");
+    float: right;
+    clear: both;
+  }
 }

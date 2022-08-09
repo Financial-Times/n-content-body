@@ -5,12 +5,15 @@ plugins:
   - '@dotcom-tool-kit/circleci-npm'
   - '@dotcom-tool-kit/eslint'
   - '@dotcom-tool-kit/prettier'
+  - './toolkit/stylelint'
 hooks: 
   test:local:
     - Eslint
+    - Stylelint
     - JestLocal
   test:ci:
     - Eslint
+    - Stylelint
     - JestCI
 options:
   '@dotcom-tool-kit/eslint':

@@ -1,58 +1,58 @@
 @media print {
-	.o-typography--loaded-sans {
-	.n-content-body {
-		font: 11pt/1.25 Georgia, serif;
-		margin: 0;
-		color: oColorsByName('black');
+  .o-typography--loaded-sans {
+    .n-content-body {
+      font: 11pt/1.25 Georgia, serif;
+      margin: 0;
+      color: ocolorsbyname("black");
 
-		&:after {
-			display: block;
-			content: 'Print a single copy of this article for personal use. Contact us if you wish to print more to distribute to others. © The Financial Times Ltd.';
-			margin-top: 0.5cm;
-			font-size: 9pt;
-			padding-top: 5px;
-			border-top: 1px solid oColorsByName('black');
-			clear: both;
-		}
+      &::after {
+        display: block;
+        content: "Print a single copy of this article for personal use. Contact us if you wish to print more to distribute to others. © The Financial Times Ltd.";
+        margin-top: 0.5cm;
+        font-size: 9pt;
+        padding-top: 5px;
+        border-top: 1px solid ocolorsbyname("black");
+        clear: both;
+      }
 
-		p {
-			margin: 0;
-			text-indent: 1em;
-			widows: 3;
-			orphans: 3;
+      p {
+        margin: 0;
+        text-indent: 1em;
+        widows: 3;
+        orphans: 3;
 
-			&:first-child {
-				text-indent: 0;
-			}
-		}
+        &:first-child {
+          text-indent: 0;
+        }
+      }
 
-		a {
-			text-decoration: none;
-			border: 0;
-			color: inherit;
-		}
+      a {
+        text-decoration: none;
+        border: 0;
+        color: inherit;
+      }
 
-		br { display: none; }
-		br + br { display: block; }
-	}
+      br { display: none; }
+      br + br { display: block; }
+    }
 
-	.n-content-image {
-		margin: 0 auto 1em;
+    .n-content-image {
+      margin: 0 auto 1em;
 
-		&--full {
-			max-width: 10cm;
-			width: 100%;
-			margin: 0;
-		}
+      &--full {
+        max-width: 10cm;
+        width: 100%;
+        margin: 0;
+      }
 
-		&__caption {
-			font-size: 9pt;
-			line-height: 1.25;
-		}
-	}
+      &__caption {
+        font-size: 9pt;
+        line-height: 1.25;
+      }
+    }
 
-	.n-content-copyright {
-		display: none;
-	}
-	}
+    .n-content-copyright {
+      display: none;
+    }
+  }
 }

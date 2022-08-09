@@ -1,97 +1,101 @@
-@import './widths';
-@import './aside';
-@import './card';
-@import './timeline';
+@import "./widths";
+@import "./aside";
+@import "./card";
+@import "./timeline";
 
 .n-content-layout {
-	// margin considers p margin bottom of 28px to equal 36px on both sides
-	margin-top: oSpacingByName('s2');
-	margin-bottom: oSpacingByName('s8');
+  // margin considers p margin bottom of 28px to equal 36px on both sides
+  margin-top: ospacingbyname("s2");
+  margin-bottom: ospacingbyname("s8");
 }
 
 .n-content-layout__container {
-	display: flex;
-	flex-wrap: wrap;
-	width: 100%;
-	padding-top: oSpacingByName('s1');
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding-top: ospacingbyname("s1");
 
-	> :not(.n-content-layout__slot) {
-		margin-top: oSpacingByName('s2');
-		margin-bottom: 0;
-		flex: 0 0 100%;
-	}
+  > :not(.n-content-layout__slot) {
+    margin-top: ospacingbyname("s2");
+    margin-bottom: 0;
+    flex: 0 0 100%;
+  }
 
-	> [class^=n-content-heading-] {
-		margin-bottom: oSpacingByName('s1');
-		margin-top: 0;
-		padding-bottom: oSpacingByName('s2');
-		border-bottom: 2px solid oColorsByName(paper);
-		box-sizing: border-box;
-	}
+  > [class^="n-content-heading-"] {
+    margin-bottom: ospacingbyname("s1");
+    margin-top: 0;
+    padding-bottom: ospacingbyname("s2");
+    border-bottom: 2px solid ocolorsbyname(paper);
+    box-sizing: border-box;
+  }
 }
 
 .n-content-layout__slot {
-	min-width: 0; //fix for images going outside the container
-	max-width: 100%; //fix overflow on IE
-	flex-basis: 100%;
-	@include oGridRespondTo(M) {
-		flex: 1 1 1px;
-		& + .n-content-layout__slot {
-			margin-left: 16px;
-		}
+  min-width: 0; //fix for images going outside the container
+  max-width: 100%; //fix overflow on IE
+  flex-basis: 100%;
 
-		&[data-slot-width="wide"] {
-			flex: 2;
-		}
-	}
+  @include oGridRespondTo(M) {
+    flex: 1 1 1px;
 
-	:last-child {
-		margin-bottom: 0;
-	}
+    & + .n-content-layout__slot {
+      margin-left: 16px;
+    }
+
+    &[data-slot-width="wide"] {
+      flex: 2;
+    }
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
 }
 
 // Overrides for slot content
 // It is difficult to update article markup at time of writing,
 // so complex selectors are needed to undo styles.
 .n-content-body {
-	.n-content-layout__slot,
-	.subhead--crosshead + .n-content-layout__slot,
-	.n-content-heading-2 + .n-content-layout__slot,
-	.subhead--standard + .n-content-layout__slot,
-	.n-content-heading-3 + .n-content-layout__slot,
-	.n-content-heading-4 + .n-content-layout__slot,
-	.n-content-heading-5 + .n-content-layout__slot {
-		margin-top: oSpacingByName('s1');
-		margin-bottom: oSpacingByName('s3');
-	}
+  .n-content-layout__slot,
+  .subhead--crosshead + .n-content-layout__slot,
+  .n-content-heading-2 + .n-content-layout__slot,
+  .subhead--standard + .n-content-layout__slot,
+  .n-content-heading-3 + .n-content-layout__slot,
+  .n-content-heading-4 + .n-content-layout__slot,
+  .n-content-heading-5 + .n-content-layout__slot {
+    margin-top: ospacingbyname("s1");
+    margin-bottom: ospacingbyname("s3");
+  }
 
-	.n-content-layout__slot {
-		> p,
-		> ul > li {
-			@include oTypographySans($scale: 1, $line-height: 22px);
-		}
-		> p {
-			margin-bottom: oSpacingByName('s3');
-		}
-	}
+  .n-content-layout__slot {
+    > p,
+    > ul > li {
+      @include oTypographySans($scale: 1, $line-height: 22px);
+    }
+
+    > p {
+      margin-bottom: ospacingbyname("s3");
+    }
+  }
 }
 
 //fix spacing and borders for layoutsets
 .n-content-layout-set {
-	margin-bottom: oSpacingByName('s8');
-	margin-top: oSpacingByName('s2');
-	.n-content-layout {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
+  margin-bottom: ospacingbyname("s8");
+  margin-top: ospacingbyname("s2");
 
-	.n-content-layout + .n-content-layout .n-content-layout__container {
-		border-top-width: 0;
-	}
+  .n-content-layout {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .n-content-layout + .n-content-layout .n-content-layout__container {
+    border-top-width: 0;
+  }
 }
 
 //Hide horizontal rules in layoutsets
 //These horizontal rules are the by-product of a layout hack used by Methode
 .n-content-layout-set > .n-content-layout hr {
-	display: none;
+  display: none;
 }

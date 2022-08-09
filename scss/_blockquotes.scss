@@ -1,10 +1,11 @@
-@import '@financial-times/o-quote/main';
+@import "@financial-times/o-quote/main";
 
 .n-content-blockquote {
-	@include oQuoteEditorial();
-	margin-bottom: oSpacingByName('s8');
+  @include oQuoteEditorial;
 
-	cite {
-		@include oQuoteEditorialCiteAuthor();
-	}
+  margin-bottom: ospacingbyname("s8");
+
+  cite {
+    @include oQuoteEditorialCiteAuthor;
+  }
 }

@@ -1,17 +1,16 @@
 .n-content-layout-set,
 .n-content-layout {
+  &[data-layout-name="aside"] {
+    background-color: ocolorsgettone("wheat", 100);
 
-	&[data-layout-name="aside"] {
-		background-color: oColorsGetTone('wheat', 100);
+    .n-content-layout__slot {
+      padding-left: ospacingbyname("s3");
+      padding-right: ospacingbyname("s3");
+    }
 
-		.n-content-layout__slot {
-			padding-left: oSpacingByName('s3');
-			padding-right: oSpacingByName('s3');
-		}
-
-		.n-content-layout__container > [class^=n-content-heading-] {
-			padding-left: oSpacingByName('s3');
-			padding-right: oSpacingByName('s3');
-		}
-	}
+    .n-content-layout__container > [class^="n-content-heading-"] {
+      padding-left: ospacingbyname("s3");
+      padding-right: ospacingbyname("s3");
+    }
+  }
 }

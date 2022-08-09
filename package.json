@@ -22,7 +22,12 @@
 		"jest": "^27.5.1",
 		"lintspaces-cli": "^0.7.1",
 		"sass": "^1.49.11",
-		"snyk": "^1.866.2"
+		"snyk": "^1.866.2",
+		"stylelint": "^14.9.1",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-standard-scss": "^5.0.0",
+		"stylelint-order": "^5.0.0",
+		"stylelint-scss": "^4.3.0"
 	},
 	"scripts": {
 		"precommit": "secret-squirrel && npm run format && npm run fix",
@@ -33,8 +38,9 @@
 		"test": "dotcom-tool-kit test:local",
 		"start": "dotcom-tool-kit run:local",
 		"integration-test": "jest test/integration",
+		"fix:styles": "stylelint --fix '**/*.{css,scss}'",
 		"fix:js": "eslint '**/*.{js,json,yml}' --fix",
-		"fix": "npm run fix:js",
+		"fix": "npm run fix:styles && npm run fix:js",
 		"format": "dotcom-tool-kit format:local"
 	},
 	"volta": {

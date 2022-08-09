@@ -1,36 +1,36 @@
 .n-content-info-box {
-	@include nContentBox;
-	border: 1px solid oColorsByName('black-20');
-}
+  @include nContentBox;
 
-.n-content-info-box {
-	padding-left: 16px;
-	padding-right: 16px;
+  border: 1px solid ocolorsbyname("black-20");
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .n-content-info-box__headline {
-	@include oTypographySans($weight: 'bold', $scale: 4);
-	font-size: 26px;
-	line-height: 27px;
-	margin: 8px 16px;
-	color: oColorsByName('black-90');
-	word-wrap: break-word;
+  @include oTypographySans($weight: "bold", $scale: 4);
 
-	p {
-		margin: 0;
-	}
+  font-size: 26px;
+  line-height: 27px;
+  margin: 8px 16px;
+  color: ocolorsbyname("black-90");
+  word-wrap: break-word;
+
+  p {
+    margin: 0;
+  }
 }
 
 .n-content-info-box__content {
-	margin-left: 16px;
-	margin-right: 16px;
-	clear: left;
+  margin-left: 16px;
+  margin-right: 16px;
+  clear: left;
 
-	p {
-		margin: 5px 0 0;
-	}
-	ul,
-	ol {
-		padding-left: 20px;
-	}
+  p {
+    margin: 5px 0 0;
+  }
+
+  ul,
+  ol {
+    padding-left: 20px;
+  }
 }

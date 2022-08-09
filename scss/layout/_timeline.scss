@@ -1,89 +1,96 @@
 .n-content-layout-set,
 .n-content-layout {
+  &[data-layout-name="timeline"] {
+    .n-content-heading-3 {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
 
-	&[data-layout-name="timeline"] {
-		.n-content-heading-3 {
-			border-bottom: 0;
-			padding-bottom: 0;
-		}
-		.n-content-heading-4 {
-			padding-top: 10px;
-			border-bottom: 0;
-			@include oTypographySans($weight: 'bold', $scale: 8);
-		}
-		.n-content-layout__slot {
-			flex-basis: 100%;
-			padding-left: 30px;
-			margin-left: 0;
-			margin-top: 0;
-			margin-bottom: 0;
-			position: relative;
-			&:before {
-				content: '';
-				width: 2px;
-				background: oColorsByName('black');
-				height: 100%;
-				display: block;
-				position: absolute;
-				left: 5px;
-				top: 0;
-			}
-			.n-content-heading-5 {
-				position: relative;
-				margin-top: 28px;
-				strong {
-					&:before {
-						content: '';
-						position: absolute;
-						top: 6px;
-						left: -28px;
-						height: 8px;
-						width: 8px;
-						border-radius: 50%;
-						background-color: oColorsByName('black');
-					}
-				}
-			}
-			p {
-				margin-bottom: 8px;
-			}
-		}
-	}
+    .n-content-heading-4 {
+      padding-top: 10px;
+      border-bottom: 0;
 
+      @include oTypographySans($weight: "bold", $scale: 8);
+    }
+
+    .n-content-layout__slot {
+      flex-basis: 100%;
+      padding-left: 30px;
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 2px;
+        background: ocolorsbyname("black");
+        height: 100%;
+        display: block;
+        position: absolute;
+        left: 5px;
+        top: 0;
+      }
+
+      .n-content-heading-5 {
+        position: relative;
+        margin-top: 28px;
+
+        strong {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 6px;
+            left: -28px;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: ocolorsbyname("black");
+          }
+        }
+      }
+
+      p {
+        margin-bottom: 8px;
+      }
+    }
+  }
 }
 
 .n-content-layout-set {
-	&[data-layout-name="card"] {
-		> :last-child {
-			padding-bottom: 20px;
-		}
-		.n-content-layout {
-			&[data-layout-name="timeline"] {
-				padding-left: oSpacingByName('s3');
-				padding-right: oSpacingByName('s3');
-				.n-content-heading-3 {
-					padding-top: 4px;
-				}
-			}
-		}
+  &[data-layout-name="card"] {
+    > :last-child {
+      padding-bottom: 20px;
+    }
 
-	}
+    .n-content-layout {
+      &[data-layout-name="timeline"] {
+        padding-left: ospacingbyname("s3");
+        padding-right: ospacingbyname("s3");
+
+        .n-content-heading-3 {
+          padding-top: 4px;
+        }
+      }
+    }
+  }
 }
 
 .n-content-layout-set {
-	&[data-layout-name="aside"] {
-		> :last-child {
-			padding-bottom: 20px;
-		}
-		.n-content-layout {
-			&[data-layout-name="timeline"] {
-				padding-left: oSpacingByName('s3');
-				padding-right: oSpacingByName('s3');
-				.n-content-heading-3 {
-					padding-top: 4px;
-				}
-			}
-		}
+  &[data-layout-name="aside"] {
+    > :last-child {
+      padding-bottom: 20px;
+    }
 
-	}
+    .n-content-layout {
+      &[data-layout-name="timeline"] {
+        padding-left: ospacingbyname("s3");
+        padding-right: ospacingbyname("s3");
+
+        .n-content-heading-3 {
+          padding-top: 4px;
+        }
+      }
+    }
+  }
 }
