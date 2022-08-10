@@ -3,7 +3,7 @@
 // Make sure when linking to a specific heading in an article that its not covered by the sticky nav
 @import "@financial-times/o-header/main";
 
-$heading-height-with-spacing: $o-header-sticky-height + ospacingbyname("s4");
+$heading-height-with-spacing: $o-header-sticky-height + oSpacingByName("s4");
 
 @mixin nContentHeading2 {
   @include oEditorialLayoutHeading($level: 2);
@@ -35,11 +35,11 @@ $heading-height-with-spacing: $o-header-sticky-height + ospacingbyname("s4");
     "To match the margin of article headings use the " +
     "`o-editorial-layout` component.";
 
-  margin-top: ospacingbyincrement($headingTop);
-  margin-bottom: ospacingbyincrement($headingBottom);
+  margin-top: oSpacingByIncrement($headingTop);
+  margin-bottom: oSpacingByIncrement($headingBottom);
 
   & + p {
-    margin-top: ospacingbyname("s1");
+    margin-top: oSpacingByName("s1");
   }
 
   & + figure,
@@ -47,6 +47,6 @@ $heading-height-with-spacing: $o-header-sticky-height + ospacingbyname("s4");
   & + ul,
   & + li,
   & + aside {
-    margin-top: ospacingbyname("s4");
+    margin-top: oSpacingByName("s4");
   }
 }

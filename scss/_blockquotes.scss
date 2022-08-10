@@ -3,7 +3,7 @@
 .n-content-blockquote {
   @include oQuoteEditorial;
 
-  margin-bottom: ospacingbyname("s8");
+  margin-bottom: oSpacingByName("s8");
 
   cite {
     @include oQuoteEditorialCiteAuthor;

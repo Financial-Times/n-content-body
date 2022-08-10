@@ -10,14 +10,14 @@
 
   p {
     margin-top: -12px;
-    margin-bottom: ospacingbyname("s4");
+    margin-bottom: oSpacingByName("s4");
   }
 }
 
 .n-content-pullquote__content {
   @include oTypographySans($scale: 3, $weight: "bold");
 
-  margin-bottom: ospacingbyname("s4");
+  margin-bottom: oSpacingByName("s4");
   padding-right: 16px;
 
   &::before {
@@ -33,7 +33,7 @@
 .n-content-pullquote__footer {
   @include oTypographySans(-1);
 
-  color: ocolorsbyname("black-80");
+  color: oColorsByName("black-80");
 }
 
 .n-content-pullquote--wide {

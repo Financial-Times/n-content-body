@@ -24,7 +24,7 @@
       &::before {
         content: "";
         width: 2px;
-        background: ocolorsbyname("black");
+        background: oColorsByName("black");
         height: 100%;
         display: block;
         position: absolute;
@@ -45,7 +45,7 @@
             height: 8px;
             width: 8px;
             border-radius: 50%;
-            background-color: ocolorsbyname("black");
+            background-color: oColorsByName("black");
           }
         }
       }
@@ -65,8 +65,8 @@
 
     .n-content-layout {
       &[data-layout-name="timeline"] {
-        padding-left: ospacingbyname("s3");
-        padding-right: ospacingbyname("s3");
+        padding-left: oSpacingByName("s3");
+        padding-right: oSpacingByName("s3");
 
         .n-content-heading-3 {
           padding-top: 4px;
@@ -84,8 +84,8 @@
 
     .n-content-layout {
       &[data-layout-name="timeline"] {
-        padding-left: ospacingbyname("s3");
-        padding-right: ospacingbyname("s3");
+        padding-left: oSpacingByName("s3");
+        padding-right: oSpacingByName("s3");
 
         .n-content-heading-3 {
           padding-top: 4px;

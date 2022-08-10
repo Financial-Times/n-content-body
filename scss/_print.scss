@@ -3,7 +3,7 @@
     .n-content-body {
       font: 11pt/1.25 Georgia, serif;
       margin: 0;
-      color: ocolorsbyname("black");
+      color: oColorsByName("black");
 
       &::after {
         display: block;
@@ -11,7 +11,7 @@
         margin-top: 0.5cm;
         font-size: 9pt;
         padding-top: 5px;
-        border-top: 1px solid ocolorsbyname("black");
+        border-top: 1px solid oColorsByName("black");
         clear: both;
       }
 

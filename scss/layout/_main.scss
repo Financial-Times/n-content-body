@@ -5,27 +5,27 @@
 
 .n-content-layout {
   // margin considers p margin bottom of 28px to equal 36px on both sides
-  margin-top: ospacingbyname("s2");
-  margin-bottom: ospacingbyname("s8");
+  margin-top: oSpacingByName("s2");
+  margin-bottom: oSpacingByName("s8");
 }
 
 .n-content-layout__container {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding-top: ospacingbyname("s1");
+  padding-top: oSpacingByName("s1");
 
   > :not(.n-content-layout__slot) {
-    margin-top: ospacingbyname("s2");
+    margin-top: oSpacingByName("s2");
     margin-bottom: 0;
     flex: 0 0 100%;
   }
 
   > [class^="n-content-heading-"] {
-    margin-bottom: ospacingbyname("s1");
+    margin-bottom: oSpacingByName("s1");
     margin-top: 0;
-    padding-bottom: ospacingbyname("s2");
-    border-bottom: 2px solid ocolorsbyname(paper);
+    padding-bottom: oSpacingByName("s2");
+    border-bottom: 2px solid oColorsByName(paper);
     box-sizing: border-box;
   }
 }
@@ -63,8 +63,8 @@
   .n-content-heading-3 + .n-content-layout__slot,
   .n-content-heading-4 + .n-content-layout__slot,
   .n-content-heading-5 + .n-content-layout__slot {
-    margin-top: ospacingbyname("s1");
-    margin-bottom: ospacingbyname("s3");
+    margin-top: oSpacingByName("s1");
+    margin-bottom: oSpacingByName("s3");
   }
 
   .n-content-layout__slot {
@@ -74,15 +74,15 @@
     }
 
     > p {
-      margin-bottom: ospacingbyname("s3");
+      margin-bottom: oSpacingByName("s3");
     }
   }
 }
 
 //fix spacing and borders for layoutsets
 .n-content-layout-set {
-  margin-bottom: ospacingbyname("s8");
-  margin-top: ospacingbyname("s2");
+  margin-bottom: oSpacingByName("s8");
+  margin-top: oSpacingByName("s2");
 
   .n-content-layout {
     margin-top: 0;

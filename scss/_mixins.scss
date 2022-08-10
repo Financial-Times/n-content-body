@@ -25,7 +25,7 @@
     }
 
     &:hover {
-      color: ocolorsbyname("black-80");
+      color: oColorsByName("black-80");
       text-decoration: none;
     }
 
@@ -62,7 +62,7 @@
   background-color: inherit;
 
   a {
-    color: ocolorsbyname("black-70");
+    color: oColorsByName("black-70");
     border-bottom: 0;
     text-decoration: none;
   }
@@ -76,24 +76,24 @@
 }
 
 @mixin nLayoutInset() {
-  margin-bottom: ospacingbyname("s8");
+  margin-bottom: oSpacingByName("s8");
 
   @include oGridRespondTo(S) {
     @include oGridColspan(5, $width-only: true);
 
-    margin-right: ospacingbyname("s8");
+    margin-right: oSpacingByName("s8");
     float: left;
     clear: both;
   }
 }
 
 @mixin nLayoutInsetRight() {
-  margin-bottom: ospacingbyname("s8");
+  margin-bottom: oSpacingByName("s8");
 
   @include oGridRespondTo(S) {
     @include oGridColspan(5, $width-only: true);
 
-    margin-left: ospacingbyname("s8");
+    margin-left: oSpacingByName("s8");
     float: right;
     clear: both;
   }

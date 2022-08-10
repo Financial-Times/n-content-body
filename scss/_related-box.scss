@@ -1,7 +1,7 @@
 .n-content-info-box {
   @include nContentBox;
 
-  border: 1px solid ocolorsbyname("black-20");
+  border: 1px solid oColorsByName("black-20");
   padding-left: 16px;
   padding-right: 16px;
 }
@@ -12,7 +12,7 @@
   font-size: 26px;
   line-height: 27px;
   margin: 8px 16px;
-  color: ocolorsbyname("black-90");
+  color: oColorsByName("black-90");
   word-wrap: break-word;
 
   p {

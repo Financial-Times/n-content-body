@@ -32,8 +32,8 @@
 .n-content-picture__caption {
   @include oTypographySans(-1);
 
-  margin-top: ospacingbyname("s1");
-  color: ocolorsbyname("black-70");
+  margin-top: oSpacingByName("s1");
+  color: oColorsByName("black-70");
 
   @media print {
     font-size: 9pt;

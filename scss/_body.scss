@@ -8,7 +8,7 @@
   // STANDARD TYPOGRAPHY AND ELEMENTS
   @include oEditorialTypographyBody;
 
-  margin-bottom: ospacingbyincrement(10);
+  margin-bottom: oSpacingByIncrement(10);
 
   p {
     // style paragraphs in relation to sibling elements,
@@ -30,9 +30,9 @@
 
   // DIVIDER
   > hr {
-    margin-bottom: ospacingbyname("s8");
-    margin-top: ospacingbyname("s2");
-    border: 2px solid ocolorsbyname("black");
+    margin-bottom: oSpacingByName("s8");
+    margin-top: oSpacingByName("s2");
+    border: 2px solid oColorsByName("black");
     border-width: 2px 0;
     width: 60px;
     display: inline-block;
@@ -56,7 +56,7 @@
   // BLOCKQUOTES
   blockquote {
     -webkit-font-smoothing: antialiased;
-    color: ocolorsbyname("black-80");
+    color: oColorsByName("black-80");
     position: relative;
   }
 
