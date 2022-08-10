@@ -1,47 +1,52 @@
 @import "@financial-times/o-editorial-layout/main";
 
 // Make sure when linking to a specific heading in an article that its not covered by the sticky nav
-@import '@financial-times/o-header/main';
-$heading-height-with-spacing: $o-header-sticky-height + oSpacingByName('s4');
+@import "@financial-times/o-header/main";
+
+$heading-height-with-spacing: $o-header-sticky-height + oSpacingByName("s4");
 
 @mixin nContentHeading2 {
-	@include oEditorialLayoutHeading($level: 2);
-	scroll-margin-top: $heading-height-with-spacing;
+  @include oEditorialLayoutHeading($level: 2);
+
+  scroll-margin-top: $heading-height-with-spacing;
 }
 
 @mixin nContentHeading3 {
-	@include oEditorialLayoutHeading($level: 3);
-	scroll-margin-top: $heading-height-with-spacing;
+  @include oEditorialLayoutHeading($level: 3);
+
+  scroll-margin-top: $heading-height-with-spacing;
 }
 
 @mixin nContentHeading4 {
-	@include oEditorialLayoutHeading($level: 4);
-	scroll-margin-top: $heading-height-with-spacing;
+  @include oEditorialLayoutHeading($level: 4);
+
+  scroll-margin-top: $heading-height-with-spacing;
 }
 
 @mixin nContentHeading5 {
-	@include oEditorialLayoutHeading($level: 5);
-	scroll-margin-top: $heading-height-with-spacing;
+  @include oEditorialLayoutHeading($level: 5);
+
+  scroll-margin-top: $heading-height-with-spacing;
 }
 
 /// @deprecated - Use o-editorial-layout instead.
 @mixin nContentMargins($headingTop: 0, $headingBottom: 1) {
-	@warn 'The mixin `nContentMargins` is deprecated. ' +
-	'To match the margin of article headings use the ' +
-	'`o-editorial-layout` component.';
+  @warn "The mixin `nContentMargins` is deprecated. " +
+    "To match the margin of article headings use the " +
+    "`o-editorial-layout` component.";
 
-	margin-top: oSpacingByIncrement($headingTop);
-	margin-bottom: oSpacingByIncrement($headingBottom);
+  margin-top: oSpacingByIncrement($headingTop);
+  margin-bottom: oSpacingByIncrement($headingBottom);
 
-	& + p {
-		margin-top: oSpacingByName('s1');
-	}
+  & + p {
+    margin-top: oSpacingByName("s1");
+  }
 
-	& + figure,
-	& + div:not(.n-content-layout__slot),
-	& + ul,
-	& + li,
-	& + aside {
-		margin-top: oSpacingByName('s4');
-	}
+  & + figure,
+  & + div:not(.n-content-layout__slot),
+  & + ul,
+  & + li,
+  & + aside {
+    margin-top: oSpacingByName("s4");
+  }
 }

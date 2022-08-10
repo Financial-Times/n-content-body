@@ -1,3 +1,5 @@
+/* eslint no-console: "off" */
+
 const path = require('path');
 const sass = require('sass');
 
@@ -5,16 +7,19 @@ const BASE_PATH = path.join(__dirname, '../../');
 
 async function compile({ file, includePaths }) {
 	return new Promise((resolve, reject) => {
-		sass.render({
-			file,
-			includePaths
-		}, function(err, result) {
-			if (err) {
-				console.error(err.formatted)
-				return reject(err);
+		sass.render(
+			{
+				file,
+				includePaths
+			},
+			function (err, result) {
+				if (err) {
+					console.error(err.formatted);
+					return reject(err);
+				}
+				resolve(result);
 			}
-			resolve(result);
-		});
+		);
 	});
 }
 
@@ -24,7 +29,7 @@ describe('Compile scss file', () => {
 			file: path.join(__dirname, 'entry-file.scss'),
 			includePaths: [
 				path.join(BASE_PATH, 'node_modules/@financial-times'),
-				path.join(BASE_PATH, 'node_modules'),
+				path.join(BASE_PATH, 'node_modules')
 			]
 		});
 		expect(result).toBeTruthy();

@@ -1,49 +1,48 @@
 .n-content-layout-set,
 .n-content-layout {
-	clear: both;
+  clear: both;
 
-	&[data-layout-width="full-bleed"] {
+  &[data-layout-width="full-bleed"] {
+    @include oGridRespondTo($from: L) {
+      width: 100vw;
+      margin-left: -50vw;
+      z-index: 1;
+      left: calc(50% + 120px);
 
-		@include oGridRespondTo($from: L) {
-			width: 100vw;
-			margin-left: -50vw;
-			z-index: 1;
-			left: calc(50% + 120px);
+      .n-content-layout__container {
+        padding-left: 40px;
+        padding-right: 40px;
+        width: auto;
+      }
+    }
+  }
 
-			.n-content-layout__container {
-				padding-left: 40px;
-				padding-right: 40px;
-				width: auto;
-			}
-		}
-	}
+  &[data-layout-width="full-grid"] {
+    @include oGridRespondTo($until: L) {
+      width: 100%;
+    }
 
-	&[data-layout-width="full-grid"] {
-		@include oGridRespondTo($until: L) {
-			width: 100%;
-		}
+    @include oGridRespondTo(L) {
+      position: relative;
+      left: calc(75% + 10px);
+      width: 100vw;
+      margin-left: -50vw;
 
-		@include oGridRespondTo(L) {
-			position: relative;
-			left: calc(75% + 10px);
-			width: 100vw;
-			margin-left: -50vw;
+      .n-content-layout__container {
+        @include oGridContainer;
+      }
+    }
 
-			.n-content-layout__container {
-				@include oGridContainer;
-			}
-		}
+    @include oGridRespondTo(XL) {
+      left: calc(75% - 15px);
+    }
+  }
 
-		@include oGridRespondTo(XL) {
-			left: calc(75% - 15px);
-		}
-	}
+  &[data-layout-width="inset-left"] {
+    @include nLayoutInset;
+  }
 
-	&[data-layout-width="inset-left"] {
-		@include nLayoutInset();
-	}
-
-	&[data-layout-width="inset-right"] {
-		@include nLayoutInsetRight();
-	}
+  &[data-layout-width="inset-right"] {
+    @include nLayoutInsetRight;
+  }
 }

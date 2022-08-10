@@ -1,46 +1,48 @@
 .n-content-pullquote {
-	.n-content-body > & {
-		@include nLayoutInset;
-		padding-top: 0;
-		padding-bottom: 0;
-		margin-top: 0;
-		margin-left: 0;
-	}
+  .n-content-body > & {
+    @include nLayoutInset;
 
-	p {
-		margin-top: -12px;
-		margin-bottom: oSpacingByName('s4');
-	}
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-left: 0;
+  }
+
+  p {
+    margin-top: -12px;
+    margin-bottom: oSpacingByName("s4");
+  }
 }
 
-
 .n-content-pullquote__content {
-	@include oTypographySans($scale: 3, $weight: 'bold');
-	margin-bottom: oSpacingByName('s4');
+  @include oTypographySans($scale: 3, $weight: "bold");
 
-	padding-right: 16px;
+  margin-bottom: oSpacingByName("s4");
+  padding-right: 16px;
 
-	&:before {
-		@include oIconsContent('speech-left', oColorsByName('black-80'), 44, $iconset-version: 1);
-		content: "";
-		position: relative;
-		top: -8px;
-		left: -8px;
-	}
+  &::before {
+    @include oIconsContent("speech-left", oColorsByName("black-80"), 44, $iconset-version: 1);
+
+    content: "";
+    position: relative;
+    top: -8px;
+    left: -8px;
+  }
 }
 
 .n-content-pullquote__footer {
-	@include oTypographySans(-1);
-	color: oColorsByName('black-80');
+  @include oTypographySans(-1);
+
+  color: oColorsByName("black-80");
 }
 
 .n-content-pullquote--wide {
-	float: none;
-	max-width: 100%;
-	margin-top: 35px;
-	text-align: center;
+  float: none;
+  max-width: 100%;
+  margin-top: 35px;
+  text-align: center;
 
-	.n-content-pullquote__content:before {
-		left: 44%;
-	}
+  .n-content-pullquote__content::before {
+    left: 44%;
+  }
 }

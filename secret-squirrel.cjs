@@ -1,8 +1,8 @@
 module.exports = {
 	files: {
 		allow: [
-			'.snyk',
-			'CODEOWNERS'
+			'.husky/pre-commit',
+			'.husky/pre-push'
 		],
 		allowOverrides: []
 	},

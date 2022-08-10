@@ -1,22 +1,25 @@
 .n-content-big-number {
-	color: oColorsByName('black');
+  color: oColorsByName("black");
 
-	p {
-		margin: 0;
-	}
-	// big numbers not inside a layout should float
-	.n-content-body > & {
-		@include nLayoutInset;
-	}
+  p {
+    margin: 0;
+  }
+
+  // big numbers not inside a layout should float
+  .n-content-body > & {
+    @include nLayoutInset;
+  }
 }
 
 .n-content-big-number__title {
-	@include oTypographySans($weight: 'bold', $scale: 8);
-	display: block;
-	margin: 5px 0;
+  @include oTypographySans($weight: "bold", $scale: 8);
+
+  display: block;
+  margin: 5px 0;
 }
 
 .n-content-big-number__content {
-	@include oTypographySans($scale: 1, $line-height: 22px);
-	display: block;
+  @include oTypographySans($scale: 1, $line-height: 22px);
+
+  display: block;
 }

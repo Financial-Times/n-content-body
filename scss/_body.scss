@@ -1,116 +1,119 @@
-@import '@financial-times/o-spacing/main';
+@import "@financial-times/o-spacing/main";
 @import "@financial-times/o-typography/main";
 @import "@financial-times/o-editorial-typography/main";
 @import "@financial-times/o-editorial-layout/main";
 
-//ARTICLE BODY ELEMENTS
+// ARTICLE BODY ELEMENTS
 .n-content-body {
+  // STANDARD TYPOGRAPHY AND ELEMENTS
+  @include oEditorialTypographyBody;
 
-	// STANDARD TYPOGRAPHY AND ELEMENTS
-	@include oEditorialTypographyBody();
-	margin-bottom: oSpacingByIncrement(10);
+  margin-bottom: oSpacingByIncrement(10);
 
-	p {
-		// style paragraphs in relation to sibling elements,
-		// headings etc, without including typographic styles
-		// again which are inherited from .n-content-body
-		@include oEditorialLayoutBodyWithoutTypography();
-	}
+  p {
+    // style paragraphs in relation to sibling elements,
+    // headings etc, without including typographic styles
+    // again which are inherited from .n-content-body
+    @include oEditorialLayoutBodyWithoutTypography;
+  }
 
-	> p,
-	.n-content-layout__slot > p {
-		a {
-			@include oTypographyLink;
-		}
-	}
+  > p,
+  .n-content-layout__slot > p {
+    a {
+      @include oTypographyLink;
+    }
+  }
 
-	> :first-child {
-		margin-top: 0;
-	}
+  > :first-child {
+    margin-top: 0;
+  }
 
-	// DIVIDER
-	> hr {
-		margin-bottom: oSpacingByName('s8');
-		margin-top: oSpacingByName('s2');
-		border: 2px solid oColorsByName('black');
-		border-width: 2px 0;
-		width: 60px;
-		display: inline-block;
-	}
+  // DIVIDER
+  > hr {
+    margin-bottom: oSpacingByName("s8");
+    margin-top: oSpacingByName("s2");
+    border: 2px solid oColorsByName("black");
+    border-width: 2px 0;
+    width: 60px;
+    display: inline-block;
+  }
 
-	// LISTS
-	> ul,
-	.n-content-layout__slot > ul {
-		@include oTypographyList($type: 'unordered');
-	}
+  // LISTS
+  > ul,
+  .n-content-layout__slot > ul {
+    @include oTypographyList($type: "unordered");
+  }
 
-	> ol,
-	.n-content-layout__slot > ol {
-		@include oTypographyList($type: 'ordered');
-	}
+  > ol,
+  .n-content-layout__slot > ol {
+    @include oTypographyList($type: "ordered");
+  }
 
-	strong {
-		@include oTypographySerif($weight: 'bold', $include-font-family: false);
-	}
+  strong {
+    @include oTypographySerif($weight: "bold", $include-font-family: false);
+  }
 
-	// BLOCKQUOTES
-	blockquote {
-		-webkit-font-smoothing: antialiased;
-		color: oColorsByName('black-80');
-		position: relative;
-	}
+  // BLOCKQUOTES
+  blockquote {
+    -webkit-font-smoothing: antialiased;
+    color: oColorsByName("black-80");
+    position: relative;
+  }
 
-	.subhead--crosshead,
-	.n-content-heading-2 {
-		@include nContentHeading2;
-	}
+  .subhead--crosshead,
+  .n-content-heading-2 {
+    @include nContentHeading2;
+  }
 
-	.subhead--standard,
-	.n-content-heading-3 {
-		@include nContentHeading3;
-	}
+  .subhead--standard,
+  .n-content-heading-3 {
+    @include nContentHeading3;
+  }
 
-	.n-content-heading-4 {
-		@include nContentHeading4;
-	}
+  .n-content-heading-4 {
+    @include nContentHeading4;
+  }
 
-	.n-content-heading-5 {
-		@include nContentHeading5;
-	}
+  .n-content-heading-5 {
+    @include nContentHeading5;
+  }
 }
 
 // TABLES
 .n-content-layout {
-	.n-content-body__caption {
-		text-align: left;
-		padding: 0;
-	}
+  .n-content-body__caption {
+    text-align: left;
+    padding: 0;
+  }
 
-	&[data-layout-width="full-bleed"] .n-content-body__caption,
-	&[data-layout-width="full-grid"] .n-content-body__caption {
-		padding: 0 10px;
-	}
+  &[data-layout-width="full-bleed"] .n-content-body__caption,
+  &[data-layout-width="full-grid"] .n-content-body__caption {
+    padding: 0 10px;
+  }
 }
 
 // Shift caption headings down one, as h1 is the highest caption level,
 // but we want h2 to be the highest heading style possible
 .n-content-body__caption--h1 {
-	@include oEditorialTypographyHeading($level: 2);
+  @include oEditorialTypographyHeading($level: 2);
 }
+
 .n-content-body__caption--auto, // Default style
 .n-content-body__caption--h2 {
-	@include oEditorialTypographyHeading($level: 3);
+  @include oEditorialTypographyHeading($level: 3);
 }
+
 .n-content-body__caption--h3 {
-	@include oEditorialTypographyHeading($level: 4);
+  @include oEditorialTypographyHeading($level: 4);
 }
+
 .n-content-body__caption--h4,
 .n-content-body__caption--h5,
 .n-content-body__caption--h6 {
-	@include oEditorialTypographyHeading($level: 5);
+  @include oEditorialTypographyHeading($level: 5);
 }
 
 // Hide caption
 .n-content-body__caption--hidden {
-	@include oNormaliseVisuallyHidden;
+  @include oNormaliseVisuallyHidden;
 }

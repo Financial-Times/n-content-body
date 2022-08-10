@@ -1,37 +1,41 @@
 .n-content-recommended {
-	.n-content-body > & {
-		@include nLayoutInset;
-	}
+  .n-content-body > & {
+    @include nLayoutInset;
+  }
 
-	ul {
-		margin: 0;
-		padding: 0;
+  ul {
+    margin: 0;
+    padding: 0;
 
-		li {
-			list-style: none;
-			border-bottom: 1px solid oColorsByName('black-10');
-			padding: 0;
-			&:before {
-				display: none;
-			}
-		}
-	}
+    li {
+      list-style: none;
+      border-bottom: 1px solid oColorsByName("black-10");
+      padding: 0;
 
-	a {
-		@include oTypographySans($scale: 1);
-		color: oColorsByUsecase('link-title', 'text');
-		padding-top: oSpacingByName('s1');
-		padding-bottom: oSpacingByName('s2');
-		display: inline-block;
-		border-bottom-width: 0;
-		width: 100%;
+      &::before {
+        display: none;
+      }
+    }
+  }
 
-		&:hover {
-			color: oColorsByName('black-60');
-		}
-	}
+  a {
+    @include oTypographySans($scale: 1);
+
+    color: oColorsByUsecase("link-title", "text");
+    padding-top: oSpacingByName("s1");
+    padding-bottom: oSpacingByName("s2");
+    display: inline-block;
+    border-bottom-width: 0;
+    width: 100%;
+
+    &:hover {
+      color: oColorsByName("black-60");
+    }
+  }
 }
+
 .n-content-recommended__title {
-	@include oTypographySans($weight: 'semibold', $scale: 1);
-	margin-top: 4px;
+  @include oTypographySans($weight: "semibold", $scale: 1);
+
+  margin-top: 4px;
 }
