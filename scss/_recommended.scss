@@ -34,8 +34,20 @@
   }
 }
 
-.n-content-recommended__title {
-  @include oTypographySans($weight: "semibold", $scale: 1);
+.n-content-recommended {
+  &--single-story {
+    @include nLayoutInset;
 
-  margin-top: 4px;
+    .o-teaser__meta,
+    .o-teaser__heading {
+      @include oTypographySans(0);
+    }
+  }
+
+  &__title {
+    @include oTypographySans($weight: "semibold", $scale: 1);
+
+    margin-top: 4px;
+    margin-bottom: 0.83em;
+  }
 }
