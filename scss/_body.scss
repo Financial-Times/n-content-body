@@ -92,6 +92,12 @@
   }
 }
 
+.n-content-table__cell--hide-mobile {
+  @include oGridRespondTo($until: S) {
+    display: none;
+  }
+}
+
 // Shift caption headings down one, as h1 is the highest caption level,
 // but we want h2 to be the highest heading style possible
 .n-content-body__caption--h1 {
