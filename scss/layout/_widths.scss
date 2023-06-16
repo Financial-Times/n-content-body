@@ -1,3 +1,17 @@
+.n-content-layout {
+  &__container--in-line {
+    margin-bottom: 1em;  // same as n-content-image
+  }
+
+  &__container--mid-grid {
+    @include oGridRespondTo($until: L) {
+      padding: 0;
+    }
+
+    margin-bottom: 1em;
+  }
+}
+
 .n-content-layout-set,
 .n-content-layout {
   clear: both;
