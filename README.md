@@ -1,3 +1,5 @@
+# DEPRECATED. This package is no longer supported. Please use: https://github.com/Financial-Times/cp-content-pipeline/tree/main/packages/styles
+
 # n-content-body [![Circle CI](https://circleci.com/gh/Financial-Times/n-content-body.svg?style=svg)](https://circleci.com/gh/Financial-Times/n-content-body)
 
 ## Styling for the body of content (eg. article)
